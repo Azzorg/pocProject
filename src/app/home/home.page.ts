@@ -7,4 +7,14 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
+  /**
+   * test
+   */
+  public test(isLeft:boolean) {
+    if(isLeft)
+      console.log("Throwout left");
+    else 
+      console.log("Throwout right")
+  }
+
 }
