@@ -1,4 +1,7 @@
-.background-blur{
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+
+/*.background-blur{
   position: fixed;
   left: 0;
   right: 0;
@@ -31,18 +34,90 @@ ion-card{
 .welcome-card ion-img {
   max-height: 35vh;
   overflow: hidden;
-}
-
-
-
-/*#main style:host{
-  --background: transparent;
 }*/
 
 #main {
+  --background: transparent;
   background-image: url('../../assets/img/yosemite.jpg');
   background-repeat: no-repeat;
   background-size: cover;
 
   text-shadow: 2px 2px #626466;
+}
+
+body {
+  background-image: url('../../assets/img/yosemite.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+}
+
+.blurred-bg {
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.blurred-bg.tinted {
+  background-size: 100%;
+  background-image: -moz-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  background-image: -webkit-linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+  background-image: linear-gradient(0deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2));
+}
+
+.box {
+  position: relative;
+  border-radius: 5px;
+  -moz-box-shadow: 0 5px 7px rgba(62, 63, 65, 0.6);
+  -webkit-box-shadow: 0 5px 7px rgba(62, 63, 65, 0.6);
+  box-shadow: 0 5px 7px rgba(62, 63, 65, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 20px;
+  text-align: center;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
+  transition: box-shadow .3s ease;
+}
+.box:active {
+  cursor: move;
+  -moz-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9);
+}
+.box .content {
+  margin: auto;
+}
+
+h1, h2, a, p {
+  color: white;
+  font-weight: 100;
+}
+.tinted h1, .tinted h2, .tinted a, .tinted p {
+  color: black;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+h2 {
+  font-size: 14px;
+}
+
+p {
+  margin: 20px;
+}
+p.related {
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #444;
+}
+p.related a {
+  font-weight: 700;
+  text-decoration: none;
+}
+p.related a:hover {
+  text-decoration: underline;
 }
