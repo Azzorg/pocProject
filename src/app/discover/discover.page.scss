@@ -1,0 +1,23 @@
+#footer_discover{
+    background-color: rgba(0, 0, 0, 0.6) !important;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+ion-toolbar{
+    --background: transparent;
+}
+
+
+#main_discover {
+    --background: transparent;
+    background-image: url("../../assets/img/yocemite1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    color: white;
+  
+    text-shadow: 2px 2px #626466;
+  }
