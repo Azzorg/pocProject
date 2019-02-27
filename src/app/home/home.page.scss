@@ -7,6 +7,10 @@
   bottom: 0;
 }
 
+ion-toolbar{
+  --background: transparent;
+}
+
 #content-list{
   margin-bottom: 80px;
 }
@@ -25,19 +29,20 @@
 
 .blurred-bg {
   background-image: url("../../assets/img/yosemite_blur.jpg");
+  background-image: linear-gradient(0deg, rgba(62, 63, 65, 0.4), rgba(62, 63, 65, 0.4)), url("../../assets/img/yosemite_blur.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   //background-position: center;
   background-attachment: fixed;
 }
-.blurred-bg.tinted {
+/*.blurred-bg.tinted {
   background-image: url("../../assets/img/yosemite_blur.jpg");
   background-image: linear-gradient(0deg, rgba(62, 63, 65, 0.4), rgba(62, 63, 65, 0.4)), url("../../assets/img/yosemite_blur.jpg");
 }
-.blurred-bg.shaded {
+/*.blurred-bg.shaded {
   background-image: url("../../assets/img/yosemite_blur.jpg");
   background-image: linear-gradient(0deg, rgba(62, 63, 65, 0.2), rgba(62, 63, 65, 0.2)), url("../../assets/img/yosemite_blur.jpg");
-}
+}*/
 
 .box {
   position: relative;

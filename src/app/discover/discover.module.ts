@@ -18,7 +18,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FormsModule,
-    IonicModule,
+    IonicModule, 
     RouterModule.forChild(routes)
   ],
   declarations: [DiscoverPage]

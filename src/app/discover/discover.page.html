@@ -1,9 +1,16 @@
-<ion-content id="main_discover">
+<ion-content [style.backgroundImage]="'url(' + trip.image + ')'" id="main_discover">
+  <main>
+    <div class="main-title">{{trip.name}}</div>
 
+    <!-- List of notifications -->
+    <div>
+      <ion-card >
+        
+      </ion-card>
+    </div>
+  </main>
 
-  
-
-  <ion-footer id="footer_discover">
+  <ion-footer id="footer">
     <ion-toolbar>
       <ion-buttons slot="start">
         <ion-menu-button style="color: white"></ion-menu-button>
