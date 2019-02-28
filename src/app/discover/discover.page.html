@@ -24,19 +24,19 @@
             <ion-row>
               <!-- Place -->
               <ion-col size="8">
-                  <span><ion-icon name="pin"></ion-icon>{{notif.lieu}}</span>
+                  <span><ion-icon style="margin-bottom: -3px; font-size: 6vw" name="pin"></ion-icon>{{notif.lieu}}</span>
               </ion-col>
 
               <!-- Comments -->
               <ion-col text-center size="2">
                 <ion-icon style="font-size: 8vw" name="heart-empty"></ion-icon>
-                {{notif.nbComment}}
+                <p>{{notif.nbComment}}</p>
               </ion-col>
 
               <!-- Likes -->
               <ion-col text-center size="2">
                 <ion-icon style="font-size: 8vw" name="chatbubbles"></ion-icon>
-                {{notif.nbLike}}
+                <p>{{notif.nbLike}}</p>
               </ion-col>  
             </ion-row> 
           </ion-grid>

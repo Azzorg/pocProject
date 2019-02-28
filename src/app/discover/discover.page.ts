@@ -19,7 +19,7 @@ export class DiscoverPage implements OnInit {
   ngOnInit() {
     this.bgImage = "../../assets/img/yocemite1.jpg";
     // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
-    this.nameTrip = "Grand West Trip";
+    this.nameTrip = "Farwest Trip";
 
     this.generateTrip();
 
