@@ -5,7 +5,7 @@
     <!-- List of notifications -->
     <div *ngFor="let notif of trip.notifications">
       <ion-card class="box">
-        <div class="beforeCard" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
+        <div class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
         <ion-card-content class="content">
           <!-- Top part of the card : avatar / pseudo / action / date -->
           <div class="top-bloc">
@@ -20,9 +20,26 @@
           </div>
 
           <!-- Bottom part of the card : place / comments / likes -->
-          <div>
-            
-          </div>
+          <ion-grid class="bottom-bloc">
+            <ion-row>
+              <!-- Place -->
+              <ion-col size="8">
+                  <span><ion-icon name="pin"></ion-icon>{{notif.lieu}}</span>
+              </ion-col>
+
+              <!-- Comments -->
+              <ion-col text-center size="2">
+                <ion-icon style="font-size: 8vw" name="heart-empty"></ion-icon>
+                {{notif.nbComment}}
+              </ion-col>
+
+              <!-- Likes -->
+              <ion-col text-center size="2">
+                <ion-icon style="font-size: 8vw" name="chatbubbles"></ion-icon>
+                {{notif.nbLike}}
+              </ion-col>  
+            </ion-row> 
+          </ion-grid>
         </ion-card-content>
       </ion-card>
     </div>

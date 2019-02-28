@@ -146,7 +146,10 @@ export class DiscoverPage implements OnInit {
     };
   }
 
-
+  /**
+   * Used to transform the idAction to description
+   * @param action 
+   */
   public getAction(action: any){
     switch (action.idAction){
       case 0:
@@ -163,7 +166,4 @@ export class DiscoverPage implements OnInit {
 
     }
   }
-
-
-
 }
