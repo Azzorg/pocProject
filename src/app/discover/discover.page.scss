@@ -11,10 +11,9 @@ ion-toolbar{
 
 #main_discover {
   --background: transparent;
-  // background-image: url("../../assets/img/yocemite1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: right;
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   color: white;
   
@@ -36,4 +35,33 @@ main{
   font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   font-weight : 500;
   text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+}
+
+.box{
+  position: relative;
+  color : white;
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+  padding: 10px 5px;
+  font-size: 20px;
+  font-family: 'Lora', serif;
+  line-height: 1.5;
+  border-radius: 25px;
+  // width: 80vw;
+  // height : 250px;
+  // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.beforeCard{
+  background: right no-repeat fixed;
+  background-color: rgba(227, 230, 234, 0.9);
+  content: '';
+  margin: -35px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  filter: blur(20px);
+  overflow:hidden;
 }

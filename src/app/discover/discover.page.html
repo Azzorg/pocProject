@@ -3,9 +3,12 @@
     <div class="main-title">{{trip.name}}</div>
 
     <!-- List of notifications -->
-    <div>
-      <ion-card >
-        
+    <div *ngFor="let notif of trip.notifications">
+      <ion-card class="box">
+        <div class="beforeCard" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
+        <ion-card-content class="content">
+          <h1>{{notif.user.name}}</h1>
+        </ion-card-content>
       </ion-card>
     </div>
   </main>
