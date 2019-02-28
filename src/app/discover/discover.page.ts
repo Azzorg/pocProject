@@ -10,6 +10,7 @@ export class DiscoverPage implements OnInit {
   nameTrip: String;
   private listNotification : Array<any>;
   trip: any;
+  actionDone: String;
 
   
 
@@ -17,9 +18,11 @@ export class DiscoverPage implements OnInit {
 
   ngOnInit() {
     this.bgImage = "../../assets/img/yocemite1.jpg";
+    // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
     this.nameTrip = "Grand West Trip";
 
     this.generateTrip();
+
   }
 
   /**
@@ -141,6 +144,24 @@ export class DiscoverPage implements OnInit {
       image: this.bgImage,
       notifications: this.listNotification
     };
+  }
+
+
+  public getAction(action: any){
+    switch (action.idAction){
+      case 0:
+        // Commentaire
+        return " a commenté une publication.";
+      case 1:
+        // Ajout de photos
+        return " a ajouté 3 photos."
+      case 2:
+        // Création d'étape
+        return " a créé une étape."
+      default:
+        return " a fait un dab."
+
+    }
   }
 
 

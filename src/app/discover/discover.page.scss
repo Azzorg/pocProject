@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,700);
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
 #footer{
   background-color: rgba(0, 0, 0, 0.2) !important;
   position: fixed;
@@ -41,9 +41,9 @@ main{
   position: relative;
   color : white;
   text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+  font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   padding: 10px 5px;
   font-size: 20px;
-  font-family: 'Lora', serif;
   line-height: 1.5;
   border-radius: 25px;
   // width: 80vw;
@@ -64,4 +64,32 @@ main{
   left: 0;
   filter: blur(20px);
   overflow:hidden;
+}
+
+.top-bloc{
+  height: auto;
+}
+
+.avatar{
+  height : 50px;
+  width : 50px;
+  border-radius : 50%;
+  display : inline-block;
+  object-fit : cover;
+  margin-right: 20px;
+  float: left;
+}
+
+.action-bloc{
+  display: inline;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.action-bloc span{
+  font-weight: bold;
+}
+
+.action-bloc p:last-child{
+  font-size: 12px;
 }
