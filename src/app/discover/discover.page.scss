@@ -109,6 +109,16 @@ main{
   font-size: 12px;
 }
 
-.bottom-bloc ion-icon{
-  font-size: 14pt;
+.bottom-bloc .placeIcon ion-icon{
+  font-size: 15pt;
+  margin-bottom: -5px;
+}
+
+.bottom-bloc .icon ion-icon{
+  font-size: 16pt;
+}
+
+.icon p{
+  font-size: 10pt;
+  color: #e6e6e6;
 }
