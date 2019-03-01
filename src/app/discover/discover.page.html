@@ -1,47 +1,49 @@
-<ion-content [style.backgroundImage]="'url(' + trip.image + ')'" id="main_discover">
+<ion-content [style.backgroundImage]="'url(' + trip.image + ')'" id="main_discover" [scrollEvents]="true" (ionScroll)="onWindowScroll($event);">
   <main>
-    <div class="main-title">{{trip.name}}</div>
+    <div id="title_trip" class="main-title">{{trip.name}}</div>
 
     <!-- List of notifications -->
-    <div class="listNotif" *ngFor="let notif of trip.notifications">
-      <ion-card class="box">
-        <div class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
-        <ion-card-content class="content">
-          <!-- Top part of the card : avatar / pseudo / action / date -->
-          <div class="top-bloc">
-            <!-- Image -->
-            <img class="avatar" src="{{notif.user.image}}">
+    <div class="listNotif">
+      <div *ngFor="let notif of trip.notifications">
+        <ion-card class="box">
+          <div class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
+          <ion-card-content class="content">
+            <!-- Top part of the card : avatar / pseudo / action / date -->
+            <div class="top-bloc">
+              <!-- Image -->
+              <img class="avatar" src="{{notif.user.image}}">
 
-            <!-- Pseudo / Action / Date -->
-            <div class="action-bloc">
-              <p><span>{{notif.user.name}}</span>{{getAction(notif.action)}}</p>
-              <p>{{notif.date}}</p>
+              <!-- Pseudo / Action / Date -->
+              <div class="action-bloc">
+                <p><span>{{notif.user.name}}</span>{{getAction(notif.action)}}</p>
+                <p>{{notif.date}}</p>
+              </div>
             </div>
-          </div>
 
-          <!-- Bottom part of the card : place / comments / likes -->
-          <ion-grid class="bottom-bloc">
-            <ion-row>
-              <!-- Place -->
-              <ion-col class="placeIcon" size="8">
-                  <span><ion-icon name="pin"></ion-icon>{{notif.lieu}}</span>
-              </ion-col>
+            <!-- Bottom part of the card : place / comments / likes -->
+            <ion-grid class="bottom-bloc">
+              <ion-row>
+                <!-- Place -->
+                <ion-col class="placeIcon" size="8">
+                    <span><ion-icon name="pin"></ion-icon>{{notif.lieu}}</span>
+                </ion-col>
 
-              <!-- Likes -->
-              <ion-col class="icon" text-center size="2">
-                <ion-icon name="chatbubbles"></ion-icon>
-                <p>{{notif.nbLike}}</p>
-              </ion-col>  
+                <!-- Likes -->
+                <ion-col class="icon" text-center size="2">
+                  <ion-icon name="chatbubbles"></ion-icon>
+                  <p>{{notif.nbLike}}</p>
+                </ion-col>  
 
-              <!-- Comments -->
-              <ion-col class="icon" text-center size="2">
-                <ion-icon name="heart-empty"></ion-icon>
-                <p>{{notif.nbComment}}</p>
-              </ion-col>
-            </ion-row> 
-          </ion-grid>
-        </ion-card-content>
-      </ion-card>
+                <!-- Comments -->
+                <ion-col class="icon" text-center size="2">
+                  <ion-icon name="heart-empty"></ion-icon>
+                  <p>{{notif.nbComment}}</p>
+                </ion-col>
+              </ion-row> 
+            </ion-grid>
+          </ion-card-content>
+        </ion-card>
+      </div>
     </div>
   </main>
 

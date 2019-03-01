@@ -1,9 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener, Inject } from '@angular/core';
+import { trigger, state, transition, style, animate } from '@angular/animations';  
+import { DOCUMENT } from '@angular/common';
 
 @Component({
   selector: 'app-discover',
   templateUrl: './discover.page.html',
   styleUrls: ['./discover.page.scss'],
+  animations:[ 
+    trigger('fade',
+    [ 
+      state('void', style({ opacity : 0})),
+      transition(':enter',[ animate(300)]),
+      transition(':leave',[ animate(500)]),
+    ]
+  )]
 })
 export class DiscoverPage implements OnInit {
   bgImage: String;
@@ -12,9 +22,7 @@ export class DiscoverPage implements OnInit {
   trip: any;
   actionDone: String;
 
-  
-
-  constructor() { }
+  constructor(@Inject(DOCUMENT) document) { }
 
   ngOnInit() {
     this.bgImage = "../../assets/img/yocemite1.jpg";
@@ -22,7 +30,19 @@ export class DiscoverPage implements OnInit {
     this.nameTrip = "Farwest Trip";
 
     this.generateTrip();
+  }
 
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll(e){
+    //console.log("Page y offset : ", window.pageYOffset);
+    // console.log("Page x offset : ", window.pageXOffset);
+    /*if(window.pageYOffset > 5){
+      let element = this.document.getElementById('title_trip');
+      element.classList.add('sticky');
+    } else {
+      let element = this.document.getElementById('title_trip');
+      element.classList.remove('sticky');
+    }*/
   }
 
   /**
