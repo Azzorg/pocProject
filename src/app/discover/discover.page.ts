@@ -29,15 +29,19 @@ export class DiscoverPage implements OnInit {
     this.bgImage = "../../assets/img/yocemite1.jpg";
     this.blurTitle = false;
     // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
-    this.nameTrip = "Farwest Trip";
-
+    this.nameTrip = "Grand West Trip";
     this.generateTrip();
+  }
+
+  ngAfterViewInit(){
+    console.log("View initialized ... ");
+    console.log("Height of the title name : ", document.getElementById("title_trip").getBoundingClientRect().height);
   }
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e){
-    console.log("Page scrolling : ", document.getElementById("main_container").getBoundingClientRect().top);
-    if(document.getElementById("main_container").getBoundingClientRect().top < 10){
+    //console.log("Page scrolling : ", document.getElementById("main_container").getBoundingClientRect().top);
+    if(document.getElementById("main_container").getBoundingClientRect().top < 5){
       this.blurTitle = true;
       let element = document.getElementById('title_trip');
       element.classList.add('sticky');
