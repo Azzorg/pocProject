@@ -27,8 +27,8 @@ main{
 .main-title{
   position : relative;
   margin-top : 20vh;
-  width : 80vw;
-  left : 10vw;
+  width : 98vw;
+  left : 1vw;
   text-align : center;
   color : white;
   font-size : 3em;
@@ -44,6 +44,14 @@ main{
   padding-left: 10px;
 }
 
+.sticky{
+  position: fixed !important;
+  top: 0;
+  margin-top: 5px;
+  z-index: 999;
+  text-shadow: 0 0 0;
+}
+
 .box{
   position: relative;
   color : white;
@@ -55,6 +63,19 @@ main{
   border-radius: 25px;
   // width: 80vw;
   // height : 250px;
+  // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+.main-title{
+  position: relative;
+  color : white;
+  //text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+  font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  padding: 5px;
+  // font-size: 20px;
+  line-height: 1.5;
+  border-radius: 25px;
   // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
   overflow: hidden;
 }
@@ -74,7 +95,7 @@ main{
 }
 
 .content{
-  height: auto;
+  //height: auto;
 }
 
 .top-bloc{
@@ -129,8 +150,6 @@ main{
   margin-top: 40px;
 }
 
-.sticky{
-  color: red !important;
-  position: fixed;
-  top: 0;
+.title_text{
+  position: relative;
 }

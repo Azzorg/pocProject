@@ -1,6 +1,10 @@
 <ion-content [style.backgroundImage]="'url(' + trip.image + ')'" id="main_discover" [scrollEvents]="true" (ionScroll)="onWindowScroll($event);">
-  <main>
-    <div id="title_trip" class="main-title">{{trip.name}}</div>
+  <main id="main_container">
+    <!-- Title of the trip -->
+    <div id="title_trip" class="main-title">
+      <div *ngIf="blurTitle" class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
+      <div class="title_text">{{trip.name}}</div>
+    </div>
 
     <!-- List of notifications -->
     <div class="listNotif">

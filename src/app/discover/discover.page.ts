@@ -21,11 +21,13 @@ export class DiscoverPage implements OnInit {
   private listNotification : Array<any>;
   trip: any;
   actionDone: String;
+  blurTitle: boolean;
 
   constructor(@Inject(DOCUMENT) document) { }
 
   ngOnInit() {
     this.bgImage = "../../assets/img/yocemite1.jpg";
+    this.blurTitle = false;
     // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
     this.nameTrip = "Farwest Trip";
 
@@ -34,15 +36,16 @@ export class DiscoverPage implements OnInit {
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll(e){
-    //console.log("Page y offset : ", window.pageYOffset);
-    // console.log("Page x offset : ", window.pageXOffset);
-    /*if(window.pageYOffset > 5){
-      let element = this.document.getElementById('title_trip');
+    console.log("Page scrolling : ", document.getElementById("main_container").getBoundingClientRect().top);
+    if(document.getElementById("main_container").getBoundingClientRect().top < 10){
+      this.blurTitle = true;
+      let element = document.getElementById('title_trip');
       element.classList.add('sticky');
     } else {
-      let element = this.document.getElementById('title_trip');
+      this.blurTitle = false;
+      let element = document.getElementById('title_trip');
       element.classList.remove('sticky');
-    }*/
+    }
   }
 
   /**
