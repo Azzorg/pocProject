@@ -1,6 +1,8 @@
 {
   "name": "pocProject",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular",
   "id": "561456e0"
 }

@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, Inject } from '@angular/core';
 import { trigger, state, transition, style, animate } from '@angular/animations';  
 import { DOCUMENT } from '@angular/common';
+// import { Platform } from 'ionic-angular';
 
 @Component({
   selector: 'app-discover',
@@ -22,10 +23,12 @@ export class DiscoverPage implements OnInit {
   trip: any;
   actionDone: String;
   blurTitle: boolean;
+  marginTopValue: number;
 
-  constructor(@Inject(DOCUMENT) document) { }
+  constructor(@Inject(DOCUMENT) document /*, public platform : Platform*/) { }
 
   ngOnInit() {
+    console.log("NgOnInit discover");
     this.bgImage = "../../assets/img/yocemite1.jpg";
     this.blurTitle = false;
     // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
@@ -35,7 +38,15 @@ export class DiscoverPage implements OnInit {
 
   ngAfterViewInit(){
     console.log("View initialized ... ");
-    console.log("Height of the title name : ", document.getElementById("title_trip").getBoundingClientRect().height);
+    let screenHeight =  window.screen.availHeight;
+    let titleHeight =  document.getElementById("title_trip").getBoundingClientRect().height;
+    let titleMarginTop = document.getElementById("title_trip").getBoundingClientRect().top;
+    let firstNotifHeight = document.getElementsByClassName("content")[0].getBoundingClientRect().height;
+    let footerHeight = document.getElementById("footer").getBoundingClientRect().height;
+
+    this.marginTopValue = screenHeight - titleHeight - titleMarginTop - firstNotifHeight - footerHeight;
+
+    console.log("Margin-top : " + marginTopValue);
   }
 
   @HostListener('window:scroll', ['$event'])

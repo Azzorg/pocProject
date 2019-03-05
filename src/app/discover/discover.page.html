@@ -7,7 +7,7 @@
     </div>
 
     <!-- List of notifications -->
-    <div class="listNotif">
+    <div id="listNotif" class="listNotif" [style.marginTop.px]="marginTopValue">  <!-- [style.marginTop.px]="getMarginTop()" -->
       <div *ngFor="let notif of trip.notifications">
         <ion-card class="box">
           <div class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
