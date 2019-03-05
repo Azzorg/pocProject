@@ -1,8 +1,7 @@
-<ion-content [style.backgroundImage]="'url(' + trip.image + ')'" id="main_discover" [scrollEvents]="true" (ionScroll)="onWindowScroll($event);">
-  <main id="main_container">
+<ion-content id="backdropMain" [style.backgroundImage]="'url(' + trip.image + ')'">
+  <main id="main_container_backdrop">
     <!-- Title of the trip -->
     <div id="title_trip" class="main-title">
-      <div *ngIf="blurTitle" class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
       <div id="title" class="title_text">{{trip.name}}</div>
     </div>
 
@@ -10,7 +9,6 @@
     <div id="listNotif" class="listNotif">  <!-- [style.marginTop.px]="marginTopValue" -->
       <div *ngFor="let notif of trip.notifications">
         <ion-card class="box">
-          <div class="beforeContent" [style.backgroundImage]="'url(' + trip.image + ')'"></div>
           <ion-card-content class="content">
             <!-- Top part of the card : avatar / pseudo / action / date -->
             <div class="top-bloc">
@@ -50,6 +48,7 @@
       </div>
     </div>
   </main>
+
 
   <ion-footer id="footer">
     <ion-toolbar>

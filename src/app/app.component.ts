@@ -24,6 +24,11 @@ export class AppComponent {
       title: 'Discover',
       url: '/discover',
       icon: 'globe'
+    },
+    {
+      title: 'Backdrop test',
+      url: '/backdrop',
+      icon: 'construct'
     }
   ];
 

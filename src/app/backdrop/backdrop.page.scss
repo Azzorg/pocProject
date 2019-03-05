@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+#footer{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.9)) !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
+  position: fixed;
+  bottom: 0;
+}
+  
+ion-toolbar{
+  --background: transparent;
+}
+
+#backdropMain{
+    --background: transparent;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    color: white;
+}
+
+main{
+    margin-bottom: 80px;
+  }
+  
+  .main-title{
+    position : relative;
+    margin-top : 20vh;
+    width : 98vw;
+    left : 1vw;
+    text-align : center;
+    color : white;
+    font-size : 3em;
+    font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    font-weight : 400;
+    text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+    // transition: margin 0.5s;
+  }
+  
+  .card-content{
+    padding-bottom: 0px;
+    padding-top:10px;
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+  
+  .sticky{
+    position: fixed !important;
+    font-size: 2rem;
+    top: 0;
+    margin-top: 5px;
+    z-index: 999;
+    text-shadow: 0 0 0;
+  }
+  
+  .box{
+    position: relative;
+    color : white;
+    //text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+    font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    padding: 5px;
+    font-size: 20px;
+    line-height: 1.5;
+    border-radius: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    backdrop-filter: blur(3px);
+    // width: 80vw;
+    // height : 250px;
+    // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
+    overflow: hidden;
+  }
+  
+  .main-title{
+    position: relative;
+    color : white;
+    //text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+    font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    padding: 5px 15px;
+    // font-size: 20px;
+    line-height: 1.5;
+    border-radius: 25px;
+    // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
+    overflow: hidden;
+  }
+  
+  .beforeContent{
+    background: right no-repeat fixed;
+    background-color: rgba(227, 230, 234, 0.9);
+    content: '';
+    margin: -35px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    filter: blur(1.5rem);
+    overflow:hidden;
+  }
+  
+  .content{
+    //height: auto;
+  }
+  
+  .top-bloc{
+    overflow: auto;
+  }
+  
+  .avatar{
+    height : 50px;
+    width : 50px;
+    border-radius : 50%;
+    display : inline-block;
+    object-fit : cover;
+    margin-right: 20px;
+    float: left;
+  }
+  
+  .action-bloc{
+    display: inline;
+    margin-bottom: auto;
+    margin-top: auto;
+  }
+  
+  .action-bloc span{
+    font-weight: bold;
+  }
+  
+  .action-bloc p:last-child{
+    font-size: 12px;
+  }
+  
+  .bottom-bloc{
+    clear: left; 
+    padding-bottom:0px;
+    font-size: 12px;
+  }
+  
+  .bottom-bloc .placeIcon ion-icon{
+    font-size: 15pt;
+    margin-bottom: -5px;
+  }
+  
+  .bottom-bloc .icon ion-icon{
+    font-size: 16pt;
+  }
+  
+  .icon p{
+    font-size: 10pt;
+    color: #e6e6e6;
+  }
+  
+  .listNotif{
+    // margin-top: 30vh;
+    margin-top: 200px;
+  }
+  
+  .title_text{
+    position: relative;
+  }

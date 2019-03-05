@@ -15,7 +15,8 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'discover', loadChildren: './discover/discover.module#DiscoverPageModule' }
+  { path: 'discover', loadChildren: './discover/discover.module#DiscoverPageModule' },  { path: 'backdrop', loadChildren: './backdrop/backdrop.module#BackdropPageModule' }
+
 
 ];
 

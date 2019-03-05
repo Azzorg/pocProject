@@ -1,22 +1,13 @@
-import { Component, OnInit, HostListener, Inject } from '@angular/core';
-import { trigger, state, transition, style, animate } from '@angular/animations';  
-import { DOCUMENT } from '@angular/common';
-// import { Platform } from 'ionic-angular';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-discover',
-  templateUrl: './discover.page.html',
-  styleUrls: ['./discover.page.scss'],
-  animations:[ 
-    trigger('fade',
-    [ 
-      state('void', style({ opacity : 0})),
-      transition(':enter',[ animate(300)]),
-      transition(':leave',[ animate(500)]),
-    ]
-  )]
+  selector: 'app-backdrop',
+  templateUrl: './backdrop.page.html',
+  styleUrls: ['./backdrop.page.scss'],
 })
-export class DiscoverPage implements OnInit {
+export class BackdropPage implements OnInit {
+
+  /* Variables */
   bgImage: String;
   nameTrip: String;
   private listNotification : Array<any>;
@@ -25,60 +16,17 @@ export class DiscoverPage implements OnInit {
   blurTitle: boolean;
   marginTopValue: number;
 
-  constructor(@Inject(DOCUMENT) document /*, public platform : Platform*/) { }
+  constructor() { }
 
   ngOnInit() {
-    console.log("NgOnInit discover");
+    console.log("NgOnInit backdrop");
     this.bgImage = "../../assets/img/yocemite1.jpg";
-    this.blurTitle = false;
-    // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
     this.nameTrip = "Grand West Trip";
     this.generateTrip();
-    console.log("Document : ", document);
-    console.log("View initialized ... ");
-    let screenHeight =  window.screen.availHeight;
-    let titleHeight =  document.getElementById("title_trip").getBoundingClientRect().height;
-    let titleMarginTop = document.getElementById("title_trip").getBoundingClientRect().top;
-    //let firstNotifHeight = document.getElementsByClassName("content")[0].getBoundingClientRect().height;
-    let footerHeight = document.getElementById("footer").getBoundingClientRect().height;
-    console.log('list of notification : ', document.getElementsByClassName("content"));
-
-    /*this.marginTopValue = screenHeight - titleHeight - titleMarginTop - firstNotifHeight - footerHeight;
-
-    console.log("Margin-top : " + this.marginTopValue);*/
   }
 
-  ngAfterViewInit(){
-    console.log("length of list notification in after view init : ", document.getElementsByClassName("content"));
-    /*console.log("View initialized ... ");
-    let screenHeight =  window.screen.availHeight;
-    let titleHeight =  document.getElementById("title_trip").getBoundingClientRect().height;
-    let titleMarginTop = document.getElementById("title_trip").getBoundingClientRect().top;
-    let firstNotifHeight = document.getElementsByClassName("content")[0].getBoundingClientRect().height;
-    let footerHeight = document.getElementById("footer").getBoundingClientRect().height;
-
-    this.marginTopValue = screenHeight - titleHeight - titleMarginTop - firstNotifHeight - footerHeight;
-
-    console.log("Margin-top : " + this.marginTopValue);*/
-  }
-
-  @HostListener('window:scroll', ['$event'])
-  onWindowScroll(e){
-    //console.log("Page scrolling : ", document.getElementById("main_container").getBoundingClientRect().top);
-    if(document.getElementById("main_container").getBoundingClientRect().top < 5){
-      this.blurTitle = true;
-      let element = document.getElementById('title_trip');
-      element.classList.add('sticky');
-  
-    } else {
-      this.blurTitle = false;
-      let element = document.getElementById('title_trip');
-      element.classList.remove('sticky');
-    }
-  }
-
-  /**
-   * Generate the trip with data
+   /**
+   * Generate the trip with fake data
    */
   private generateTrip() {
 
@@ -198,6 +146,7 @@ export class DiscoverPage implements OnInit {
     };
   }
 
+  
   /**
    * Used to transform the idAction to description
    * @param action 
@@ -218,4 +167,6 @@ export class DiscoverPage implements OnInit {
 
     }
   }
+
+
 }
