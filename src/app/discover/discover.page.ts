@@ -34,18 +34,24 @@ export class DiscoverPage implements OnInit {
     // this.bgImage = "https://www.latina.fr/upload/news/main/5c7657d51825b6.81294857.jpg";
     this.nameTrip = "Grand West Trip";
     this.generateTrip();
+
+
+    /* Test bloc
+    
     console.log("Document : ", document);
     console.log("View initialized ... ");
     let screenHeight =  window.screen.availHeight;
+    let firstNotifHeight = document.getElementsByClassName("content")[0].getBoundingClientRect().height;
+    let footerHeight = document.getElementById("footer").getBoundingClientRect().height;
     let titleHeight =  document.getElementById("title_trip").getBoundingClientRect().height;
     let titleMarginTop = document.getElementById("title_trip").getBoundingClientRect().top;
-    //let firstNotifHeight = document.getElementsByClassName("content")[0].getBoundingClientRect().height;
-    let footerHeight = document.getElementById("footer").getBoundingClientRect().height;
     console.log('list of notification : ', document.getElementsByClassName("content"));
+    console.log("Heights and margin top : ", screenHeight, " // ", titleHeight, " // ", titleMarginTop, " // ", firstNotifHeight, " // ", footerHeight);
 
-    /*this.marginTopValue = screenHeight - titleHeight - titleMarginTop - firstNotifHeight - footerHeight;
+    this.marginTopValue = screenHeight - titleHeight - titleMarginTop - firstNotifHeight - footerHeight;
 
-    console.log("Margin-top : " + this.marginTopValue);*/
+    console.log("Margin-top : " + this.marginTopValue);
+    */
   }
 
   ngAfterViewInit(){

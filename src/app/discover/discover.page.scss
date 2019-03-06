@@ -16,6 +16,9 @@ ion-toolbar{
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -webkit-background-position: right;
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   color: white;
 }
@@ -57,6 +60,12 @@ main{
 .box{
   position: relative;
   color : white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -webkit-background-position: right;
   //text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
   font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   padding: 5px;
@@ -85,8 +94,21 @@ main{
 }
 
 .beforeContent{
-  background: right no-repeat fixed;
-  background-color: rgba(227, 230, 234, 0.9);
+  //background: right no-repeat fixed;
+  //-webkit-background: right no-repeat fixed;
+  //background-size: cover;
+  //-webkit-background-size: cover;
+
+  /*background-repeat: no-repeat;
+  //background-size: cover;
+  background-position: right;
+  background-attachment: fixed;
+  -webkit-background-repeat: no-repeat;
+  //-webkit-background-size: cover;
+  -webkit-background-position: right;
+  -webkit-background-attachment: fixed;*/
+
+  background-color: rgba(102, 103, 105, 0.9);
   content: '';
   margin: -35px;
   position: absolute;
@@ -152,7 +174,7 @@ main{
 
 .listNotif{
   // margin-top: 30vh;
-  margin-top: 200px;
+  //margin-top: 200px;
 }
 
 .title_text{
