@@ -37,6 +37,34 @@
     color: rgb(206, 206, 206);
 }
 
+#side-menu ion-content{
+    height: -webkit-fill-available;
+    -webkit-height: -webkit-fill-available;
+    --background: transparent;
+}
+
+#side-menu ion-list{
+    margin-top: 50px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: transparent;
+}
+
 #side-menu ion-content ion-item{
+    --background: transparent;
     color: white !important;
+}
+
+#side-menu ion-content ion-item{
+    border: none !important;
+}
+
+#side-menu ion-label{
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    font-size: 12pt;
+    font-variant: small-caps;
+}
+
+#side-menu ion-content ion-icon{
+    color: white;
 }
