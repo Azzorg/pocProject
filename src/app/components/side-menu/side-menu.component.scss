@@ -1,0 +1,42 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+
+#side-menu{
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+}
+
+#side-menu ion-toolbar{
+    --background: transparent;
+    text-align: center;
+    color:white !important;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+}
+
+#side-menu ion-title{
+    color: white !important;
+}
+
+#side-menu .header:after{
+    background-image: none;
+}
+
+#side-menu .avatar{
+    height : 75px;
+    width : 75px;
+    border-radius : 50%;
+    display : inline-block;
+    object-fit : cover;
+    margin-top: 20px;
+}
+
+#side-menu .username{
+    font-variant: small-caps;
+}
+
+#side-menu .nbAbonne{
+    font-size: 10pt;
+    color: rgb(206, 206, 206);
+}
+
+#side-menu ion-content ion-item{
+    color: white !important;
+}

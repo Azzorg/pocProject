@@ -1,0 +1,25 @@
+<div id="side-menu">
+  <ion-header>
+    <ion-toolbar>
+       <!-- Image -->
+       <img class="avatar" src="{{user.avatar}}">
+
+       <br/>
+       <span class="username">{{user.name}}</span>
+       <br/>
+       <span class="nbAbonne">{{user.nbAbonnes}} abonnés</span>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content> 
+    <ion-list>
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+        <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+          <ion-icon slot="start" [name]="p.icon"></ion-icon>
+          <ion-label>
+            {{p.title}}
+          </ion-label>
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+</div>
