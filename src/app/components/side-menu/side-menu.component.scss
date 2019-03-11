@@ -44,10 +44,20 @@
 }
 
 #side-menu ion-list{
-    margin-top: 50px;
+    margin-top: 20px;
     padding-top: 0px;
-    padding-bottom: 0px;
+    padding-bottom: 20px;
     background: transparent;
+}
+
+#side-menu .partSideMenu:after{
+    content: "";
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+    height: 1px;
+    width: 80%;
+    border-bottom: 1px solid white;
 }
 
 #side-menu ion-content ion-item{
@@ -55,7 +65,7 @@
     color: white !important;
 }
 
-#side-menu ion-content ion-item{
+#side-menu ion-content ion-label{
     border: none !important;
 }
 
@@ -66,5 +76,14 @@
 }
 
 #side-menu ion-content ion-icon{
+    color: white;
+}
+
+#side-menu .partSideMenu .titlePart{
+    padding-left: 16px; 
+    padding-top: 16px;
+    font-size: 13pt;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    font-variant: small-caps;
     color: white;
 }

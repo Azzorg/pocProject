@@ -11,7 +11,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content> 
-    <ion-list>
+    <ion-list class="partSideMenu">
       <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
         <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
           <ion-icon slot="start" [name]="p.icon"></ion-icon>
@@ -21,5 +21,11 @@
         </ion-item>
       </ion-menu-toggle>
     </ion-list>
+
+    <div class="partSideMenu">
+      <div class="titlePart">
+        <span>Voyages en cours</span>
+      </div>
+    </div>
   </ion-content>
 </div>

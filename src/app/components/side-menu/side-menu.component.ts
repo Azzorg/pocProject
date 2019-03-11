@@ -9,19 +9,38 @@ export class SideMenuComponent implements OnInit {
 
   public appPages = [
     {
-      title: 'Home',
+      title: 'Fil d\'actualité',
       url: '/home',
       icon: 'home'
     },
     {
       title: 'Découvrir',
-      url: '/list',
+      url: '/discover',
       icon: 'albums'
     },
     {
-      title: 'Discover',
+      title: 'Mes Voyages',
       url: '/discover',
       icon: 'globe'
+    }
+  ];
+
+  public listTrip = [
+    {
+      name:"Grand West Trip",
+      countryImage: "./../../../assets/countries/usa.png"
+    },
+    {
+      name:"Vamos a Barcelona",
+      countryImage: "./../../../assets/countries/spain.png"
+    },
+    {
+      name:"Rainy London",
+      countryImage: "./../../../assets/countries/uk.png"
+    },
+    {
+      name:"Le Mans Classic",
+      countryImage: "./../../../assets/countries/france.png"
     }
   ];
 
