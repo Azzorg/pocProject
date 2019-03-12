@@ -27,28 +27,32 @@ export class SideMenuComponent implements OnInit {
 
   public listTrip = [
     {
-      name:"Grand West Trip",
-      countryImage: "./../../../assets/countries/usa.png"
-    },
-    {
-      name:"Vamos a Barcelona",
-      countryImage: "./../../../assets/countries/spain.png"
+      name:"Europe Trip",
+      countryImage: "./../../../assets/countries/france.png"
     },
     {
       name:"Rainy London",
       countryImage: "./../../../assets/countries/uk.png"
-    },
-    {
-      name:"Le Mans Classic",
-      countryImage: "./../../../assets/countries/france.png"
     }
   ];
+
+  public listFriendsTrip = [];
 
   public user = {
     name : "Azzorg",
     avatar: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg",
     nbAbonnes: 124
   }
+
+  // Options for the slider
+  public slideOpts = {
+    effect: 'fade',
+    loop: true,
+    slidesPerView: 'auto',
+    loopedSlides: 100
+  };
+
+  //effect: 'flip',    
 
   constructor() { }
 

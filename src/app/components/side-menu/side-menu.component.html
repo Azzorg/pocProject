@@ -11,7 +11,7 @@
     </ion-toolbar>
   </ion-header>
   <ion-content> 
-    <ion-list class="partSideMenu">
+    <ion-list>
       <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
         <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
           <ion-icon slot="start" [name]="p.icon"></ion-icon>
@@ -22,10 +22,34 @@
       </ion-menu-toggle>
     </ion-list>
 
-    <div class="partSideMenu">
+    <!-- Trip in progress -->
+    <div *ngIf="listTrip.length > 0" class="partSideMenu">
       <div class="titlePart">
-        <span>Voyages en cours</span>
+        <span>Voyages en cours ({{listTrip.length}})</span>
+      </div>
+
+      <ion-slides loop="true">  <!-- [options]="slideOpts" -->
+        <ion-slide *ngFor="let trip of listTrip">
+          <img class="countryImg" src={{trip.countryImage}}>
+          <span>{{trip.name}}</span>
+        </ion-slide>
+      </ion-slides>
+    </div>
+
+    <!-- Followed persons' trips in progress -->
+    <div *ngIf="listFriendsTrip.length > 0" class="partSideMenu">
+      <div class="titlePart">
+        <span>Voyages de mes amis</span>
       </div>
     </div>
+
+    <!-- Followed persons' trips in progress -->
+    <div class="partSideMenu">
+      <div class="titlePart">
+        <span>Voyages de mes amis</span>
+      </div>
+    </div>
+
+
   </ion-content>
 </div>

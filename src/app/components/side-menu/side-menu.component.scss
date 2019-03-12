@@ -45,16 +45,16 @@
 
 #side-menu ion-list{
     margin-top: 20px;
+    margin-bottom: 0px;
     padding-top: 0px;
-    padding-bottom: 20px;
+    padding-bottom: 15px;
     background: transparent;
 }
 
-#side-menu .partSideMenu:after{
+#side-menu .partSideMenu::before{
     content: "";
     position: absolute;
     left: 10%;
-    bottom: 0;
     height: 1px;
     width: 80%;
     border-bottom: 1px solid white;
@@ -81,9 +81,32 @@
 
 #side-menu .partSideMenu .titlePart{
     padding-left: 16px; 
-    padding-top: 16px;
-    font-size: 13pt;
+    padding-top: 20px;
+    font-size: 14pt;
     font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
     font-variant: small-caps;
     color: white;
+}
+#side-menu .partSideMenu ion-slides span{
+    font-size: 13pt;
+}
+
+#side-menu .partSideMenu ion-slides{
+    margin-top: 10px;
+    margin-bottom: 16px;
+    //margin-left: 16px;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    font-variant: small-caps;
+    color: white;
+}
+
+#side-menu .partSideMenu ion-slides .countryImg{
+    height: 40px;
+    width: 40px;
+    text-align: left;
+    margin-right: 10px;
+}
+
+#side-menu ion-item{
+    --border-style: none !important;
 }
