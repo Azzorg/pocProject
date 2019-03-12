@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import Swiper from 'swiper';
 
 @Component({
   selector: 'app-side-menu',
@@ -56,6 +57,12 @@ export class SideMenuComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    /*var mySwiper = new Swiper(".swiper", {
+          effect: 'fade',
+          loop: true,
+          slidesPerView: 'auto'
+        });*/
+  }
 
 }
