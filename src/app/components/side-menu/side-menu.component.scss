@@ -114,3 +114,29 @@
     justify-content: left;
     padding-left: 32px;
 }
+
+#side-menu ion-slides ion-slide:last-child{
+    padding-right: 32px;
+}
+
+#side-menu ion-slides .sliderFriendsTrip{
+    width: auto;
+}
+
+#side-menu .avatarTripImg{
+    height : 40px;
+    width : 40px;
+    border-radius : 50%;
+    display : inline-block;
+    object-fit : cover;
+    margin-top: 20px;
+}
+
+#side-menu #side-menu-footer{
+    position: fixed;
+    bottom: 0;
+}
+
+#side-menu #side-menu-footer img{
+    height: 50px;
+}
