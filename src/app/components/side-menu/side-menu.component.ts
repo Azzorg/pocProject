@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Swiper from 'swiper';
+import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-side-menu',
@@ -47,10 +47,9 @@ export class SideMenuComponent implements OnInit {
 
   // Options for the slider
   public slideOpts = {
-    effect: 'fade',
-    loop: true,
-    slidesPerView: 'auto',
-    loopedSlides: 100
+    //effect: 'fade',
+    //loop: true,
+    //slidesPerView: 'auto'
   };
 
   //effect: 'flip',    
@@ -58,6 +57,7 @@ export class SideMenuComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    //var swiper = new Slides();
     /*var mySwiper = new Swiper(".swiper", {
           effect: 'fade',
           loop: true,

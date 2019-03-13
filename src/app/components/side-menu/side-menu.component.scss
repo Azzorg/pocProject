@@ -109,3 +109,8 @@
 #side-menu ion-item{
     --border-style: none !important;
 }
+
+#side-menu ion-slides ion-slide{
+    justify-content: left;
+    padding-left: 32px;
+}

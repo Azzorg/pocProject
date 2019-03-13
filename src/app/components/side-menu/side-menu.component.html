@@ -28,7 +28,7 @@
         <span>Voyages en cours ({{listTrip.length}})</span>
       </div>
 
-      <ion-slides>  <!-- [options]="slideOpts"  pager="true" loop="true"-->
+      <ion-slides #slides [options]="slideOpts">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
         <ion-slide *ngFor="let trip of listTrip">
           <img class="countryImg" src={{trip.countryImage}}>
           <span>{{trip.name}}</span>
@@ -45,7 +45,6 @@
 
     <!-- Followed persons' trips in progress -->
     <div class="partSideMenu">
-      <div class="titlePart"></div>
       <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
         <ion-label>
           Paramètres
@@ -58,4 +57,8 @@
       </ion-item>
     </div>
   </ion-content>
+
+  <ion-footer>
+    
+  </ion-footer>
 </div>
