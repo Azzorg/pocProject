@@ -97,6 +97,11 @@
     font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
     font-variant: small-caps;
     color: white;
+    overflow: visible;
+}
+
+#side-menu .partSideMenu #sliderFriendsTripContainer{
+    overflow: visible;
 }
 
 #side-menu .partSideMenu ion-slides .countryImg{
@@ -115,12 +120,21 @@
     padding-left: 32px;
 }
 
-#side-menu ion-slides ion-slide:last-child{
-    padding-right: 32px;
+#side-menu ion-slides .sliderFriendsTrip:last-child{
+    margin-right: 32px;
 }
 
 #side-menu ion-slides .sliderFriendsTrip{
     width: auto;
+}
+
+#side-menu ion-slides .countryFriendsTrip{
+    position: absolute;
+    right: -4px;
+    bottom: -4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
 }
 
 #side-menu .avatarTripImg{
@@ -129,7 +143,7 @@
     border-radius : 50%;
     display : inline-block;
     object-fit : cover;
-    margin-top: 20px;
+    margin-top: 0px;
 }
 
 #side-menu #side-menu-footer{

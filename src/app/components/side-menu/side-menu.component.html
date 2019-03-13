@@ -42,9 +42,10 @@
         <span>Voyages de mes amis</span>
       </div>
 
-      <ion-slides [options]="slideFriendsTripOpts">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
+      <ion-slides id="sliderFriendsTripContainer" [options]="slideFriendsTripOpts">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
         <ion-slide class="sliderFriendsTrip" *ngFor="let trip of listFriendsTrip">
           <img class="avatarTripImg" src={{trip.avatar}}>
+          <img class="countryFriendsTrip" src="{{trip.countryImage}}">
         </ion-slide>
       </ion-slides>
     </div>

@@ -45,15 +45,15 @@ export class SideMenuComponent implements OnInit {
     },
     {
       avatar:"https://www.frommers.com/system/media_items/attachments/000/857/663/s500/1intromoyanbreenf.jpg",
-      countryImage:"./../../../assets/countries/france.png",
+      countryImage:"./../../../assets/countries/uk.png",
     },
     {
       avatar:"https://www.worldelse.com/wp-content/uploads/2017/10/Road-trip-au-Quebec-87.jpg",
-      countryImage:"./../../../assets/countries/france.png",
+      countryImage:"./../../../assets/countries/usa.png",
     },
     {
       avatar:"https://www.carnets-de-traverse.com/blog/wp-content/uploads/2015/02/alaska-roadtrip4.jpg",
-      countryImage:"./../../../assets/countries/france.png",
+      countryImage:"./../../../assets/countries/spain.png",
     }
   ];
 
