@@ -1,0 +1,27 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+#footer{
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.9)) !important;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px; 
+  position: fixed;
+
+  bottom: 0;
+}
+  
+ion-toolbar{
+  --background: transparent;
+}
+
+#footer ion-grid ion-col:first-child{
+  text-align: center; 
+  border-right: 2px solid white;
+  border-radius: 1px;
+
+}
+
+#footer ion-toolbar{
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --min-height: 0px;
+  --padding-start: 0px;
+}
