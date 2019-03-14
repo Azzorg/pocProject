@@ -7,21 +7,26 @@
 
   bottom: 0;
 }
-  
-ion-toolbar{
+
+#footer ion-toolbar{
   --background: transparent;
+  --padding-top: 0px;
+  --padding-bottom: 0px;
+  --min-height: 0px;
+  --padding-start: 0px;
 }
 
 #footer ion-grid ion-col:first-child{
   text-align: center; 
   border-right: 2px solid white;
   border-radius: 1px;
-
 }
 
-#footer ion-toolbar{
-  --padding-top: 0px;
-  --padding-bottom: 0px;
-  --min-height: 0px;
-  --padding-start: 0px;
+#footer ion-grid ion-col:focus{
+  outline: none;
+}
+
+#footer ion-grid ion-icon{
+  color: white;
+  font-size: 20pt;
 }
