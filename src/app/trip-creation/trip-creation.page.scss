@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+
+#trip_creation{
+  --background: transparent;
+  background-image: url("./../../assets/img/background-image.jpg");  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -webkit-background-position: right;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  color: white;
+}
