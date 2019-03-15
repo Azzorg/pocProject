@@ -24,7 +24,7 @@ import { ComponentsModule } from './components/components.module';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: LOCALE_ID, useValue: 'fr' }
+    { provide: LOCALE_ID, useValue: 'en' }
   ],
   bootstrap: [AppComponent]
 })
