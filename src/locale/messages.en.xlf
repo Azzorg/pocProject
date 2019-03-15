@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="sidemenuSubscribers" datatype="html">
+        <source>{VAR_PLURAL, plural, =0 {} =1 {1 abonné} other {<x id="INTERPOLATION" equiv-text="{{user.nbAbonnes}}"/> abonnés} }</source>
+        <target>{VAR_PLURAL, plural, =0 {} =1 {1 subscriber} other {<x id="INTERPOLATION" equiv-text="{{user.nbAbonnes}}"/> subscribers} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/side-menu/side-menu.component.html</context>
+          <context context-type="linenumber">10</context>
+        </context-group>
+        <note priority="1" from="description"> The number of subscribers in sidemenu</note>
+        <note priority="1" from="meaning">sidemenu subscribers </note>
+      </trans-unit>
+      <trans-unit id="sidemenuMyTripInProgress" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {Voyage en cours} other {Voyages en cours (<x id="INTERPOLATION" equiv-text="{{listTrip.length}}"/>)} }</source>
+        <target>{VAR_PLURAL, plural, =1 {My trip in progress} other {My trips in progress (<x id="INTERPOLATION" equiv-text="{{listTrip.length}}"/>)} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/side-menu/side-menu.component.html</context>
+          <context context-type="linenumber">28</context>
+        </context-group>
+        <note priority="1" from="description"> Own trips in progress on sidemenu</note>
+        <note priority="1" from="meaning">sidemenu trip in progress </note>
+      </trans-unit>
+      <trans-unit id="sidemenuFriendsTrips" datatype="html">
+        <source>{VAR_PLURAL, plural, =1 {Voyage de mes amis} other {Voyages de mes amis} }</source>
+        <target>{VAR_PLURAL, plural, =1 {Friends' trip} other {Friends' trips} }</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/side-menu/side-menu.component.html</context>
+          <context context-type="linenumber">42</context>
+        </context-group>
+        <note priority="1" from="description"> Friends&apos; trips in progress on sidemenu</note>
+        <note priority="1" from="meaning">sidemenu friends trip </note>
+      </trans-unit>
+      <trans-unit id="sidemenuSettings" datatype="html">
+        <source>Paramètres</source>
+        <target>Settings</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/side-menu/side-menu.component.html</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+        <note priority="1" from="description"> Settings on sidemenu</note>
+        <note priority="1" from="meaning">sidemenu settings </note>
+      </trans-unit>
+      <trans-unit id="sidemenuContactUs" datatype="html">
+        <source>Nous contacter</source>
+        <target>Contact us</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">app/components/side-menu/side-menu.component.html</context>
+          <context context-type="linenumber">60</context>
+        </context-group>
+        <note priority="1" from="description"> Contact us on sidemenu</note>
+        <note priority="1" from="meaning">sidemenu contact us </note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
