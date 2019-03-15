@@ -11,6 +11,11 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { ComponentsModule } from './components/components.module';
 
+import { registerLocaleData } from '@angular/common';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
@@ -24,7 +29,7 @@ import { ComponentsModule } from './components/components.module';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    { provide: LOCALE_ID, useValue: 'en' }
+    { provide: LOCALE_ID, useValue: 'fr' }
   ],
   bootstrap: [AppComponent]
 })
