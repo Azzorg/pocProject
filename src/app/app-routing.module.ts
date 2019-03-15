@@ -15,7 +15,7 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'discover', loadChildren: './discover/discover.module#DiscoverPageModule' },  { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' }
+  { path: 'discover', loadChildren: './discover/discover.module#DiscoverPageModule' }
 
 ];
 
