@@ -12,3 +12,45 @@
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   color: white;
 }
+
+.cancelBtn{
+  position: fixed;
+  top:12px;
+  right:30px;
+  font-variant: small-caps;
+  text-align: left; 
+  color: white;
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+}
+
+.shapeGroup{
+  // display: inline-block;
+  width: 100%;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.circle{
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  float:left;
+}
+
+.circle-outline{
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  float:left;
+}
+
+.line{
+  background: white;
+  float:left;
+  height: 1px;
+  width: 15px;
+  margin-top: 12px;
+}
