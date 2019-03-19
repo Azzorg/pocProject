@@ -13,21 +13,48 @@
   color: white;
 }
 
+.content_tripCreation{
+  position: relative;
+  margin-top: 60px;
+}
+
+.marginContent{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.smallCaps{
+  font-variant: small-caps;
+}
+
+span{
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+}
+
 .cancelBtn{
   position: fixed;
   top:12px;
   right:30px;
   font-variant: small-caps;
-  text-align: left; 
+  font-size: 13pt;
   color: white;
-  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
 }
 
+/** 
+  ------------------------------------------
+  Group of shapes on the top of the screen 
+*/
 .shapeGroup{
-  // display: inline-block;
+  position: relative;
+  height: fit-content;
   width: 100%;
-  text-align: center;
-  margin-top: 50px;
+}
+
+.underShapeGroup{
+  display: block; 
+  margin-left: auto; 
+  margin-right: auto;
+  width: fit-content;
 }
 
 .circle{
@@ -53,4 +80,24 @@
   height: 1px;
   width: 15px;
   margin-top: 12px;
+}
+
+/** ----------------------------- */
+.pageTitle{
+  position: relative;
+  margin-top: 40px;
+  color: white;
+  clear: both;
+  font-size: 19pt;
+}
+
+/** ----------------------------- */
+.sliderContainer{
+  position: relative;
+  margin-top: 30px;
+}
+
+.sliderContainer span{
+  color: #efefef;
+  font-size: 14pt;
 }

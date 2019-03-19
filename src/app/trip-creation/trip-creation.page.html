@@ -3,16 +3,56 @@
     <span>Annuler</span>
   </div>
 
-  <div class="shapeGroup">
-    <div style="display: block; margin-left: auto; margin-right: auto;">
-      <div class="circle-outline"></div>
-      <div class="line"></div>
-      <div class="circle"></div>
-      <div class="line"></div>
-      <div class="circle-outline"></div>
-      <div class="line"></div>
-      <div class="circle-outline"></div>
+  <div class="content_tripCreation">
+    <div class="shapeGroup">
+      <div class="underShapeGroup">
+        <div class="circle-outline"></div>
+        <div class="line"></div>
+        <div class="circle-outline"></div>
+        <div class="line"></div>
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="circle-outline"></div>
+      </div>
     </div>
+
+    <div class="marginContent smallCaps pageTitle">
+      <span>Création de voyage</span>
+    </div>
+
+    <div class="marginContent sliderContainer">
+      <span class="smallCaps">Définir l'image de couverture</span>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="1">
+            <span class="slider-nav arrow-prev"
+              (click)="slidePrev(sliderTwo,slideWithNav2)">
+              <div class="prev-icon-custom custon-nav"
+                [class.disabled]="sliderTwo.isBeginningSlide"></div>
+            </span>
+          </ion-col>
+          <ion-col size="10">
+     
+            <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2
+              (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+              <ion-slide *ngFor="let s of sliderTwo.slidesItems">
+                <img src="../../assets/images/{{s.id}}.jpg">
+              </ion-slide>
+            </ion-slides>
+     
+          </ion-col>
+          <ion-col size="1">
+            <span class="slider-nav arrow-next"
+              (click)="slideNext(sliderTwo,slideWithNav2)">
+              <div class="next-icon-custom custon-nav"
+                [class.disabled]="sliderTwo.isEndSlide"></div>
+            </span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </div>
+
+
   </div>
   
   <app-footer-app></app-footer-app>
