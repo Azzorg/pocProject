@@ -28,7 +28,7 @@
         <span i18n="sidemenu trip in progress | Own trips in progress on sidemenu@@sidemenuMyTripInProgress">{listTrip.length, plural, =1 {Voyage en cours} other {Voyages en cours ({{listTrip.length}})}}</span>
       </div>
 
-      <ion-slides [options]="slideOpts">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
+      <ion-slides pager="false" [options]="slideOpts" #slideWithMyTrips>  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
         <ion-slide *ngFor="let trip of listTrip">
           <img class="countryImg" src={{trip.countryImage}}>
           <span>{{trip.name}}</span>
@@ -42,7 +42,7 @@
         <span i18n="sidemenu friends trip | Friends' trips in progress on sidemenu@@sidemenuFriendsTrips">{listFriendsTrip.length, plural, =1 {Voyage de mes amis} other {Voyages de mes amis}}</span>
       </div>
 
-      <ion-slides id="sliderFriendsTripContainer" [options]="slideFriendsTripOpts">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
+      <ion-slides pager="false" id="sliderFriendsTripContainer" [options]="slideFriendsTripOpts" #slideWithFriendsTrips>  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
         <ion-slide class="sliderFriendsTrip" *ngFor="let trip of listFriendsTrip">
           <img class="avatarTripImg" src={{trip.avatar}}>
           <img class="countryFriendsTrip" src="{{trip.countryImage}}">

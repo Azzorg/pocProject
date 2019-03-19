@@ -101,3 +101,60 @@ span{
   color: #efefef;
   font-size: 14pt;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+.custon-nav{
+    height: 48px;
+    width: 20px;
+    cursor: pointer;
+ 
+    vertical-align: middle;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.prev-icon-custom.disabled{
+  opacity: 0.4;
+  cursor: default;
+}
+.icon-custom{
+  width: auto;
+  height: auto;
+  color: white;
+  font-size: 20pt;
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+}
+.next-icon-custom span{
+  text-align: right;
+}
+.next-icon-custom.disabled{
+    opacity: 0.4;
+    cursor: default;
+}
+.slider-nav{
+    ion-icon{
+        height: 100%;
+    }
+}
+
+ion-slide{
+  margin-left: 5px;
+  margin-right: 5px;
+  width: fit-content !important;
+}
+
+ion-slide img{
+  height: 150px;
+  // width: fit-content;
+}
