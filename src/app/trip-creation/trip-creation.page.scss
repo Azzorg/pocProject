@@ -31,6 +31,10 @@ span{
   text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
 }
 
+.whiteColor{
+  color: white;
+}
+
 .cancelBtn{
   position: fixed;
   top:12px;
@@ -157,3 +161,13 @@ ion-slide img{
   Dislaying the image and the 
   ------------------------------------------
 */
+.selectors span{
+  color: white;
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+  font-size: 11pt;
+}
+
+.selectors ion-range{
+  padding-top: 0;
+  padding-bottom: 0;
+}
