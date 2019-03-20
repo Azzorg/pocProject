@@ -1,2 +1,2 @@
 # pocProject
-Project to test things (specially interface tests)
+Project to try things (specially interface testings)
