@@ -16,6 +16,11 @@
   --padding-start: 0px;
 }
 
+#footer ion-col{
+  padding-bottom: 0;
+  height: fit-content;
+}
+
 #footer ion-grid ion-col:first-child{
   text-align: center; 
   border-right: 2px solid white;

@@ -25,29 +25,24 @@
       <ion-grid>
         <ion-row>
           <ion-col size="1">
-            <span class="slider-nav arrow-prev"
-              (click)="slidePrev(sliderTwo,slideWithNav2)">
-              <div class="prev-icon-custom icon-custom custon-nav"
-                [class.disabled]="sliderTwo.isBeginningSlide">
+            <span class="slider-nav arrow-prev" (click)="slidePrev(sliderTwo,slideWithNav2)">
+              <div class="prev-icon-custom icon-custom custon-nav" [class.disabled]="sliderTwo.isBeginningSlide">
                 <i class="icon ion-ios-arrow-back"></i>
               </div>
             </span>
           </ion-col>
+
           <ion-col size="10">
-     
-            <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2
-              (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
+            <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2 (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
               <ion-slide *ngFor="let s of sliderTwo.slidesItems">
-                <img src="{{s.image}}">
+                <img src="{{s.image}}" (click)='changeImageShown(s.image)'>
               </ion-slide>
             </ion-slides>
-     
           </ion-col>
+
           <ion-col size="1">
-            <span class="slider-nav arrow-next"
-              (click)="slideNext(sliderTwo,slideWithNav2)">
-              <div class="next-icon-custom icon-custom custon-nav"
-                [class.disabled]="sliderTwo.isEndSlide">
+            <span class="slider-nav arrow-next" (click)="slideNext(sliderTwo,slideWithNav2)">
+              <div class="next-icon-custom icon-custom custon-nav" [class.disabled]="sliderTwo.isEndSlide">
                 <i class="icon ion-ios-arrow-forward"></i>
               </div>
             </span>
@@ -57,10 +52,12 @@
     </div>
 
     <div class="customizingZone marginContent">
+      <!-- Image -->
       <div class="shownImage">
-
+        <img src="{{urlImage}}">
       </div>
 
+      <!-- Ion-range to modify the image -->
       <div class="selectors">
         <!-- Luminosité -->
         <div class="brightness">
@@ -79,7 +76,6 @@
           <span class="whiteColor">Saturation</span> 
           <ion-range color="primary"></ion-range>
         </div>
-
       </div>
     </div>
 
