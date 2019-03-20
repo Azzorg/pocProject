@@ -162,8 +162,14 @@ ion-slide img{
   Dislaying the image and the selectors
   ------------------------------------------
 */
+.customizingZone{
+  margin-top: 20px;
+}
+
 .shownImage{
   overflow: hidden;
+  width: fit-content;
+  float: left;
 }
 
 .shownImage img{
@@ -173,10 +179,16 @@ ion-slide img{
   object-position: 50% 50%;
 }
 
+.selectors{
+  padding-left: 7px;
+  width: 45vw;
+  float: left;
+}
+
 .selectors span{
   color: white;
   text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
-  font-size: 11pt;
+  font-size: 10pt;
 }
 
 .selectors ion-range{
