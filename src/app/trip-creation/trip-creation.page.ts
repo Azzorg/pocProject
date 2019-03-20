@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+//require('caman').Caman;
 
 @Component({
   selector: 'app-trip-creation',
@@ -6,6 +7,13 @@ import { Component, OnInit, ViewChild } from '@angular/core';
   styleUrls: ['./trip-creation.page.scss'],
 })
 export class TripCreationPage implements OnInit {
+  //Caman = require('caman').Caman;
+
+  brightness : number = 0;
+  contrast : number = 0;
+  saturation : number = 0;
+
+  filters : string = "brightness(10)";
   
   @ViewChild('slideWithNav2') slideWithNav2: any;
   
@@ -71,6 +79,26 @@ export class TripCreationPage implements OnInit {
    */
   changeImageShown(url){
     this.urlImage = url;
+  }
+  
+  onRangeChanged(filter: string){
+    switch (filter){
+
+      case "brightness":
+        console.log("BRIGHTNESS");
+        break;
+      case "contrast":
+        console.log("CONTRAST");
+        break;
+      case "saturation":
+        console.log("SATURATION");
+        break;
+    }
+
+    /*console.log("Filter : ", filter);
+    console.log("Brightness : ", this.brightness);
+    console.log("Contrast : ", this.contrast);
+    console.log("saturation : ", this.saturation);*/
   }
 
 
