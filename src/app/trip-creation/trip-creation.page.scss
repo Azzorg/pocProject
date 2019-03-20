@@ -16,6 +16,7 @@
 .content_tripCreation{
   position: relative;
   margin-top: 60px;
+  padding-bottom: 60px;
 }
 
 .marginContent{
@@ -161,6 +162,16 @@ ion-slide img{
   Dislaying the image and the selectors
   ------------------------------------------
 */
+.shownImage{
+  overflow: hidden;
+}
+
+.shownImage img{
+  width: 45vw;
+  height: 80vw;
+  object-fit: cover;
+  object-position: 50% 50%;
+}
 
 .selectors span{
   color: white;
