@@ -1,0 +1,15 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+
+#main_profil {
+    --background: rgba(0, 0, 0, 0.5);
+    background-image: url("./../../assets/img/background-image.jpg");  
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    // background-color: rgba(0, 0, 0, 0.863);
+    -webkit-background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -webkit-background-position: right;
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    color: white;
+  }

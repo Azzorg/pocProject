@@ -15,6 +15,17 @@
     color: white !important;
 }
 
+#side-menu .profil{
+    width: fit-content; 
+    height: fit-content; 
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+#side-menu .profil:focus{
+    outline: none;
+}
+
 #side-menu .header:after{
     background-image: none;
 }
