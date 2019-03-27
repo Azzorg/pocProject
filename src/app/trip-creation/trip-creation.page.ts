@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { DomSanitizer } from '@angular/platform-browser';
 //require('caman').Caman;
 
 @Component({
@@ -9,9 +10,11 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 export class TripCreationPage implements OnInit {
   //Caman = require('caman').Caman;
 
-  brightness : number = 0;
-  contrast : number = 0;
-  saturation : number = 0;
+  brightnessValue : number = 100;
+  contrastValue : number = 100;
+  saturationValue : number = 100;
+  hueValue : number = 0;
+  sepiaValue : number = 0;
 
   filters : string = "brightness(10)";
   
@@ -28,7 +31,7 @@ export class TripCreationPage implements OnInit {
 
   urlImage: String;
 
-  constructor() {
+  constructor(private sanitizer: DomSanitizer) {
    }
 
   ngOnInit() {
@@ -80,10 +83,14 @@ export class TripCreationPage implements OnInit {
   changeImageShown(url){
     this.urlImage = url;
   }
+
+  getFilters(){
+    let filterText: string = "brightness(" + this.brightnessValue + "%) contrast(" + this.contrastValue + "%) saturate(" + this.saturationValue + "%) hue-rotate(" + this.hueValue + "deg) sepia(" + this.sepiaValue + "%)";
+    return this.sanitizer.bypassSecurityTrustStyle(filterText);
+  }
   
   onRangeChanged(filter: string){
-    switch (filter){
-
+    /*switch (filter){
       case "brightness":
         console.log("BRIGHTNESS");
         break;
@@ -93,17 +100,18 @@ export class TripCreationPage implements OnInit {
       case "saturation":
         console.log("SATURATION");
         break;
-    }
+    }*/
 
     /*console.log("Filter : ", filter);
-    console.log("Brightness : ", this.brightness);
-    console.log("Contrast : ", this.contrast);
-    console.log("saturation : ", this.saturation);*/
+    console.log("Brightness : ", this.brightnessValue);
+    console.log("Contrast : ", this.contrastValue);
+    console.log("saturation : ", this.saturationValue);*/
   }
 
 
+
   
-  ////////////////////////////// FOR SLIDER FUNCTIONNEMENT
+  ////////////////////////////// FOR IMAGES CHOICE SLIDER FUNCTIONNEMENT
   /**
    * Move to Next slide
    * @param object 

@@ -54,7 +54,7 @@
     <div class="customizingZone marginContent">
       <!-- Image -->
       <div class="shownImage">
-        <img src="{{urlImage}}">  <!--  data-caman="{{filters}}" -->
+        <img src="{{urlImage}}" [style.filter]="getFilters()">  <!--      style="filter: brightness(1) contrast(1) saturate(2)" -->
       </div>
 
       <!-- Ion-range to modify the image -->
@@ -62,19 +62,31 @@
         <!-- Luminosité -->
         <div class="brightness">
           <span class="whiteColor">Luminosité</span> 
-          <ion-range color="warning" [(ngModel)]="brightness" (ionChange)="onRangeChanged('brightness')" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="brightnessValue" (ionChange)="onRangeChanged('brightness')" min="0" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Contraste -->
         <div class="contrast">
           <span class="whiteColor">Contraste</span> 
-          <ion-range color="warning" [(ngModel)]="contrast" (ionChange)="onRangeChanged('contrast')" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="contrastValue" (ionChange)="onRangeChanged('contrast')" min="0" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Saturation -->
         <div class="saturation">
           <span class="whiteColor">Saturation</span> 
-          <ion-range color="warning" [(ngModel)]="saturation" (ionChange)="onRangeChanged('saturation')" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="saturationValue" (ionChange)="onRangeChanged('saturation')" min="0" max="300" step="1" mode="md"></ion-range>
+        </div>
+
+        <!-- Teinte -->
+        <div class="hue">
+          <span class="whiteColor">Teinte</span> 
+          <ion-range color="warning" [(ngModel)]="hueValue" (ionChange)="onRangeChanged('hue')" min="0" max="360" step="1" mode="md"></ion-range>
+        </div>
+
+        <!-- Sepia -->
+        <div class="Sepia">
+          <span class="whiteColor">Sepia</span> 
+          <ion-range color="warning" [(ngModel)]="sepiaValue" (ionChange)="onRangeChanged('sepia')" min="0" max="100" step="1" mode="md"></ion-range>
         </div>
       </div>
     </div>
