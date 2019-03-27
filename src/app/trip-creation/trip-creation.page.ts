@@ -86,27 +86,6 @@ export class TripCreationPage implements OnInit {
     return this.sanitizer.bypassSecurityTrustStyle(filterText);
   }
   
-  onRangeChanged(filter: string){
-    /*switch (filter){
-      case "brightness":
-        console.log("BRIGHTNESS");
-        break;
-      case "contrast":
-        console.log("CONTRAST");
-        break;
-      case "saturation":
-        console.log("SATURATION");
-        break;
-    }*/
-
-    /*console.log("Filter : ", filter);
-    console.log("Brightness : ", this.brightnessValue);
-    console.log("Contrast : ", this.contrastValue);
-    console.log("saturation : ", this.saturationValue);*/
-  }
-
-
-
   
   ////////////////////////////// FOR IMAGES CHOICE SLIDER FUNCTIONNEMENT
   /**
