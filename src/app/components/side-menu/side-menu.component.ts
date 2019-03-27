@@ -1,5 +1,4 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { IonSlides } from '@ionic/angular';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,6 +8,24 @@ import { IonSlides } from '@ionic/angular';
 export class SideMenuComponent implements OnInit {
   @ViewChild('slideWithMyTrips') slideWithMyTrips: any;
   @ViewChild('slideWithFriendsTrips') slideWithFriendsTrips: any;
+
+  // Options for the slider
+  slideOpts = {
+    initialSlide: 0,
+    centeredSlides: false
+  };
+
+  slideFriendsTripOpts = {
+    initialSlide: 0,
+    slidesPerView: 'auto',
+    centeredSlides: false
+  }
+
+  public listTrip : any;
+
+  public listFriendsTrip :any;
+
+  //effect: 'flip',    
 
   public logo = './../../../assets/logo/logo.png';
 
@@ -35,34 +52,13 @@ export class SideMenuComponent implements OnInit {
     }
   ];
 
-  public listTrip : any;
-
-  public listFriendsTrip :any;
-
   public user = {
     name : "Azzorg",
     avatar: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg",
     nbAbonnes: 124
   }
 
-  // Options for the slider
-  slideOpts = {
-    initialSlide: 0,
-    // runCallbacksOnInit: true,
-    // watchOverflow: true
-    //effect: 'fade',
-    loop: true,
-    //slidesPerView: 'auto'
-  };
 
-  slideFriendsTripOpts = {
-    initialSlide: 0,
-    //runCallbacksOnInit: true,
-    //watchOverflow: true,
-    //slidesPerView: 'auto',
-  }
-
-  //effect: 'flip',    
 
   constructor() { }
 
@@ -113,4 +109,71 @@ export class SideMenuComponent implements OnInit {
       }
     ];
   }
+
+  
+   ////////////////////////////// FOR IMAGES CHOICE SLIDER FUNCTIONNEMENT
+  /**
+   * Move to Next slide
+   * @param object 
+   * @param slideView 
+   */
+  slideNextSideMenu(object, slideView) {
+    slideView.slideNext(500).then(() => {
+      this.checkIfNavDisabledSideMenu(object, slideView);
+    });
+  }
+
+  /**
+   * Move to previous slide
+   * @param object 
+   * @param slideView 
+   */
+  slidePrevSideMenu(object, slideView) {
+    slideView.slidePrev(500).then(() => {
+      this.checkIfNavDisabledSideMenu(object, slideView);
+    });;
+  }
+
+  /**
+   * Method called when slide is changed by drag or navigation
+   * @param object 
+   * @param slideView 
+   */
+  slideDidChangeSideMenu(object, slideView) {
+    this.checkIfNavDisabledSideMenu(object, slideView);
+  }
+
+  /**
+   * Call methods to check if slide is first or last to enable disbale navigation
+   * @param object 
+   * @param slideView 
+   */
+  checkIfNavDisabledSideMenu(object, slideView) {
+    this.checkisBeginningSideMenu(object, slideView);
+    this.checkisEndSideMenu(object, slideView);
+  }
+
+  /**
+   * Check if the slider is at the beginning
+   * @param object 
+   * @param slideView 
+   */
+  checkisBeginningSideMenu(object, slideView) {
+    slideView.isBeginning().then((istrue) => {
+      object.isBeginningSlide = istrue;
+    });
+  }
+
+  /**
+   * Check if the slider is at the end
+   * @param object 
+   * @param slideView 
+   */
+  checkisEndSideMenu(object, slideView) {
+    slideView.isEnd().then((istrue) => {
+      object.isEndSlide = istrue;
+    });
+  }
+
+
 }

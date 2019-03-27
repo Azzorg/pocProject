@@ -45,9 +45,10 @@ span{
   color: white;
 }
 
+
 /** 
-  ------------------------------------------
   Group of shapes on the top of the screen 
+  ------------------------------------------
 */
 .shapeGroup{
   position: relative;
@@ -87,6 +88,7 @@ span{
   margin-top: 12px;
 }
 
+
 /** ----------------------------- */
 .pageTitle{
   position: relative;
@@ -96,9 +98,12 @@ span{
   font-size: 19pt;
 }
 
-/** ----------------------------- 
+
+/** 
   Slider Css
+  --------------------------------------
 */
+
 .sliderContainer{
   position: relative;
   margin-top: 30px;
@@ -157,6 +162,7 @@ ion-slide{
 ion-slide img{
   height: 120px;
 }
+
 
 /**
   Dislaying the image and the selectors

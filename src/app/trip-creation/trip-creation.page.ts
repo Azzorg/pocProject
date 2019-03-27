@@ -1,6 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-//require('caman').Caman;
 
 @Component({
   selector: 'app-trip-creation',
@@ -8,21 +7,19 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./trip-creation.page.scss'],
 })
 export class TripCreationPage implements OnInit {
-  //Caman = require('caman').Caman;
-
   brightnessValue : number = 100;
   contrastValue : number = 100;
   saturationValue : number = 100;
   hueValue : number = 0;
   sepiaValue : number = 0;
 
-  filters : string = "brightness(10)";
+  filters : string;
   
-  @ViewChild('slideWithNav2') slideWithNav2: any;
+  @ViewChild('slideWithNav') slideWithNav: any;
   
-  sliderTwo: any;
+  sliderImgs: any;
   
-  slideOptsTwo = {
+  slideOpts = {
     initialSlide: 0,
     //loop: true,
     slidesPerView: 'auto',
@@ -32,11 +29,11 @@ export class TripCreationPage implements OnInit {
   urlImage: String;
 
   constructor(private sanitizer: DomSanitizer) {
-   }
+  }
 
   ngOnInit() {
     this.getTripImages();
-    this.urlImage = this.sliderTwo.slidesItems[0].image;
+    this.urlImage = this.sliderImgs.slidesItems[0].image;
   }
 
 
@@ -44,7 +41,7 @@ export class TripCreationPage implements OnInit {
    * Get all images saved for this trip to fill the slider
    */
   getTripImages(){
-    this.sliderTwo =
+    this.sliderImgs =
     {
       isBeginningSlide: true,
       isEndSlide: false,
@@ -139,7 +136,7 @@ export class TripCreationPage implements OnInit {
    * @param object 
    * @param slideView 
    */
-  SlideDidChange(object, slideView) {
+  slideDidChange(object, slideView) {
     this.checkIfNavDisabled(object, slideView);
   }
 

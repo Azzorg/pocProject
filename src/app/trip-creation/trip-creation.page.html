@@ -25,24 +25,24 @@
       <ion-grid>
         <ion-row>
           <ion-col size="1">
-            <span class="slider-nav arrow-prev" (click)="slidePrev(sliderTwo,slideWithNav2)">
-              <div class="prev-icon-custom icon-custom custon-nav" [class.disabled]="sliderTwo.isBeginningSlide">
+            <span class="slider-nav arrow-prev" (click)="slidePrev(sliderImgs,slideWithNav)">
+              <div class="prev-icon-custom icon-custom custon-nav" [class.disabled]="sliderImgs.isBeginningSlide">
                 <i class="icon ion-ios-arrow-back"></i>
               </div>
             </span>
           </ion-col>
 
           <ion-col size="10">
-            <ion-slides pager="false" [options]="slideOptsTwo" #slideWithNav2 (ionSlideDidChange)="SlideDidChange(sliderTwo,slideWithNav2)">
-              <ion-slide *ngFor="let s of sliderTwo.slidesItems">
+            <ion-slides pager="false" [options]="slideOpts" #slideWithNav (ionSlideDidChange)="slideDidChange(sliderImgs,slideWithNav)">
+              <ion-slide *ngFor="let s of sliderImgs.slidesItems">
                 <img src="{{s.image}}" (click)='changeImageShown(s.image)'>
               </ion-slide>
             </ion-slides>
           </ion-col>
 
           <ion-col size="1">
-            <span class="slider-nav arrow-next" (click)="slideNext(sliderTwo,slideWithNav2)">
-              <div class="next-icon-custom icon-custom custon-nav" [class.disabled]="sliderTwo.isEndSlide">
+            <span class="slider-nav arrow-next" (click)="slideNext(sliderImgs,slideWithNav)">
+              <div class="next-icon-custom icon-custom custon-nav" [class.disabled]="sliderImgs.isEndSlide">
                 <i class="icon ion-ios-arrow-forward"></i>
               </div>
             </span>
@@ -53,40 +53,41 @@
 
     <div class="customizingZone marginContent">
       <!-- Image -->
-      <div class="shownImage">
+      <div class="shownImage"> 
         <img src="{{urlImage}}" [style.filter]="getFilters()">  <!--      style="filter: brightness(1) contrast(1) saturate(2)" -->
       </div>
 
       <!-- Ion-range to modify the image -->
       <div class="selectors">
+        
         <!-- Luminosité -->
         <div class="brightness">
           <span class="whiteColor">Luminosité</span> 
-          <ion-range color="warning" [(ngModel)]="brightnessValue" (ionChange)="onRangeChanged('brightness')" min="0" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="brightnessValue" min="0" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Contraste -->
         <div class="contrast">
           <span class="whiteColor">Contraste</span> 
-          <ion-range color="warning" [(ngModel)]="contrastValue" (ionChange)="onRangeChanged('contrast')" min="0" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="contrastValue" min="0" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Saturation -->
         <div class="saturation">
           <span class="whiteColor">Saturation</span> 
-          <ion-range color="warning" [(ngModel)]="saturationValue" (ionChange)="onRangeChanged('saturation')" min="0" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="saturationValue" min="0" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Teinte -->
         <div class="hue">
           <span class="whiteColor">Teinte</span> 
-          <ion-range color="warning" [(ngModel)]="hueValue" (ionChange)="onRangeChanged('hue')" min="0" max="360" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="hueValue" min="0" max="360" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Sepia -->
         <div class="Sepia">
           <span class="whiteColor">Sepia</span> 
-          <ion-range color="warning" [(ngModel)]="sepiaValue" (ionChange)="onRangeChanged('sepia')" min="0" max="100" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="sepiaValue" min="0" max="100" step="1" mode="md"></ion-range>
         </div>
       </div>
     </div>
