@@ -118,6 +118,8 @@
 #side-menu .partSideMenu ion-slides .countryImg{
     height: 40px;
     width: 40px;
+    border-radius : 50%;
+    object-fit : cover;
     text-align: left;
     margin-right: 10px;
 }

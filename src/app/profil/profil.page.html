@@ -1,3 +1,55 @@
 <ion-content id="main_profil">   <!--  [style.backgroundImage]="'url(' + backgroundImgUrl + ')'" -->
+  <!-- Top part : Image / pseudo / nbAbonné / btnToMap / s'abonner btn (si pas son propre profil) -->
+  <div class="topPart">
+    <div>
+      <img class="avatar" src="{{user.image}}">
+    </div>
 
+    <div class="centerBlock">
+      <div class="blankIcon inlineBlock">
+          <ion-icon name="globe"></ion-icon>
+      </div>
+
+      <div class="inlineBlock">
+        <div class="username">
+          <span>{{user.pseudo}}</span>
+        </div>
+        <div class="nbAbonnes">
+          <span>{{user.nbAbonnes}} abonnés</span>
+        </div>
+      </div>
+      
+      <div class="mapBtn inlineBlock">
+        <ion-icon name="globe" mode="md"></ion-icon>
+      </div>
+    </div>
+
+    <!-- Bouton pour s'abonner : si pas son propre profil-->
+    <div class="centerBlock">
+      <ion-button shape="round">S'abonner</ion-button>
+    </div>
+  </div>
+
+  <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
+  <div>
+    <!-- Stats part -->
+    <div class="stats">
+
+    </div>
+
+    <!-- Succes -->
+    <div class="succes">
+
+    </div>
+  </div>
+
+  <!-- Zone map -->
+
+  <!-- Voyages -->
+  <div class="trips">
+
+  </div>
+
+  
+  <app-footer-app></app-footer-app>
 </ion-content>

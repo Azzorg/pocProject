@@ -74,10 +74,11 @@ export class SideMenuComponent implements OnInit {
    * Initialize the list of the user's trips done currently
    */
   initUserTrips(){
+    // ./../../../assets/countries/france.png
     this.listTrip = [
       {
         name:"Europe Trip",
-        countryImage: "./../../../assets/countries/france.png"
+        countryImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1200px-Flag_of_Europe.svg.png"  
       },
       {
         name:"Rainy London",
