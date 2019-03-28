@@ -2,15 +2,15 @@
   <ion-header>
     <ion-toolbar>
        <!-- Image -->
-      <div class="profil" [routerDirection]="'root'" [routerLink]="'/profil'">
+      <ion-menu-toggle auto-hide="false" class="profil" [routerDirection]="'root'" [routerLink]="'/profil'" close>
         <img class="avatar" src="{{user.avatar}}">
 
         <br/>
         <span class="username">{{user.name}}</span>
         <br/>
         <span class="nbAbonne" i18n="sidemenu subscribers | The number of subscribers in sidemenu@@sidemenuSubscribers">{user.nbAbonnes, plural, =0 {} =1 {1 abonné} other {{{user.nbAbonnes}} abonnés}}</span>
-      </div>
-      </ion-toolbar>
+      </ion-menu-toggle>
+    </ion-toolbar>
   </ion-header>
   <ion-content> 
     <ion-list>
@@ -53,16 +53,14 @@
     </div>
 
     <!-- Followed persons' trips in progress -->
-    <div class="partSideMenu">
-      <!--<ion-menu-toggle auto-hide="false">-->
-        <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
-          <ion-label i18n="sidemenu settings | Settings on sidemenu@@sidemenuSettings">Paramètres</ion-label>
-        </ion-item>
-        <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
-          <ion-label i18n="sidemenu contact us | Contact us on sidemenu@@sidemenuContactUs">Nous contacter</ion-label>
-        </ion-item>
-      <!--</ion-menu-toggle>-->
-    </div>
+    <ion-menu-toggle class="partSideMenu">
+      <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
+        <ion-label i18n="sidemenu settings | Settings on sidemenu@@sidemenuSettings">Paramètres</ion-label>
+      </ion-item>
+      <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
+        <ion-label i18n="sidemenu contact us | Contact us on sidemenu@@sidemenuContactUs">Nous contacter</ion-label>
+      </ion-item>
+    </ion-menu-toggle>
 
     
     <ion-footer id="side-menu-footer">
