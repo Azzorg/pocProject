@@ -64,7 +64,16 @@
 
     <!-- Succes -->
     <div class="succes">
+      <span class="title">{{'Succes' | uppercase}}</span>
+      <div class="listBadge">
+        <div *ngFor="let badge of listBadge">
 
+            <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
+            <br/>
+            <span>{{badge.name}}</span>
+
+        </div>
+      </div>
     </div>
   </div>
 
