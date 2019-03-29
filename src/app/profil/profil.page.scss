@@ -13,6 +13,10 @@
   color: white;
 }
 
+.smallCaps{
+  font-variant: small-caps;
+}
+
 /**
   -----------------------------------
   Top part with : profil image + pseudo + number of subscribers + button to show the map + button to subscribe (if not own profil page)
@@ -61,8 +65,8 @@
 }
 
 #main_profil .centerBlock ion-button{
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
   --padding-start: 40px;
   --padding-end: 40px;
   font-weight: 300;
@@ -74,4 +78,25 @@
   Statistiques 
 */
 
+#main_profil .statsSucces{
+  margin-top: 20px;
+}
 
+#main_profil .stats ion-col{
+  text-align: center;
+}
+
+#main_profil .stats ion-icon{
+  font-size: 10vw;
+  color: white;
+}
+
+#main_profil .stats ion-col span{
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 4.3vw;
+}
+
+#main_profil .stats ion-col .number{
+  color: white;
+  font-size: 5vw;
+}

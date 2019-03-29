@@ -9,6 +9,10 @@ export class ProfilPage implements OnInit {
   backgroundImgUrl : string = "./../../assets/img/background-image.jpg";
 
   user : any;
+  nbKms: number = 11520;
+  nbPays: number = 4;
+  nbVoyages : number = 6;
+
 
   constructor() { }
 

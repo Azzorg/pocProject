@@ -33,10 +33,33 @@
 
 
   <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
-  <div>
+  <div class="statsSucces">
     <!-- Stats part -->
     <div class="stats">
-      
+      <ion-grid>
+        <ion-row>
+          <!-- Nb voyages -->
+          <ion-col size="4">
+              <ion-icon src="../../assets/icon/world.svg"></ion-icon>
+              <br/>
+              <span class="number">{{nbVoyages}} </span><span class="smallCaps">voyages</span>
+          </ion-col>
+
+          <!-- Nb kilometres -->
+          <ion-col size="4">
+              <ion-icon src="../../assets/icon/destination.svg"></ion-icon>
+              <br/>
+              <span class="number">{{nbKms}} </span><span class="smallCaps">kms</span>
+          </ion-col>
+
+          <!-- Nb pays -->
+          <ion-col size="4">
+              <ion-icon src="../../assets/icon/flag.svg"></ion-icon>
+              <br/>
+              <span class="number">{{nbPays}} </span><span class="smallCaps">pays</span>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
     </div>
 
     <!-- Succes -->
