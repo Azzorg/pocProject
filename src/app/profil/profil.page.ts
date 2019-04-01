@@ -13,18 +13,21 @@ export class ProfilPage implements OnInit {
   nbKms: number = 11520;
   nbPays: number = 4;
   nbVoyages : number = 6;
+  hidden: boolean = true;
   
 
 
   constructor() { }
+
 
   ngOnInit() {
     this.getVisitingProfil();
     this.getListBadges();
   }
 
+
   /**
-   * 
+   * get profil information
    */
   getVisitingProfil(){
     this.user = {
@@ -34,6 +37,10 @@ export class ProfilPage implements OnInit {
     };
   }
 
+
+  /**
+   * get the list of badges
+   */
   getListBadges(){
     this.listBadge = [
       {
@@ -63,4 +70,28 @@ export class ProfilPage implements OnInit {
     ];
   }
 
+
+  /**
+   * display a modal with info of the badge
+   * @param badge 
+   */
+  showInfoBadge(badge){
+    console.log("Show info badge", badge);
+  }
+
+
+  /**
+   * Display all badges on the screen
+   */
+  showAllBadges(){
+    this.hidden = false;
+  }
+
+
+  /**
+   * Hide all badges list and display only the 3 first of them
+   */
+  hideAllBadges(){
+    this.hidden = true;
+  }
 }

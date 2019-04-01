@@ -22,6 +22,11 @@
   color: #cacaca;
 }
 
+.blank{
+  margin-bottom: 15px;
+}
+
+
 /**
   -----------------------------------
   Top part with : profil image + pseudo + number of subscribers + button to show the map + button to subscribe (if not own profil page)
@@ -113,13 +118,21 @@
 */
 
 #main_profil .statsSucces .succes{
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  border-top: solid 1px rgba(182, 182, 182, 1);
-  padding-top: 10px;
   padding-left: 10px;
   color: white;
+}
+
+#main_profil .statsSucces .succes::before{
+  content: "";
+  position: absolute;
+  left: 5%;
+  height: 1px;
+  width: 90%;
+  border-top: 1px solid rgba(182, 182, 182, 1);
+}
+
+#main_profil .statsSucces .succes .title{
+  padding-left: 5px;
 }
 
 #main_profil .succes .listBadge{
@@ -128,13 +141,36 @@
   align-items: flex-start;
   justify-content: space-between;
   flex-direction: row;
-  margin-top: 10px;
+
+  margin-top: 15px;  
+  //height: calc(10vw + 11pt + 11pt + 15px);
+  height: auto;
+  overflow: hidden;
+  
+  font-weight: 300;
+  font-size: 11pt;
+
+  transition: height 2s;
 }
 
 #main_profil .succes .listBadge div{
   text-align: center; 
   width: 30%;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+}
+
+#main_profil .succes .showFirstLine{
+  height: calc(10vw + 11pt + 11pt + 15px) !important;
+}
+
+#main_profil .succes .sign{
+  width: 100%;
+  text-align: center;
+}
+
+#main_profil .succes .sign ion-icon{
+  font-size: 40pt;
+  font-weight: 100;
 }
 
 
