@@ -143,14 +143,14 @@
   flex-direction: row;
 
   margin-top: 15px;  
-  //height: calc(10vw + 11pt + 11pt + 15px);
   height: auto;
   overflow: hidden;
   
   font-weight: 300;
   font-size: 11pt;
 
-  transition: height 2s;
+  max-height: 10000px;
+  transition: max-height 1s ease;
 }
 
 #main_profil .succes .listBadge div{
@@ -160,7 +160,8 @@
 }
 
 #main_profil .succes .showFirstLine{
-  height: calc(10vw + 11pt + 11pt + 15px) !important;
+  height: calc(10vw + 11pt + 11pt + 15px);
+  max-height: calc(10vw + 11pt + 11pt + 15px);
 }
 
 #main_profil .succes .sign{
