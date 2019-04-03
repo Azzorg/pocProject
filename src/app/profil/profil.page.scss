@@ -147,10 +147,7 @@
   overflow: hidden;
   
   font-weight: 300;
-  font-size: 11pt;
-
-  max-height: 10000px;
-  transition: max-height 1s ease;
+  font-size: 13pt;
 }
 
 #main_profil .succes .listBadge div{
@@ -159,10 +156,6 @@
   margin-bottom: 15px;
 }
 
-#main_profil .succes .showFirstLine{
-  height: calc(10vw + 11pt + 11pt + 15px);
-  max-height: calc(10vw + 11pt + 11pt + 15px);
-}
 
 #main_profil .succes .sign{
   width: 100%;
