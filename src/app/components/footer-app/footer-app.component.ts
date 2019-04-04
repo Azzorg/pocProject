@@ -11,4 +11,8 @@ export class FooterAppComponent implements OnInit {
 
   ngOnInit() {}
 
+  clickMainFAB(){
+    console.log('Clicked open social menu');
+  }
+
 }

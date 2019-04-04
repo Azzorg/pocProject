@@ -1,26 +1,27 @@
+
+
 <ion-footer id="footer">
   <ion-toolbar>
     <ion-grid>
       <ion-row>
-
         <!-- Menu -->
         <ion-col size="2">
           <ion-menu-button style="color: white; margin-right: 0"></ion-menu-button>
         </ion-col>
 
         <!-- Mes voyages -->
-        <ion-col style="text-align: left;" offset="1" size="3" [routerDirection]="'root'" [routerLink]="'/discover'">
-            <ion-icon name="globe"></ion-icon>
+        <ion-col style="text-align: left; height: 35px" offset="1" size="3">  <!--  [routerDirection]="'root'" [routerLink]="'/discover'" -->
+          <ion-icon name="add"></ion-icon>
         </ion-col>
 
         <!-- Fil d'actualité -->
         <ion-col style="text-align: center;" size="3" [routerDirection]="'root'" [routerLink]="'/home'">
-            <ion-icon name="home"></ion-icon>
+          <ion-icon name="home"></ion-icon>
         </ion-col>
 
         <!-- Découvrir -->
         <ion-col style="text-align: right;" size="3" [routerDirection]="'root'" [routerLink]="'/discover'">
-          <ion-icon name="copy"></ion-icon>
+          <ion-icon name="globe"></ion-icon>
         </ion-col>
 
       </ion-row>
