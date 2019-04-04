@@ -1,99 +1,105 @@
 <ion-content id="main_profil">   <!--  [style.backgroundImage]="'url(' + backgroundImgUrl + ')'" -->
   <!-- Top part : Image / pseudo / nbAbonné / btnToMap / s'abonner btn (si pas son propre profil) -->
-  <div class="topPart">
-    <div>
-      <img class="avatar" src="{{user.image}}">
+  <div class="container">
+    <div class="topPart">
+      <div>
+        <img class="avatar" src="{{user.image}}">
+      </div>
+
+      <div class="centerBlock">
+        <div class="blankIcon inlineBlock">
+            <ion-icon name="globe"></ion-icon>
+        </div>
+
+        <div class="inlineBlock">
+          <div class="username">
+            <span>{{user.pseudo}}</span>
+          </div>
+          <div class="nbAbonnes">
+            <span>{{user.nbAbonnes}} abonnés</span>
+          </div>
+        </div>
+        
+        <div class="mapBtn inlineBlock">
+          <ion-icon name="globe" mode="md"></ion-icon>
+        </div>
+      </div>
+
+      <!-- Bouton pour s'abonner : si pas son propre profil -->
+      <div class="centerBlock">
+        <ion-button shape="round">S'abonner</ion-button>
+      </div>
     </div>
 
-    <div class="centerBlock">
-      <div class="blankIcon inlineBlock">
-          <ion-icon name="globe"></ion-icon>
+
+
+    <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
+    <div class="statsSucces">
+      <!-- Stats part -->
+      <div class="stats">
+        <ion-grid>
+          <ion-row>
+            <!-- Nb voyages -->
+            <ion-col size="4">
+                <ion-icon src="../../assets/icon/world.svg"></ion-icon>
+                <br/>
+                <span class="number">{{nbVoyages}} </span><span class="smallCaps">voyages</span>
+            </ion-col>
+
+            <!-- Nb kilometres -->
+            <ion-col size="4">
+                <ion-icon src="../../assets/icon/destination.svg"></ion-icon>
+                <br/>
+                <span class="number">{{nbKms}} </span><span class="smallCaps">kms</span>
+            </ion-col>
+
+            <!-- Nb pays -->
+            <ion-col size="4">
+                <ion-icon src="../../assets/icon/flag.svg"></ion-icon>
+                <br/>
+                <span class="number">{{nbPays}} </span><span class="smallCaps">pays</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
       </div>
 
-      <div class="inlineBlock">
-        <div class="username">
-          <span>{{user.pseudo}}</span>
-        </div>
-        <div class="nbAbonnes">
-          <span>{{user.nbAbonnes}} abonnés</span>
+      <!-- Succes -->
+      <div *ngIf="!mapMode" class="succes borderBefore" padding>
+        <div class="blank"></div>
+        <span class="title">{{'Succes' | uppercase}}</span>
+        <div class="listBadge">
+          <div *ngFor='let badge of listBadge | slice:0:3; let i=index' (click)="showInfoBadge(badge)">
+            <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
+            <br/>
+            <span class="smallCaps">{{badge.name}}</span>
+          </div>
         </div>
       </div>
+    </div>
+
+
+
+    <!-- Zone map -->
+    <div *ngIf="mapMode" class="map borderBefore" padding>
       
-      <div class="mapBtn inlineBlock">
-        <ion-icon name="globe" mode="md"></ion-icon>
-      </div>
     </div>
 
-    <!-- Bouton pour s'abonner : si pas son propre profil -->
-    <div class="centerBlock">
-      <ion-button shape="round">S'abonner</ion-button>
-    </div>
-  </div>
 
 
-
-  <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
-  <div class="statsSucces">
-    <!-- Stats part -->
-    <div class="stats">
-      <ion-grid>
-        <ion-row>
-          <!-- Nb voyages -->
-          <ion-col size="4">
-              <ion-icon src="../../assets/icon/world.svg"></ion-icon>
-              <br/>
-              <span class="number">{{nbVoyages}} </span><span class="smallCaps">voyages</span>
-          </ion-col>
-
-          <!-- Nb kilometres -->
-          <ion-col size="4">
-              <ion-icon src="../../assets/icon/destination.svg"></ion-icon>
-              <br/>
-              <span class="number">{{nbKms}} </span><span class="smallCaps">kms</span>
-          </ion-col>
-
-          <!-- Nb pays -->
-          <ion-col size="4">
-              <ion-icon src="../../assets/icon/flag.svg"></ion-icon>
-              <br/>
-              <span class="number">{{nbPays}} </span><span class="smallCaps">pays</span>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </div>
-
-    <!-- Succes -->
-    <div *ngIf="!mapMode" class="succes borderBefore" padding>
+    <!-- Voyages -->
+    <div class="trips borderBefore" padding>
       <div class="blank"></div>
-      <span class="title">{{'Succes' | uppercase}}</span>
-      <div class="listBadge">
-        <div *ngFor='let badge of listBadge | slice:0:3; let i=index' (click)="showInfoBadge(badge)">
-          <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
-          <br/>
-          <span class="smallCaps">{{badge.name}}</span>
+      <span class="title">{{'Voyages' | uppercase}}</span>
+
+      <div class="listTrips">
+        <div class="trip" *ngFor='let trip of listTrips' (click)="goToTrip(trip)">
+          <img class="tripImage" src="{{trip.image}}" />
+          <div class="titleTrip">
+            <p>{{trip.name | uppercase}}</p>
+            
+          </div>
+          <img class="countryImg" src="{{trip.paysImage}}">
         </div>
-      </div>
-    </div>
-  </div>
-
-
-
-  <!-- Zone map -->
-  <div *ngIf="mapMode" class="map borderBefore" padding>
-    
-  </div>
-
-
-
-  <!-- Voyages -->
-  <div class="trips borderBefore" padding>
-    <div class="blank"></div>
-    <span class="title">{{'Voyages' | uppercase}}</span>
-
-    <div class="listTrips">
-      <div class="trip" *ngFor='let trip of listTrips' (click)="goToTrip(trip)">
-        <img src="{{trip.image}}" />
-        <span class="titleTrip">{{trip.name | uppercase}}</span>
       </div>
     </div>
   </div>

@@ -98,7 +98,7 @@ export class ProfilPage implements OnInit {
         dateFin: "30/07/2017"
       },
       {
-        name: "Antibes",
+        name: "Chez Tibo",
         image: "https://media-cdn.tripadvisor.com/media/photo-s/08/b0/2b/0f/le-sentier-du-littoral.jpg",
         paysImage: "./../../assets/countries/france.png",
         dateDebut: "23/08/2016",
@@ -129,20 +129,13 @@ export class ProfilPage implements OnInit {
   showInfoBadge(badge){
     console.log("Show info badge", badge);
   }
-
-
-  /**
-   * Display all badges on the screen
-   */
-  showAllBadges(){
-    this.hidden = false;
-  }
-
+  
 
   /**
-   * Hide all badges list and display only the 3 first of them
+   * Go to the trip page
+   * @param trip 
    */
-  hideAllBadges(){
-    this.hidden = true;
+  goToTrip(trip : any){
+    console.log("Trip : " + trip.name, trip);
   }
 }

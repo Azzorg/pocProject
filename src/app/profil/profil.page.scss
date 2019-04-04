@@ -35,6 +35,10 @@
   border-top: 1px solid rgba(182, 182, 182, 1);
 }
 
+.container{
+  padding-bottom: 50px;
+}
+
 
 /**
   -----------------------------------
@@ -177,10 +181,10 @@
   position: relative;
 }
 
-#main_profil .trips .listTrips .trip img{
+#main_profil .trips .listTrips .trip .tripImage{
   border-radius: 5px;
   object-fit : cover;
-  height: 190px;
+  height: 200px;
   width: 100%;
 }
 
@@ -190,6 +194,26 @@
   top: 4px;
   color: white;
   z-index: 10;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  width: 80%;
+}
+
+#main_profil .trips .listTrips .countryImg{
+  position: absolute;
+  right: 4px;
+  top: 4px;
+  color: white;
+  z-index: 10;
+  text-shadow: 0px 0px 10px rgba(0, 0, 0, 1);
+  width: 10vw;
+  height: 10vw;
+  object-fit : cover;
+  border-radius : 50%;
+}
+
+#main_profil .trips .listTrips .titleTrip p{
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
 
 
