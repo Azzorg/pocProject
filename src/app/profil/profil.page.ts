@@ -116,7 +116,7 @@ export class ProfilPage implements OnInit {
         image: "https://www.govoyages.com/blog/wp-content/uploads/sites/14/2018/10/deux-jours-copenhague-720.jpg",
         paysImage: "https://banner2.kisspng.com/20180608/hyl/kisspng-flag-of-denmark-flag-of-luxembourg-danish-flag-of-5b1a099f7c96f4.4275827715284330555103.jpg",
         dateDebut: "05/05/2011",
-        dateFin: "18/05/2012"
+        dateFin: "18/05/2011"
       }
     ]
   }
@@ -137,5 +137,19 @@ export class ProfilPage implements OnInit {
    */
   goToTrip(trip : any){
     console.log("Trip : " + trip.name, trip);
+  }
+
+  /**
+   * return
+   * @param trip 
+   */
+  getDates(trip: any){
+    console.log("Trip : " + trip.name);
+
+    if(trip.dateFin === ""){
+      return "En cours";
+    }
+
+    return trip.dateDebut + " - " + trip.dateFin
   }
 }
