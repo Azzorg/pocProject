@@ -139,17 +139,15 @@ export class ProfilPage implements OnInit {
     console.log("Trip : " + trip.name, trip);
   }
 
+  
   /**
    * return
    * @param trip 
    */
   getDates(trip: any){
-    console.log("Trip : " + trip.name);
-
     if(trip.dateFin === ""){
       return "En cours";
     }
-
     return trip.dateDebut + " - " + trip.dateFin
   }
 }
