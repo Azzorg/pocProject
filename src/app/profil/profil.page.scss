@@ -26,6 +26,15 @@
   margin-bottom: 15px;
 }
 
+.borderBefore::before{
+  content: "";
+  position: absolute;
+  left: 5%;
+  height: 1px;
+  width: 90%;
+  border-top: 1px solid rgba(182, 182, 182, 1);
+}
+
 
 /**
   -----------------------------------
@@ -120,15 +129,7 @@
 #main_profil .statsSucces .succes{
   padding-left: 10px;
   color: white;
-}
-
-#main_profil .statsSucces .succes::before{
-  content: "";
-  position: absolute;
-  left: 5%;
-  height: 1px;
-  width: 90%;
-  border-top: 1px solid rgba(182, 182, 182, 1);
+  padding-bottom: 0;
 }
 
 #main_profil .statsSucces .succes .title{
@@ -153,9 +154,7 @@
 #main_profil .succes .listBadge div{
   text-align: center; 
   width: 30%;
-  margin-bottom: 15px;
 }
-
 
 #main_profil .succes .sign{
   width: 100%;
@@ -165,6 +164,32 @@
 #main_profil .succes .sign ion-icon{
   font-size: 40pt;
   font-weight: 100;
+}
+
+
+
+/** 
+  --------------------------------------
+  Trips 
+*/
+#main_profil .trips .listTrips .trip{
+  margin-top: 10px;
+  position: relative;
+}
+
+#main_profil .trips .listTrips .trip img{
+  border-radius: 5px;
+  object-fit : cover;
+  height: 190px;
+  width: 100%;
+}
+
+#main_profil .trips .listTrips .titleTrip{
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  color: white;
+  z-index: 10;
 }
 
 

@@ -63,7 +63,7 @@
     </div>
 
     <!-- Succes -->
-    <div class="succes" padding>
+    <div *ngIf="!mapMode" class="succes borderBefore" padding>
       <div class="blank"></div>
       <span class="title">{{'Succes' | uppercase}}</span>
       <div class="listBadge">
@@ -79,16 +79,23 @@
 
 
   <!-- Zone map -->
-  <div>
-
+  <div *ngIf="mapMode" class="map borderBefore" padding>
+    
   </div>
 
 
 
-
   <!-- Voyages -->
-  <div class="trips">
+  <div class="trips borderBefore" padding>
+    <div class="blank"></div>
+    <span class="title">{{'Voyages' | uppercase}}</span>
 
+    <div class="listTrips">
+      <div class="trip" *ngFor='let trip of listTrips' (click)="goToTrip(trip)">
+        <img src="{{trip.image}}" />
+        <span class="titleTrip">{{trip.name | uppercase}}</span>
+      </div>
+    </div>
   </div>
 
   
