@@ -1,5 +1,5 @@
 <div class="addFabs">
-  <ion-fab-button [ngClass]="{'show':showOptions}">
+  <ion-fab-button [ngClass]="{'show':showOptions}" [routerLink]="'/trip-creation'">
     <ion-icon name="airplane"></ion-icon>
   </ion-fab-button>
 
@@ -27,12 +27,12 @@
         </ion-col>
 
         <!-- Fil d'actualité -->
-        <ion-col style="text-align: center;" size="3" [routerDirection]="'root'" [routerLink]="'/home'">
+        <ion-col style="text-align: center;" size="3" [routerLink]="'/home'">
           <ion-icon name="home"></ion-icon>
         </ion-col>
 
         <!-- Découvrir -->
-        <ion-col style="text-align: right;" size="3" [routerDirection]="'root'" [routerLink]="'/discover'">
+        <ion-col style="text-align: right;" size="3" [routerLink]="'/discover'">
           <ion-icon name="globe"></ion-icon>
         </ion-col>
 

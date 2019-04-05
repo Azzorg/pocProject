@@ -2,9 +2,8 @@
   <ion-header>
     <ion-toolbar>
        <!-- Image -->
-      <ion-menu-toggle auto-hide="false" class="profil" [routerDirection]="'root'" [routerLink]="'/profil'" close>
+      <ion-menu-toggle auto-hide="false" class="profil" [routerLink]="'/profil'" close>
         <img class="avatar" src="{{user.avatar}}">
-
         <br/>
         <span class="username">{{user.name}}</span>
         <br/>
@@ -15,7 +14,7 @@
   <ion-content> 
     <ion-list>
       <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-        <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
+        <ion-item [routerLink]="[p.url]">
           <ion-icon slot="start" [name]="p.icon"></ion-icon>
           <ion-label>
             {{p.title}}
@@ -54,14 +53,13 @@
 
     <!-- Followed persons' trips in progress -->
     <ion-menu-toggle class="partSideMenu">
-      <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
+      <ion-item [routerLink]="'/discover'">
         <ion-label i18n="sidemenu settings | Settings on sidemenu@@sidemenuSettings">Paramètres</ion-label>
       </ion-item>
-      <ion-item [routerDirection]="'root'" [routerLink]="'/discover'">
+      <ion-item [routerLink]="'/discover'">
         <ion-label i18n="sidemenu contact us | Contact us on sidemenu@@sidemenuContactUs">Nous contacter</ion-label>
       </ion-item>
     </ion-menu-toggle>
-
     
     <ion-footer id="side-menu-footer">
       <ion-toolbar>
@@ -69,5 +67,4 @@
       </ion-toolbar>
     </ion-footer>
   </ion-content>
-
 </div>
