@@ -1,13 +1,13 @@
 <div class="addFabs">
-  <ion-fab-button>
+  <ion-fab-button [ngClass]="{'show':showOptions}">
     <ion-icon name="airplane"></ion-icon>
   </ion-fab-button>
 
-  <ion-fab-button class="topperFabs">
+  <ion-fab-button [ngClass]="{'show':showOptions}">
     <ion-icon name="git-commit"></ion-icon>
   </ion-fab-button>
   
-  <ion-fab-button>
+  <ion-fab-button [ngClass]="{'show':showOptions}">
     <ion-icon name="images"></ion-icon>
   </ion-fab-button>
 </div>  
@@ -22,7 +22,7 @@
         </ion-col>
 
         <!-- Mes voyages -->
-        <ion-col style="text-align: left; height: 35px" offset="1" size="3">  <!--  [routerDirection]="'root'" [routerLink]="'/discover'" -->
+        <ion-col style="text-align: left; height: 35px" offset="1" size="3" (click)="toggleAddOptions()">  <!--  [routerDirection]="'root'" [routerLink]="'/discover'" -->
           <ion-icon name="add"></ion-icon>
         </ion-col>
 

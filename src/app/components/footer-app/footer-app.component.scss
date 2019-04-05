@@ -54,13 +54,36 @@
 }
 
 .addFabs ion-fab-button{
+
   align-self: flex-end;
   height: 40px;
   margin-right: 10px;
   width: 40px;
   --background: rgba(0, 0, 0, 0.8);
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0s;
 }
 
-.addFabs .topperFabs{
+.addFabs ion-fab-button.show:nth-child(1){
+  transition-delay: 0.1s;
+}
+
+.addFabs ion-fab-button:nth-child(2){
   align-self: flex-start;
-} 
+}
+
+.addFabs ion-fab-button.show:nth-child(2){
+  transition-delay: 0.2s;
+}
+
+
+.addFabs ion-fab-button.show:nth-child(3){
+  transition-delay: 0.3s;
+}
+
+.addFabs ion-fab-button.show{ 
+  visibility: visible;
+  opacity: 1;
+  transition: visibility 0s, opacity 0.1s ease-in;
+}
