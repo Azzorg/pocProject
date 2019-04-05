@@ -14,7 +14,6 @@ ion-toolbar{
   background-image: url("../../assets/img/yosemite.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  //background-position: center;
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   color: white;
 
@@ -33,9 +32,7 @@ ion-toolbar{
 .box {
   position: relative;
   border-radius: 5px;
-  //box-shadow: 0 6px 9px rgba(62, 63, 65, 0.6);
   box-shadow: 0 0 0;
-  //padding: 20px;
   text-align: center;
   box-sizing: border-box;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);

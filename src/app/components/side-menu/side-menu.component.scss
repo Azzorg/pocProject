@@ -15,6 +15,60 @@
     color: white !important;
 }
 
+#side-menu ion-item{
+    --border-style: none !important;
+}
+
+#side-menu ion-slides ion-slide{
+    justify-content: left;
+    padding-left: 32px;
+}
+
+#side-menu ion-content{
+    height: -webkit-fill-available;
+    -webkit-height: -webkit-fill-available;
+    --background: transparent;
+}
+
+#side-menu ion-list{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    padding-top: 0px;
+    padding-bottom: 15px;
+    background: transparent;
+}
+
+#side-menu ion-content ion-item{
+    --background: transparent;
+    color: white !important;
+}
+
+#side-menu ion-content ion-label{
+    border: none !important;
+}
+
+#side-menu ion-label{
+    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+    font-size: 12pt;
+    font-variant: small-caps;
+}
+
+#side-menu ion-content ion-icon{
+    color: white;
+}
+
+
+
+/**
+ ---------------------------------------
+ Profil : top part of the sidemenu
+ Photo de profil - Pseudo - nb abonnés - button to subscribe - button to display the map
+*/
+
+#side-menu .header:after{
+    background-image: none;
+}
+
 #side-menu .profil{
     width: fit-content; 
     height: fit-content; 
@@ -24,10 +78,6 @@
 
 #side-menu .profil:focus{
     outline: none;
-}
-
-#side-menu .header:after{
-    background-image: none;
 }
 
 #side-menu .avatar{
@@ -48,19 +98,12 @@
     color: rgb(206, 206, 206);
 }
 
-#side-menu ion-content{
-    height: -webkit-fill-available;
-    -webkit-height: -webkit-fill-available;
-    --background: transparent;
-}
 
-#side-menu ion-list{
-    margin-top: 20px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 15px;
-    background: transparent;
-}
+
+/**
+  ----------------------------------------------
+  Sliders
+*/
 
 #side-menu .partSideMenu::before{
     content: "";
@@ -69,25 +112,6 @@
     height: 1px;
     width: 80%;
     border-bottom: 1px solid white;
-}
-
-#side-menu ion-content ion-item{
-    --background: transparent;
-    color: white !important;
-}
-
-#side-menu ion-content ion-label{
-    border: none !important;
-}
-
-#side-menu ion-label{
-    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
-    font-size: 12pt;
-    font-variant: small-caps;
-}
-
-#side-menu ion-content ion-icon{
-    color: white;
 }
 
 #side-menu .partSideMenu .titlePart{
@@ -111,9 +135,13 @@
     overflow: visible;
 }
 
-#side-menu .partSideMenu #sliderFriendsTripContainer{
-    overflow: visible;
-}
+
+
+
+/** 
+  ----------------------------
+  Own trips part
+*/
 
 #side-menu .partSideMenu ion-slides .countryImg{
     height: 40px;
@@ -124,13 +152,15 @@
     margin-right: 10px;
 }
 
-#side-menu ion-item{
-    --border-style: none !important;
-}
 
-#side-menu ion-slides ion-slide{
-    justify-content: left;
-    padding-left: 32px;
+
+/**
+  -----------------------------------------
+  Friends' trip list
+*/
+
+#side-menu .partSideMenu #sliderFriendsTripContainer{
+    overflow: visible;
 }
 
 #side-menu ion-slides .sliderFriendsTrip:last-child{
@@ -159,6 +189,12 @@
     margin-top: 0px;
 }
 
+
+
+/**
+ --------------------------------------
+ Side menu footer
+*/
 #side-menu #side-menu-footer{
     position: fixed;
     bottom: 0;

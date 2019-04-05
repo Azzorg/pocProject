@@ -31,7 +31,6 @@ main{
   font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   font-weight : 400;
   text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
-  // transition: margin 0.5s;
 }
 
 .card-content{
@@ -59,7 +58,6 @@ main{
   -webkit-background-repeat: no-repeat;
   -webkit-background-size: cover;
   -webkit-background-position: right;
-  //text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
   font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   padding: 5px;
   font-size: 20px;
@@ -67,40 +65,20 @@ main{
   border-radius: 25px;
   margin-top: 10px;
   margin-bottom: 10px;
-  // width: 80vw;
-  // height : 250px;
-  // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
   overflow: hidden;
 }
 
 .main-title{
   position: relative;
   color : white;
-  //text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
   font-family : Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   padding: 5px 15px;
-  // font-size: 20px;
   line-height: 1.5;
   border-radius: 25px;
-  // box-shadow: 0px 0px 50px rgba(0,0,0,0.7);
   overflow: hidden;
 }
 
 .beforeContent{
-  //background: right no-repeat fixed;
-  //-webkit-background: right no-repeat fixed;
-  //background-size: cover;
-  //-webkit-background-size: cover;
-
-  /*background-repeat: no-repeat;
-  //background-size: cover;
-  background-position: right;
-  background-attachment: fixed;
-  -webkit-background-repeat: no-repeat;
-  //-webkit-background-size: cover;
-  -webkit-background-position: right;
-  -webkit-background-attachment: fixed;*/
-
   background-color: rgba(102, 103, 105, 0.9);
   content: '';
   margin: -35px;
@@ -111,10 +89,6 @@ main{
   left: 0;
   filter: blur(1.5rem);
   overflow:hidden;
-}
-
-.content{
-  //height: auto;
 }
 
 .top-bloc{
@@ -163,11 +137,6 @@ main{
 .icon p{
   font-size: 10pt;
   color: #e6e6e6;
-}
-
-.listNotif{
-  // margin-top: 30vh;
-  //margin-top: 200px;
 }
 
 .title_text{
