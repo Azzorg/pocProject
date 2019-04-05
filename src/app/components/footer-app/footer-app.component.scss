@@ -1,4 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+
+/**
+  --------------------------------
+  Footer
+*/
 #footer{
   background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0,0,0,0.9)) !important;
   border-top-left-radius: 15px;
@@ -35,3 +40,27 @@
   color: white;
   font-size: 20pt;
 }
+
+/**
+  --------------------------------------------
+  add fabs
+*/
+.addFabs{
+  position: fixed;
+  display : flex;
+  bottom: 55px;
+  left: 13%;
+  height: 60px;
+}
+
+.addFabs ion-fab-button{
+  align-self: flex-end;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+  --background: rgba(0, 0, 0, 0.8);
+}
+
+.addFabs .topperFabs{
+  align-self: flex-start;
+} 
