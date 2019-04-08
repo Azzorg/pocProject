@@ -78,6 +78,14 @@ export class TripCreationPage implements OnInit {
     let filterText: string = "brightness(" + this.brightnessValue + "%) contrast(" + this.contrastValue + "%) saturate(" + this.saturationValue + "%) hue-rotate(" + this.hueValue + "deg) sepia(" + this.sepiaValue + "%)";
     return this.sanitizer.bypassSecurityTrustStyle(filterText);
   }
+
+  reinitializeFilters(){
+    this.brightnessValue = 100;
+    this.contrastValue = 100;
+    this.saturationValue = 100;
+    this.hueValue = 0;
+    this.sepiaValue = 0;
+  }
   
   
   ////////////////////////////// FOR IMAGES CHOICE SLIDER FUNCTIONNEMENT

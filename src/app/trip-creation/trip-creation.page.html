@@ -54,22 +54,27 @@
     <div class="customizingZone marginContent">
       <!-- Image -->
       <div class="shownImage"> 
-        <img src="{{urlImage}}" [style.filter]="getFilters()">  <!--      style="filter: brightness(1) contrast(1) saturate(2)" -->
+        <img src="{{urlImage}}" [style.filter]="getFilters()">
       </div>
 
       <!-- Ion-range to modify the image -->
       <div class="selectors">
+
+        <ion-button color="warning" fill="outline" (click)="reinitializeFilters()">
+          <ion-icon slot="start" name="undo"></ion-icon>
+          <span>Réinitialiser</span>
+        </ion-button>
         
         <!-- Luminosité -->
         <div class="brightness">
           <span class="whiteColor">Luminosité</span> 
-          <ion-range color="warning" [(ngModel)]="brightnessValue" min="0" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="brightnessValue" min="40" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Contraste -->
         <div class="contrast">
           <span class="whiteColor">Contraste</span> 
-          <ion-range color="warning" [(ngModel)]="contrastValue" min="0" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="contrastValue" min="40" max="300" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Saturation -->
