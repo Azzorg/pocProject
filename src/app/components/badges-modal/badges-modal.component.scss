@@ -1,0 +1,43 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+
+/** 
+* -------------------------------------------
+* Header
+*/
+ion-header{
+  // --background: rgba(0, 0, 0, 0.7);
+}
+
+
+ion-header ion-toolbar{
+  // --background:transparent;
+  
+  --background: rgba(0, 0, 0, 0.7);
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+}
+
+.header:after{
+  background: transparent;
+}
+
+ion-header ion-toolbar ion-title{
+  text-align: center;
+  color: rgb(255, 182, 48);
+}
+
+
+
+/**
+* ---------------------------------------------
+* Content
+*/
+
+ion-content{
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  // --background:transparent;
+  --background: rgba(0, 0, 0, 0.7);
+  color: white !important;
+}
+
+
+

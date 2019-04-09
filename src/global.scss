@@ -9,3 +9,19 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+
+/** for badges modal background 
+    Voir si on peut le mettre autre part, mais ne fonctionne pas dans app.css, profil.css ni dans badge-modal.css
+*/
+app-badges-modal{
+  --background: rgba(0, 0, 0, 0.7);
+  background-image: url("./assets/img/background-image.jpg") !important;  
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -webkit-background-position: right;
+}

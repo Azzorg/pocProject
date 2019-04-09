@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-badges-modal',
@@ -7,8 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BadgesModalComponent implements OnInit {
 
-  constructor() { }
+    // "badge" passed in componentProps
+    @Input() badge: any;
+
+  constructor(private modalCtrl:ModalController) { }
 
   ngOnInit() {}
+
+  /**
+   * To dismiss the modal
+   */
+  dismiss(){
+    this.modalCtrl.dismiss();
+  }
 
 }

@@ -1,3 +1,29 @@
-<p>
-  badges-modal works!
-</p>
+<!-- <div id="badgeModal"> -->
+  <ion-header>
+    <ion-toolbar style="display: inline-block">  <!-- Si ionic 3  remplacer par ion-navbar // si ionic 4 remplacer par ion-toolbar -->
+      <div>
+
+        <ion-title>
+          <ion-icon name="star"></ion-icon>
+          Badges
+          <ion-icon name="star"></ion-icon>
+        </ion-title>
+      </div>
+
+      <ion-buttons slot="end">
+        <ion-icon name="close" (click)="dismiss()">Close</ion-icon>
+      </ion-buttons>
+
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content padding>
+
+    <!-- Description du badge : badge - titre du badge - description -->
+    <div class="infoBadge" *ngIf="badge">
+      {{badge.name}}
+    </div>
+
+  </ion-content>
+
+<!-- </div> -->
