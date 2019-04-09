@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { ComponentsModule } from './../components/components.module';
+import { BadgesModalComponent } from './../components/badges-modal/badges-modal.component';
 
 import { ProfilPage } from './profil.page';
 
@@ -24,6 +25,7 @@ const routes: Routes = [
     ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [ProfilPage]
+  declarations: [ProfilPage],
+  entryComponents: [BadgesModalComponent]
 })
 export class ProfilPageModule {}

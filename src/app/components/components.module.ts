@@ -6,6 +6,7 @@ import { RouteReuseStrategy, RouterModule } from '@angular/router';
 /** Custom components */
 import { SideMenuComponent } from './side-menu/side-menu.component';
 import { FooterAppComponent } from './footer-app/footer-app.component';
+import { BadgesModalComponent } from './badges-modal/badges-modal.component';
 
 @NgModule({
   imports: [
@@ -16,11 +17,13 @@ import { FooterAppComponent } from './footer-app/footer-app.component';
   ],
   declarations: [
     SideMenuComponent,
-    FooterAppComponent
+    FooterAppComponent,
+    BadgesModalComponent
   ],
   exports:[
     SideMenuComponent,
-    FooterAppComponent
+    FooterAppComponent,
+    BadgesModalComponent
   ],
   providers: [
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }

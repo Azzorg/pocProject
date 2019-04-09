@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { BadgesModalComponent } from './../components/badges-modal/badges-modal.component';
 
 @Component({
   selector: 'app-profil',
@@ -20,7 +22,7 @@ export class ProfilPage implements OnInit {
   
 
 
-  constructor() { }
+  constructor(public modalController: ModalController) { }
 
 
   ngOnInit() {
@@ -126,8 +128,15 @@ export class ProfilPage implements OnInit {
    * display a modal with info of the badge
    * @param badge 
    */
-  showInfoBadge(badge){
+  async showInfoBadge(badge){
     console.log("Show info badge", badge);
+    const modal = await this.modalController.create({
+      component: BadgesModalComponent,
+      componentProps: {
+        'badge': badge
+      }
+    });
+    return await modal.present();
   }
   
 
