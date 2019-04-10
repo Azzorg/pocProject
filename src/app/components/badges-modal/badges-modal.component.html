@@ -1,8 +1,13 @@
 <!-- <div id="badgeModal"> -->
   <ion-header>
     <ion-toolbar style="display: inline-block">  <!-- Si ionic 3  remplacer par ion-navbar // si ionic 4 remplacer par ion-toolbar -->
-      <div>
+      
+      <!-- /!\ IMPORTANT : pour centrer le titre de la page -->
+      <div class="blankDiv" slot="start">
+        <ion-icon name="close"></ion-icon>
+      </div>
 
+      <div>
         <ion-title>
           <ion-icon name="star"></ion-icon>
           Badges
@@ -10,9 +15,9 @@
         </ion-title>
       </div>
 
-      <ion-buttons slot="end">
-        <ion-icon name="close" (click)="dismiss()">Close</ion-icon>
-      </ion-buttons>
+      <ion-button slot="end" (click)="dismiss()">
+        <ion-icon color="light" name="close">Close</ion-icon>
+      </ion-button>
 
     </ion-toolbar>
   </ion-header>
@@ -21,7 +26,44 @@
 
     <!-- Description du badge : badge - titre du badge - description -->
     <div class="infoBadge" *ngIf="badge">
-      {{badge.name}}
+
+      <ion-grid>
+        <ion-row>
+          <!-- left part : badge -->
+          <ion-col size="3">
+            <div class="leftPart">
+              <ion-icon src="{{badge.badge}}"></ion-icon>
+            </div>
+          </ion-col>
+
+          <!-- right part : Title of the badge and description of the badge -->
+          <ion-col size="9">
+            <div class="rightPart">
+              <!-- Title of the badge -->
+              <div>{{badge.name | uppercase}}</div>
+
+              <!-- Description of the badge -->
+              <p>
+                {{badge.description}}
+              </p>
+            </div>
+          </ion-col>
+
+        </ion-row>
+
+      </ion-grid>
+
+
+      
+      
+      
+
+      
+      
+        
+
+      
+      
     </div>
 
   </ion-content>

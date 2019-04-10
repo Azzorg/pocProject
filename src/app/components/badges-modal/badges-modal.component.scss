@@ -1,18 +1,19 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
 
+.blankDiv{
+  color: transparent;
+  padding-left: 26px;
+  padding-right: 16px;
+}
+
 /** 
 * -------------------------------------------
 * Header
 */
-ion-header{
-  // --background: rgba(0, 0, 0, 0.7);
-}
-
 
 ion-header ion-toolbar{
-  // --background:transparent;
-  
-  --background: rgba(0, 0, 0, 0.7);
+  contain: none;
+  --background: rgba(0, 0, 0, 0.6);
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
 }
 
@@ -25,6 +26,17 @@ ion-header ion-toolbar ion-title{
   color: rgb(255, 182, 48);
 }
 
+ion-header ion-button{
+  --background: transparent;
+  --box-shadow: none;
+  margin-right: 10px;
+}
+
+ion-header ion-button:active{
+  --background: transparent;
+}
+
+
 
 
 /**
@@ -34,9 +46,40 @@ ion-header ion-toolbar ion-title{
 
 ion-content{
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
-  // --background:transparent;
-  --background: rgba(0, 0, 0, 0.7);
+  --background: rgba(0, 0, 0, 0.6);  
+}
+
+ion-content .infoBadge{
   color: white !important;
+}
+
+
+
+/**
+* --------------------------------------------
+* Info on a bagde : at the top of the screen
+*/
+
+ion-content .infoBadge{
+}
+
+ion-content .infoBadge ion-col:nth-child(1){
+  display: flex;
+}
+
+ion-content .infoBadge .leftPart{
+  margin-top:auto;
+  margin-bottom: auto;
+  text-align: center;
+}
+
+ion-content .infoBadge .leftPart ion-icon{
+  font-size: 20vw;
+}
+
+ion-content .infoBadge .rightPart p{
+  text-align: justify;
+  font-size:10pt;
 }
 
 
