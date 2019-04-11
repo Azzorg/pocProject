@@ -22,11 +22,10 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-content padding>
 
+  <ion-content>
     <!-- Description du badge : badge - titre du badge - description -->
-    <div class="infoBadge" *ngIf="badge">
-
+    <div padding class="infoBadge" *ngIf="badge">
       <ion-grid>
         <ion-row>
           <!-- left part : badge -->
@@ -48,22 +47,43 @@
               </p>
             </div>
           </ion-col>
-
         </ion-row>
+      </ion-grid>      
+    </div>
 
-      </ion-grid>
+    <!-- Lists of badges displayed in 2 tabs : badges earned and badges in progress -->
+    <div>
+      <!-- Titles of lists -->
+      <div class="titleLists">
+        <ion-grid>
+          <ion-row>
+            <ion-col (click)="goToEarnedBadgesList()">
+              <span>Obtenus</span>
+            </ion-col>
+            
+            <ion-col (click)="goToInProgressBadgesList()">
+              <span>En cours</span>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </div>
 
+      <!-- Lists of badges -->
+      <div class="listsBadges">
+        <div  [ngClass]="{'translateLeft': !showEarnedBadges, 'translateRight': showEarnedBadges}">
 
-      
-      
-      
+          <!-- List of badges already gotten -->
+          <div class="gottenBadgesPart">
 
-      
-      
-        
+          </div>
 
-      
-      
+          <!-- List of the rest of badges -->
+          <div class="inProgressBadgesPart">
+
+          </div>
+        </div>
+      </div>
+
     </div>
 
   </ion-content>

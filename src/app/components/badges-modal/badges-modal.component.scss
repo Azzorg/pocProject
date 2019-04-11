@@ -60,9 +60,6 @@ ion-content .infoBadge{
 * Info on a bagde : at the top of the screen
 */
 
-ion-content .infoBadge{
-}
-
 ion-content .infoBadge ion-col:nth-child(1){
   display: flex;
 }
@@ -82,5 +79,70 @@ ion-content .infoBadge .rightPart p{
   font-size:10pt;
 }
 
+
+
+/**
+* ---------------------------------------------
+* Title of the 2 lists to display badges : "earned" and "in progress"
+*/
+
+.titleLists ion-grid{
+  padding-bottom: 0px;
+}
+
+.titleLists ion-col{
+  text-align: center;
+  color: white;
+}
+
+.titleLists ion-col:nth-child(1){
+  border-right: 1px solid;
+}
+
+
+
+/**
+* --------------------------------------
+* Lists of badges
+*/
+
+.translateLeft{
+  transform: translateX(-50%);
+  transition: transform ease-in-out 2s;
+}
+
+.translateRight{
+  transform: translateX(0);
+  transition: transform ease-in-out 2s;
+}
+
+.listsBadges {
+  margin-right:-16px;
+  overflow: hidden;
+  width: 200%;
+}
+
+.listsBadges div:nth-child(1)::before{
+  content: "";
+    position: absolute;
+    left: 25%;
+    height: 1px;
+    width: 50%;
+    border-top: 1px solid white;
+}
+
+.gottenBadgesPart{
+  width: 50%;
+  height: 500px;
+  background-color: green;
+  float: left;
+}
+
+.inProgressBadgesPart{
+  margin-left:50%;
+  width: 50%;
+  height: 500px;
+  background-color: red;
+}
 
 
