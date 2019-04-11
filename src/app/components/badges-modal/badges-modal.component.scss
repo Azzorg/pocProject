@@ -117,12 +117,26 @@ ion-content .infoBadge .rightPart p{
 }
 
 .listsBadges {
-  margin-right:-16px;
   overflow: hidden;
   width: 200%;
 }
 
-.listsBadges div:nth-child(1)::before{
+.listBadge{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+
+  padding-top: 15px;  
+  height: auto;
+  overflow: hidden;
+  
+  font-weight: 300;
+  font-size: 13pt;
+}
+
+.listsBadges > div:nth-child(1)::before{
   content: "";
     position: absolute;
     left: 25%;
@@ -134,7 +148,6 @@ ion-content .infoBadge .rightPart p{
 .gottenBadgesPart{
   width: 50%;
   height: 500px;
-  background-color: green;
   float: left;
 }
 
@@ -142,7 +155,12 @@ ion-content .infoBadge .rightPart p{
   margin-left:50%;
   width: 50%;
   height: 500px;
-  background-color: red;
+}
+
+.badge{
+  color: white;
+  text-align: center; 
+  width: 30%;
 }
 
 
