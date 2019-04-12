@@ -75,7 +75,7 @@
           <!-- List of badges already gotten -->
           <div class="gottenBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badgeObj of listGottenBadges' class="badge" [ngClass]="{'badgeSelected': badgeObj.id===badge.id}" (click)="showInfoBadge(badgeObj)">
+              <div *ngFor='let badgeObj of listGottenBadges' class="badge" [ngClass]="{'badgeSelected': badge && badgeObj.id===badge.id}" (click)="showInfoBadge(badgeObj)">
                 <ion-icon style="font-size: 10vw" src="{{badgeObj.badge}}"></ion-icon>
                 <br/>
                 <span class="smallCaps">{{badgeObj.name}}</span>
@@ -87,7 +87,7 @@
           <!-- List of the rest of badges -->
           <div class="inProgressBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badgeObj of listInProgressBadges' class="badge" [ngClass]="{'badgeSelected': badgeObj.id===badge.id}" (click)="showInfoBadge(badgeObj)">
+              <div *ngFor='let badgeObj of listInProgressBadges' class="badge" [ngClass]="{'badgeSelected': badge && badgeObj.id===badge.id}" (click)="showInfoBadge(badgeObj)">
                 <ion-icon style="font-size: 10vw" src="{{badgeObj.badge}}"></ion-icon>
                 <br/>
                 <span class="smallCaps">{{badgeObj.name}}</span>

@@ -1,3 +1,9 @@
+/** 
+  /!\ IMPORTANT /!\
+  The background is defined in global.scss
+*/
+
+
 @import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
 
 .blankDiv{
@@ -63,7 +69,7 @@ ion-content .infoBadge{
 
 /**
 * --------------------------------------------
-* Info on a bagde : at the top of the screen
+* Info on a badge : at the top of the screen
 */
 
 ion-content .infoBadge ion-col:nth-child(1){
@@ -78,6 +84,11 @@ ion-content .infoBadge .leftPart{
 
 ion-content .infoBadge .leftPart ion-icon{
   font-size: 20vw;
+}
+
+ion-content .infoBadge .rightPart{
+  display: flex;
+  flex-direction: column;
 }
 
 ion-content .infoBadge .rightPart p{

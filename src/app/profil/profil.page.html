@@ -66,7 +66,7 @@
       <!-- Succes -->
       <div *ngIf="!mapMode" class="succes borderBefore" padding>
         <div class="blank"></div>
-        <span class="title">{{'Succes' | uppercase}}</span>
+        <span class="title" (click)="showInfoBadge()">{{'Succes' | uppercase}}</span>
         <div class="listBadge">
           <div *ngFor='let badge of listBadge | slice:0:3; let i=index' (click)="showInfoBadge(badge)">
             <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
