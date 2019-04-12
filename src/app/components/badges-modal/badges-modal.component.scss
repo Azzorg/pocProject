@@ -71,7 +71,12 @@ ion-content{
 ion-content .infoBadge{
   color: white !important;
   display: block;
-  transition: all 2s ease-in-out;
+
+  background: red;
+
+  transform: scaleY(1);    
+  transform-origin: top;
+  transition: all 2s ease;
 }
 
 ion-content .infoBadge ion-col:nth-child(1){
@@ -94,8 +99,11 @@ ion-content .infoBadge .rightPart p{
 }
 
 ion-content .hidden{
-  display: none;
-  opacity: 0;
+  display: block;
+  transform: scaleY(0);
+  transition: all 2s ease;
+
+  background: blue;
 }
 
 
@@ -185,6 +193,7 @@ ion-content .hidden{
 
 .badgeSelected{
   background:rgba(255, 255, 255, 0.2);
+  transition: all 2s;
   border-radius: 5px
 }
 

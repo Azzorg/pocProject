@@ -58,7 +58,7 @@ export class BadgesModalComponent implements OnInit {
   showInfoBadge(badgeShown){
     if(this.badge && badgeShown.id === this.badge.id){
       this.hideInfoBadge = true; 
-      this.badge = null;
+      // this.badge = null;
     }
     else{
       this.hideInfoBadge = false; 
@@ -137,14 +137,14 @@ export class BadgesModalComponent implements OnInit {
         name:"No stress",
         gotten: true,
         badge:"./../../assets/icon/badges/sticker.svg",
-        description:"Cum haec taliaque sollicitas eius aures everberarent expositas semper eius modi rumoribus et patentes, varia animo tum miscente consilia, tandem id ut optimum factu elegit: et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur."
+        description:"Et Vrsicinum primum ad se venire summo cum honore mandavit ea specie ut pro rerum tunc urgentium captu disponeretur concordi consilio, quibus virium incrementis Parthicarum gentium a arma minantium impetus frangerentur."
       },
       {
         id: 8,
-        name:"Grand Routeur",
+        name:"Petit Routeur",
         gotten: true,
         badge:"./../../assets/icon/badges/gift.svg",
-        description:"Nec piget dicere avide magis hanc insulam populum Romanum invasisse quam iuste. Ptolomaeo enim rege foederato nobis et socio ob aerarii nostri angustias iusso sine ulla culpa proscribi ideoque hausto veneno voluntaria morte deleto et tributaria facta est et velut hostiles eius exuviae classi inpositae in urbem advectae sunt per Catonem, nunc repetetur ordo gestorum."
+        description:"Classi inpositae in urbem advectae sunt per Catonem, nunc repetetur ordo gestorum."
       },
       {
         id: 9,
