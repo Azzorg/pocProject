@@ -61,16 +61,18 @@ ion-content{
   --background: rgba(0, 0, 0, 0.6);  
 }
 
-ion-content .infoBadge{
-  color: white !important;
-}
-
 
 
 /**
 * --------------------------------------------
 * Info on a badge : at the top of the screen
 */
+
+ion-content .infoBadge{
+  color: white !important;
+  display: block;
+  transition: all 2s ease-in-out;
+}
 
 ion-content .infoBadge ion-col:nth-child(1){
   display: flex;
@@ -86,14 +88,14 @@ ion-content .infoBadge .leftPart ion-icon{
   font-size: 20vw;
 }
 
-ion-content .infoBadge .rightPart{
-  display: flex;
-  flex-direction: column;
-}
-
 ion-content .infoBadge .rightPart p{
   text-align: justify;
   font-size:10pt;
+}
+
+ion-content .hidden{
+  display: none;
+  opacity: 0;
 }
 
 

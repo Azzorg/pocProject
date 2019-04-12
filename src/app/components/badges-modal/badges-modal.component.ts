@@ -15,6 +15,7 @@ export class BadgesModalComponent implements OnInit {
     listGottenBadges: any;
     listInProgressBadges : any;
 
+    hideInfoBadge: boolean = false;
     showEarnedBadges: boolean = true;
 
   constructor(private modalCtrl:ModalController) { }
@@ -55,7 +56,14 @@ export class BadgesModalComponent implements OnInit {
    * Show info of the badge selected
    */
   showInfoBadge(badgeShown){
-    this.badge = badgeShown;
+    if(this.badge && badgeShown.id === this.badge.id){
+      this.hideInfoBadge = true; 
+      this.badge = null;
+    }
+    else{
+      this.hideInfoBadge = false; 
+      this.badge = badgeShown;
+    }
   }
 
 
