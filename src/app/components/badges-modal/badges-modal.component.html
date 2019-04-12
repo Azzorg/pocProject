@@ -73,9 +73,9 @@
         <div  [ngClass]="{'translateLeft': !showEarnedBadges, 'translateRight': showEarnedBadges}">
 
           <!-- List of badges already gotten -->
-          <div class="gottenBadgesPart">
+          <div class="gottenBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badge of listGottenBadges' class="badge">
+              <div *ngFor='let badge of listGottenBadges' class="badge" (click)="showInfoBadge(badge)">
                 <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
                 <br/>
                 <span class="smallCaps">{{badge.name}}</span>
@@ -85,9 +85,9 @@
           </div>
 
           <!-- List of the rest of badges -->
-          <div class="inProgressBadgesPart">
+          <div class="inProgressBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badge of listInProgressBadges' class="badge">
+              <div *ngFor='let badge of listInProgressBadges' class="badge" (click)="showInfoBadge(badge)">
                 <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
                 <br/>
                 <span class="smallCaps">{{badge.name}}</span>

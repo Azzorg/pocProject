@@ -6,6 +6,12 @@
   padding-right: 16px;
 }
 
+.smallCaps{
+  font-variant: small-caps;
+}
+
+
+
 /** 
 * -------------------------------------------
 * Header
@@ -108,12 +114,12 @@ ion-content .infoBadge .rightPart p{
 
 .translateLeft{
   transform: translateX(-50%);
-  transition: transform ease-in-out 2s;
+  transition: transform ease-in-out 0.5s;
 }
 
 .translateRight{
   transform: translateX(0);
-  transition: transform ease-in-out 2s;
+  transition: transform ease-in-out 0.5s;
 }
 
 .listsBadges {
@@ -121,28 +127,13 @@ ion-content .infoBadge .rightPart p{
   width: 200%;
 }
 
-.listBadge{
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-direction: row;
-
-  padding-top: 15px;  
-  height: auto;
-  overflow: hidden;
-  
-  font-weight: 300;
-  font-size: 13pt;
-}
-
 .listsBadges > div:nth-child(1)::before{
   content: "";
-    position: absolute;
-    left: 25%;
-    height: 1px;
-    width: 50%;
-    border-top: 1px solid white;
+  position: absolute;
+  left: 25%;
+  height: 1px;
+  width: 50%;
+  border-top: 1px solid white;
 }
 
 .gottenBadgesPart{
@@ -157,7 +148,23 @@ ion-content .infoBadge .rightPart p{
   height: 500px;
 }
 
+.listBadge{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: row;
+
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+  
+  font-weight: 300;
+  font-size: 13pt;
+}
+
 .badge{
+  margin-top: 15px;
   color: white;
   text-align: center; 
   width: 30%;
