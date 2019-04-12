@@ -87,7 +87,7 @@ export class BadgesModalComponent implements OnInit {
         name: "Jeune Baroudeur",
         gotten: true,
         badge:"./../../assets/icon/badges/diamand.svg",
-        description:"Quare hoc quidem praeceptum, cuiuscumque est."
+        description:"Quare hoc quidem praeceptum, cuiuscumque est, ad tollendam amicitiam valet; illud potius praecipiendum fuit, ut eam diligentiam adhiberemus in amicitiis comparandis."
       },
       {
         id: 2,
