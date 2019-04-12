@@ -20,7 +20,6 @@ export class BadgesModalComponent implements OnInit {
   constructor(private modalCtrl:ModalController) { }
 
   ngOnInit() {
-    console.log("In ngInit");
     this.getListBadges();
     this.generateListsBadges();
   }
@@ -40,14 +39,11 @@ export class BadgesModalComponent implements OnInit {
   generateListsBadges(){
     this.listGottenBadges = new Array();
     this.listInProgressBadges = new Array();
-    console.log("In generateListsBadges");
     for(let i = 0; i < this.listBadge.length; i++){
       if(this.listBadge[i].gotten){
-        console.log("GOTTEN BADGE : ", this.listBadge[i]);
         this.listGottenBadges.push(this.listBadge[i]);
       }
       else{
-        console.log("IN PROGRESS BADGE : ", this.listBadge[i]);
         this.listInProgressBadges.push(this.listBadge[i]);
       }
     }

@@ -58,11 +58,11 @@
         <ion-grid>
           <ion-row>
             <ion-col (click)="goToEarnedBadgesList()">
-              <span>Obtenus</span>
+              <span class="smallCaps">Obtenus</span>
             </ion-col>
             
             <ion-col (click)="goToInProgressBadgesList()">
-              <span>En cours</span>
+              <span class="smallCaps">En cours</span>
             </ion-col>
           </ion-row>
         </ion-grid>
@@ -75,10 +75,10 @@
           <!-- List of badges already gotten -->
           <div class="gottenBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badge of listGottenBadges' class="badge" (click)="showInfoBadge(badge)">
-                <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
+              <div *ngFor='let badgeObj of listGottenBadges' class="badge" [ngClass]="{'badgeSelected': badgeObj.id===badge.id}" (click)="showInfoBadge(badgeObj)">
+                <ion-icon style="font-size: 10vw" src="{{badgeObj.badge}}"></ion-icon>
                 <br/>
-                <span class="smallCaps">{{badge.name}}</span>
+                <span class="smallCaps">{{badgeObj.name}}</span>
               </div>
             </div>
 
@@ -87,10 +87,10 @@
           <!-- List of the rest of badges -->
           <div class="inProgressBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badge of listInProgressBadges' class="badge" (click)="showInfoBadge(badge)">
-                <ion-icon style="font-size: 10vw" src="{{badge.badge}}"></ion-icon>
+              <div *ngFor='let badgeObj of listInProgressBadges' class="badge" (click)="showInfoBadge(badgeObj)">
+                <ion-icon style="font-size: 10vw" src="{{badgeObj.badge}}"></ion-icon>
                 <br/>
-                <span class="smallCaps">{{badge.name}}</span>
+                <span class="smallCaps">{{badgeObj.name}}</span>
               </div>
             </div>
           </div>
