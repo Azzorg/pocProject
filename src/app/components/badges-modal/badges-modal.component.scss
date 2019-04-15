@@ -59,8 +59,13 @@ ion-header ion-button:active{
 ion-content{
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   --background: rgba(0, 0, 0, 0.6);  
-}
 
+  
+  // display:flex;
+  // flex-direction:column;
+  // justify-content:flex-start;
+  // height:auto;
+}
 
 
 /**
@@ -74,8 +79,8 @@ ion-content .infoBadge{
 
   background: red;
 
-  transform: scaleY(1);    
-  transform-origin: top;
+  // transform: scaleY(1);    
+  // transform-origin: top;
   transition: all 2s ease;
 }
 
@@ -99,10 +104,7 @@ ion-content .infoBadge .rightPart p{
 }
 
 ion-content .hidden{
-  display: block;
-  transform: scaleY(0);
-  transition: all 2s ease;
-
+  // flex: 0 !important;
   background: blue;
 }
 

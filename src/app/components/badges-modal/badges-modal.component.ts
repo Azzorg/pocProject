@@ -56,7 +56,9 @@ export class BadgesModalComponent implements OnInit {
    * Show info of the badge selected
    */
   showInfoBadge(badgeShown){
-    if(this.badge && badgeShown.id === this.badge.id){
+    console.log("Click : ", badgeShown);
+    if(this.badge && badgeShown.id === this.badge.id && !this.hideInfoBadge){
+      console.log("hide this badge");
       this.hideInfoBadge = true; 
       // this.badge = null;
     }
