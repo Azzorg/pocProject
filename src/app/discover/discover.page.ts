@@ -93,7 +93,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Azzorg",
-          image: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg"
+          image: "./../../assets/img/imgLocal/user1.jpg"
         },
         action:{
           idAction: 0
@@ -106,7 +106,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Benclem",
-          image: "http://www.galerie-imagine.fr/images/image-de-profil_6.jpg"
+          image: "./../../assets/img/imgLocal/userClem.jpg"
         },
         action:{
           idAction: 2
@@ -119,7 +119,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Slokhas",
-          image: "https://cdn.radiofrance.fr/s3/cruiser-production/2017/07/b162611f-0afd-4de3-a958-76ebd34ca97a/640_polar_gettyimages-691829276.jpg"
+          image: "./../../assets/img/imgLocal/userTheo.jpg"
         },
         action:{
           idAction: 1
@@ -132,7 +132,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Azzorg",
-          image: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg"
+          image: "./../../assets/img/imgLocal/user1.jpg"
         },
         action:{
           idAction: 1
@@ -145,7 +145,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Azzorg",
-          image: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg"
+          image: "./../../assets/img/imgLocal/user1.jpg"
         },
         action:{
           idAction: 0
@@ -158,7 +158,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Benclem",
-          image: "http://www.galerie-imagine.fr/images/image-de-profil_6.jpg"
+          image: "./../../assets/img/imgLocal/userClem.jpg"
         },
         action:{
           idAction: 2
@@ -171,7 +171,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Slokhas",
-          image: "https://cdn.radiofrance.fr/s3/cruiser-production/2017/07/b162611f-0afd-4de3-a958-76ebd34ca97a/640_polar_gettyimages-691829276.jpg"
+          image: "./../../assets/img/imgLocal/userTheo.jpg"
         },
         action:{
           idAction: 2
@@ -184,7 +184,7 @@ export class DiscoverPage implements OnInit {
       {
         user:{
           name:"Azzorg",
-          image: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg"
+          image: "./../../assets/img/imgLocal/user1.jpg"
         },
         action:{
           idAction: 0

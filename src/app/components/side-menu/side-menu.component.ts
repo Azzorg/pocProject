@@ -54,7 +54,7 @@ export class SideMenuComponent implements OnInit {
 
   public user = {
     name : "Azzorg",
-    avatar: "https://majorblog.com/wp-content/uploads/2016/11/silhouette-of-man-looking-away.jpg",
+    avatar: "./../../../assets/img/imgLocal/user1.jpg",
     nbAbonnes: 124
   }
 
@@ -78,7 +78,7 @@ export class SideMenuComponent implements OnInit {
     this.listTrip = [
       {
         name:"Europe Trip",
-        countryImage: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Flag_of_Europe.svg/1200px-Flag_of_Europe.svg.png"  
+        countryImage: "./../../../assets/countries/ue.png"  
       },
       {
         name:"Rainy London",
@@ -93,19 +93,19 @@ export class SideMenuComponent implements OnInit {
   initListFriendsTrip(){
     this.listFriendsTrip = [
       {
-        avatar:"https://oiseaurose.com/wp-content/uploads/roadtrip-etats-unis-1.jpg",
+        avatar:"./../../../assets/img/imgLocal/user2.jpg",
         countryImage:"./../../../assets/countries/france.png",
       },
       {
-        avatar:"https://www.frommers.com/system/media_items/attachments/000/857/663/s500/1intromoyanbreenf.jpg",
+        avatar:"./../../../assets/img/imgLocal/user3.jpg",
         countryImage:"./../../../assets/countries/uk.png",
       },
       {
-        avatar:"https://www.worldelse.com/wp-content/uploads/2017/10/Road-trip-au-Quebec-87.jpg",
+        avatar:"./../../../assets/img/imgLocal/user4.jpg",
         countryImage:"./../../../assets/countries/usa.png",
       },
       {
-        avatar:"https://www.carnets-de-traverse.com/blog/wp-content/uploads/2015/02/alaska-roadtrip4.jpg",
+        avatar:"./../../../assets/img/imgLocal/user5.jpg",
         countryImage:"./../../../assets/countries/spain.png",
       }
     ];
