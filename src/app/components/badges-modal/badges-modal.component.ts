@@ -13,9 +13,21 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         padding: '0px'
       })),
       state('false', style({ 
-        height: '*'
+        height: '*',
+        padding: '16px' 
       })),
-      transition('false <=> true', animate(500))
+      transition('false <=> true', animate(300))
+    ]),
+    trigger('animateHeightChange', [
+      state('un', style({ 
+        height: '*',
+        background:'blue'
+      })),
+      state('deux', style({ 
+        height: '*',
+        background:'red'
+      })),
+      transition('un <=> deux', animate(500))
     ])
   ]
 })
@@ -33,6 +45,8 @@ export class BadgesModalComponent implements OnInit {
 
   hideShowInfo: boolean;
 
+  state: string = "un";
+
   constructor(private modalCtrl:ModalController) { }
 
   ngOnInit() {
@@ -43,7 +57,6 @@ export class BadgesModalComponent implements OnInit {
       console.log("No badge selected");
       this.hideInfoBadge = true;
 
-      // TODO: test angular animation
       this.hideShowInfo = true;
     }
     else{
@@ -84,21 +97,23 @@ export class BadgesModalComponent implements OnInit {
   showInfoBadge(badgeShown){
     if(this.badge && badgeShown.id === this.badge.id && !this.hideInfoBadge){
       this.hideInfoBadge = true; 
-
-
-      // TODO: test angular animation
       this.hideShowInfo = true;
     }
     else{
       this.hideInfoBadge = false; 
+      this.hideShowInfo = false;
       this.badge = badgeShown;
 
-
-      // TODO: test angular animation
-      this.hideShowInfo = false;
+      // To animate the height change of badge description
+      if(this.state === "un"){
+        this.state = "deux";
+      }
+      else{
+        this.state = "un";
+      }
     }
 
-    console.log("hideShowInfo : " + this.hideShowInfo);
+    console.log("State : " + this.state);
   }
 
 
@@ -137,7 +152,7 @@ export class BadgesModalComponent implements OnInit {
         name: "Jeune Explorateur",
         gotten: false,
         badge:"./../../assets/icon/badges/star.svg",
-        description:"Dum apud Persas, ut supra narravimus, perfidia regis motus agitat insperatos, et in eois tractibus bella rediviva consurgunt, anno sexto decimo et eo diutius post Nepotiani exitium, saeviens per urbem aeternam urebat cuncta Bellona, ex primordiis minimis ad clades excita luctuosas, quas obliterasset utinam iuge silentium! ne forte paria quandoque temptentur, plus exemplis generalibus nocitura quam delictis."
+        description:"Plus exemplis generalibus nocitura quam delictis."
       },
       {
         id: 3,

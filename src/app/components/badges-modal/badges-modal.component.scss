@@ -93,6 +93,7 @@ ion-content .infoBadge .leftPart ion-icon{
 ion-content .infoBadge .rightPart p{
   text-align: justify;
   font-size:10pt;
+  overflow: hidden;
 }
 
 // ion-content .hidden{
@@ -188,7 +189,7 @@ ion-content .infoBadge .rightPart p{
 
 .badgeSelected{
   background:rgba(255, 255, 255, 0.2);
-  transition: all 2s;
+  transition: all 0.5s;
   border-radius: 5px
 }
 

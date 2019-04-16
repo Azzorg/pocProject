@@ -43,7 +43,7 @@
               <div>{{badge.name | uppercase}}</div>
 
               <!-- Description of the badge -->
-              <p>
+              <p [@animateHeightChange]="state">
                 {{badge.description}}
               </p>
             </div>
