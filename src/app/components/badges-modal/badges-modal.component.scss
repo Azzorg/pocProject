@@ -71,11 +71,9 @@ ion-content{
 ion-content .infoBadge{
   color: white !important;
   display: block;
+  overflow: hidden;
 
-  max-height: 350px;
   padding: 16px;
-  overflow: scroll;
-  transition: all 0.5s ease;
 }
 
 ion-content .infoBadge ion-col:nth-child(1){
@@ -97,10 +95,10 @@ ion-content .infoBadge .rightPart p{
   font-size:10pt;
 }
 
-ion-content .hidden{
-  padding: 0px;
-  max-height: 0px !important;
-}
+// ion-content .hidden{
+//   // padding: 0px;
+//   // max-height: 0px !important;
+// }
 
 
 
@@ -185,6 +183,7 @@ ion-content .hidden{
   color: white;
   text-align: center; 
   width: 30%;
+  background: transparent;
 }
 
 .badgeSelected{

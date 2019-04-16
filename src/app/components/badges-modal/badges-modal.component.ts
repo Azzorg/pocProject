@@ -1,28 +1,54 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-badges-modal',
   templateUrl: './badges-modal.component.html',
   styleUrls: ['./badges-modal.component.scss'],
+  animations: [
+    trigger('hideShowInfo', [
+      state('true', style({ 
+        height: '0px',
+        padding: '0px'
+      })),
+      state('false', style({ 
+        height: '*'
+      })),
+      transition('false <=> true', animate(500))
+    ])
+  ]
 })
 export class BadgesModalComponent implements OnInit {
 
-    // "badge" passed in componentProps
-    @Input() badge: any;
+  // "badge" passed in componentProps
+  @Input() badge: any;
 
-    listBadge: any;
-    listGottenBadges: any;
-    listInProgressBadges : any;
+  listBadge: any;
+  listGottenBadges: any;
+  listInProgressBadges : any;
 
-    hideInfoBadge: boolean = false;
-    showEarnedBadges: boolean = true;
+  hideInfoBadge: boolean = false;
+  showEarnedBadges: boolean = true;
+
+  hideShowInfo: boolean;
 
   constructor(private modalCtrl:ModalController) { }
 
   ngOnInit() {
     this.getListBadges();
     this.generateListsBadges();
+
+    if(!this.badge){
+      console.log("No badge selected");
+      this.hideInfoBadge = true;
+
+      // TODO: test angular animation
+      this.hideShowInfo = true;
+    }
+    else{
+      this.hideShowInfo = false;
+    }
   }
 
 
@@ -56,16 +82,23 @@ export class BadgesModalComponent implements OnInit {
    * Show info of the badge selected
    */
   showInfoBadge(badgeShown){
-    console.log("Click : ", badgeShown);
     if(this.badge && badgeShown.id === this.badge.id && !this.hideInfoBadge){
-      console.log("hide this badge");
       this.hideInfoBadge = true; 
-      // this.badge = null;
+
+
+      // TODO: test angular animation
+      this.hideShowInfo = true;
     }
     else{
       this.hideInfoBadge = false; 
       this.badge = badgeShown;
+
+
+      // TODO: test angular animation
+      this.hideShowInfo = false;
     }
+
+    console.log("hideShowInfo : " + this.hideShowInfo);
   }
 
 

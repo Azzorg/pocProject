@@ -25,7 +25,8 @@
 
   <ion-content>
     <!-- Description du badge : badge - titre du badge - description -->
-    <div class="infoBadge" *ngIf="badge" [ngClass]="{'hidden': hideInfoBadge}">
+    <!-- <div class="infoBadge" *ngIf="badge" [ngClass]="{'hidden': hideInfoBadge}"> -->
+    <div class="infoBadge" *ngIf="badge" [@hideShowInfo]="hideShowInfo">
       <ion-grid>
         <ion-row>
           <!-- left part : badge -->
