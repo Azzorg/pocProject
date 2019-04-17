@@ -16,19 +16,23 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
         height: '*',
         padding: '16px' 
       })),
-      transition('false <=> true', animate(300))
+      transition('false <=> true', animate(200))
     ]),
-    trigger('animateHeightChange', [
-      state('un', style({ 
-        height: '*',
-        background:'blue'
-      })),
-      state('deux', style({ 
-        height: '*',
-        background:'red'
-      })),
-      transition('un <=> deux', animate(500))
-    ])
+
+
+    // Supposed to animate the height change of badge description
+    //
+    //
+    // trigger('animateHeightChange', [
+    //   state('*', style({ 
+    //     height: '*'
+    //   })),
+    //   // state('false', style({ 
+    //   //   height: '*',
+    //   //   background:'red'
+    //   // })),
+    //   transition('* <=> *', animate(300))
+    // ])
   ]
 })
 export class BadgesModalComponent implements OnInit {
@@ -45,7 +49,7 @@ export class BadgesModalComponent implements OnInit {
 
   hideShowInfo: boolean;
 
-  state: string = "un";
+  state: boolean = true;
 
   constructor(private modalCtrl:ModalController) { }
 
@@ -105,12 +109,7 @@ export class BadgesModalComponent implements OnInit {
       this.badge = badgeShown;
 
       // To animate the height change of badge description
-      if(this.state === "un"){
-        this.state = "deux";
-      }
-      else{
-        this.state = "un";
-      }
+      this.state = !this.state;
     }
 
     console.log("State : " + this.state);

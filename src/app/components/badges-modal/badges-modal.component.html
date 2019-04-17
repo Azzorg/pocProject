@@ -43,7 +43,7 @@
               <div>{{badge.name | uppercase}}</div>
 
               <!-- Description of the badge -->
-              <p [@animateHeightChange]="state">
+              <p >    <!-- [@animateHeightChange]="state" -->
                 {{badge.description}}
               </p>
             </div>
@@ -76,7 +76,7 @@
           <!-- List of badges already gotten -->
           <div class="gottenBadgesPart" padding>
             <div class="listBadge">
-              <div *ngFor='let badgeObj of listGottenBadges' class="badge" [ngClass]="{'badgeSelected': badge && badgeObj.id===badge.id}" (click)="showInfoBadge(badgeObj)">
+              <div *ngFor='let badgeObj of listGottenBadges' class="badge" [ngClass]="{'badgeSelected': badge && badgeObj.id===badge.id && !hideInfoBadge}" (click)="showInfoBadge(badgeObj)">
                 <ion-icon style="font-size: 10vw" src="{{badgeObj.badge}}"></ion-icon>
                 <br/>
                 <span class="smallCaps">{{badgeObj.name}}</span>
