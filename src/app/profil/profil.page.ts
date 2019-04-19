@@ -133,7 +133,6 @@ export class ProfilPage implements OnInit {
    * @param badge 
    */
   async showInfoBadge(badge?){
-    console.log("Show info badge", badge);
     const modal = await this.modalController.create({
       component: BadgesModalComponent,
       componentProps: {

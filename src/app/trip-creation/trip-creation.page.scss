@@ -43,6 +43,7 @@ span{
   font-variant: small-caps;
   font-size: 13pt;
   color: white;
+  z-index: 10;
 }
 
 
@@ -115,14 +116,14 @@ span{
 }
 
 .custon-nav{
-    height: 48px;
-    width: 20px;
-    cursor: pointer;
- 
-    vertical-align: middle;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+  height: 48px;
+  width: 20px;
+  cursor: pointer;
+
+  vertical-align: middle;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 .prev-icon-custom.disabled{
@@ -143,14 +144,14 @@ span{
 }
 
 .next-icon-custom.disabled{
-    opacity: 0.4;
-    cursor: default;
+  opacity: 0.4;
+  cursor: default;
 }
 
 .slider-nav{
-    ion-icon{
-        height: 100%;
-    }
+  ion-icon{
+    height: 100%;
+  }
 }
 
 ion-slide{
@@ -191,7 +192,7 @@ ion-slide img{
   float: left;
 }
 
-.selectors ion-button{
+.selectors ion-button{ 
   width: 100%;
   margin-bottom: 12px;
   font-variant: small-caps !important;
@@ -209,6 +210,25 @@ ion-slide img{
   padding-top: 0;
   padding-bottom: 0;
 }
+
+/**
+  List of preset filters
+  -----------------------------------------
+*/
+.listFilters{
+  
+}
+
+.listFilters ion-button{
+  --border-width: 1px;
+}
+
+.listFilters ion-button span{
+  color: white;
+  font-size: 9pt;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+}
+
 
 
 /**

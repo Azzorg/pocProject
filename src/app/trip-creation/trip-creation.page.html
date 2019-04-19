@@ -68,19 +68,19 @@
         <!-- Luminosité -->
         <div class="brightness">
           <span class="whiteColor">Luminosité</span> 
-          <ion-range color="warning" [(ngModel)]="brightnessValue" min="40" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="brightnessValue" min="40" max="200" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Contraste -->
         <div class="contrast">
           <span class="whiteColor">Contraste</span> 
-          <ion-range color="warning" [(ngModel)]="contrastValue" min="40" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="contrastValue" min="40" max="200" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Saturation -->
         <div class="saturation">
           <span class="whiteColor">Saturation</span> 
-          <ion-range color="warning" [(ngModel)]="saturationValue" min="0" max="300" step="1" mode="md"></ion-range>
+          <ion-range color="warning" [(ngModel)]="saturationValue" min="0" max="200" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Teinte -->
@@ -94,9 +94,63 @@
           <span class="whiteColor">Sepia</span> 
           <ion-range color="warning" [(ngModel)]="sepiaValue" min="0" max="100" step="1" mode="md"></ion-range>
         </div>
+
+        <!-- Greyscale -->
+        <div class="greyscale">
+          <span class="whiteColor">Niveaux de gris</span> 
+          <ion-range color="warning" [(ngModel)]="greyscaleValue" min="0" max="100" step="1" mode="md"></ion-range>
+        </div>
       </div>
     </div>
 
+    <!-- Preset filters -->
+    <div padding class="listFilters">
+      <ion-button color="warning" fill="outline" (click)="f1977()">
+        <span>1977</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="aden()">
+        <span>Aden</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="amaro()">
+        <span>Amaro</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="brannan()">
+        <span>Brannan</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="brooklyn()">
+        <span>Brooklyn</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="clarendon()">
+        <span>Clarendon</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="earlyBird()">
+        <span>Early Bird</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="gingham()">
+        <span>Gingham</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="inkwell()">
+        <span>Inkwell</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="lofi()">
+        <span>Lofi</span>
+      </ion-button>
+      
+      <ion-button color="warning" fill="outline" (click)="walden()">
+        <span>Walden</span>
+      </ion-button>
+    </div>
+
+    <!-- Next button -->
     <div class="nextBtn whiteColor smallCaps">
       <span>Suivant</span>
     </div>
