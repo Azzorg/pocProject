@@ -21,7 +21,8 @@
         </div>
         
         <div class="mapBtn inlineBlock">
-          <ion-icon name="globe" mode="md"></ion-icon>
+          <ion-icon *ngIf="!mapMode" name="globe" mode="md" (click)="hideShowMap()"></ion-icon>
+          <ion-icon *ngIf="mapMode" name="stats" mode="md" (click)="hideShowMap()"></ion-icon>
         </div>
       </div>
 
@@ -34,7 +35,8 @@
 
 
     <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
-    <div class="statsSucces">
+    <div class="statsSucces" *ngIf="!mapMode">
+
       <!-- Stats part -->
       <div class="stats">
         <ion-grid>
@@ -64,7 +66,7 @@
       </div>
 
       <!-- Succes -->
-      <div *ngIf="!mapMode" class="succes borderBefore" padding>
+      <div class="succes borderBefore" padding>
         <div class="blank"></div>
         <span class="title" (click)="showInfoBadge()">{{'Succes' | uppercase}}</span>
         <div class="listBadge">
@@ -78,12 +80,12 @@
     </div>
 
 
-
     <!-- Zone map -->
-    <div *ngIf="mapMode" class="map borderBefore" padding>
-      
+    <div *ngIf="mapMode" class="map">
+      <div class="map-container" name="wrapper">
+        <div #map id="map" class="map-container" data-tab-disable="true"></div>
+      </div>
     </div>
-
 
 
     <!-- Voyages -->

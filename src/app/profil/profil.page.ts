@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BadgesModalComponent } from './../components/badges-modal/badges-modal.component';
+
+
+import mapboxgl from 'mapbox-gl';
 
 @Component({
   selector: 'app-profil',
@@ -17,7 +20,15 @@ export class ProfilPage implements OnInit {
   nbPays: number = 4;
   nbVoyages : number = 6;
   hidden: boolean = true;
-  mapMode: boolean = false;
+  mapMode: boolean = true;
+
+  /* Mapbox */
+  public map : any;
+  @ViewChild('map') mapElement: ElementRef;
+
+
+  // Fake variables
+  carto: any;
 
   
 
@@ -26,10 +37,26 @@ export class ProfilPage implements OnInit {
 
 
   ngOnInit() {
+    /* FAKE DATA */
+    this.initFakeData();
+
     this.getVisitingProfil();
     this.getListBadges();
     this.getAllUserTrips();
+
   }
+
+  ngAfterViewInit(){
+
+    // Initialisation of the mapbox
+    this.initMapBox();
+  }
+
+  initFakeData(){
+    this.carto = "sat";
+  }
+
+
 
 
   /**
@@ -80,6 +107,10 @@ export class ProfilPage implements OnInit {
     ];
   }
 
+
+  /**
+   * Get all trip of the user
+   */
   getAllUserTrips(){
     this.listTrips = [
       {
@@ -162,4 +193,46 @@ export class ProfilPage implements OnInit {
     }
     return trip.dateDebut + " - " + trip.dateFin
   }
+
+  /**
+   * Display or hide the map
+   */
+  hideShowMap(){
+    this.mapMode = !this.mapMode;
+    console.log("Map mode : ", this.mapMode);
+    // if(this.mapMode)
+    //   this.initMapBox();
+  }
+
+  /**
+   * Initialisation 
+   */
+  initMapBox(){
+    var cartoType : string = "";
+    if(this.carto == "sat")
+      cartoType = "mapbox://styles/mapbox/satellite-v9";
+    else
+      cartoType = "mapbox://styles/theocharlot/cjlzno5x56rvh2rljya50156n";
+
+    mapboxgl.accessToken = 'pk.eyJ1IjoidGhlb2NoYXJsb3QiLCJhIjoiY2ppbmYwZnBnMDNsbDNwbHgzZ2EwNGdrdyJ9.vaaIfmiNd4iW0E9reBBwyA';
+    
+    this.map = new mapboxgl.Map({
+      container: this.mapElement.nativeElement,
+      style: cartoType,
+      localIdeographFontFamily : '"Noto Sans", "Noto Sans CJK SC", sans-serif',
+      hash: true
+    });
+
+    this.map.on('load', () => {
+      // this.map.setLayoutProperty('country-label', 'text-field', ['format',
+      //   ['get', 'name_en'], { 'font-scale': 1.2 },
+      //   '\n', {},
+      //   ['get', 'name'], {
+      //   'font-scale': 0.8,
+      //   'text-font': ['literal', [ 'DIN Offc Pro Italic', 'Arial Unicode MS Regular' ]]
+      // }]);
+    });
+  }
+
 }
+
