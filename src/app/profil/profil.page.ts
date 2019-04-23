@@ -4,6 +4,8 @@ import { BadgesModalComponent } from './../components/badges-modal/badges-modal.
 
 
 import mapboxgl from 'mapbox-gl';
+import * as $ from 'jquery';
+
 
 @Component({
   selector: 'app-profil',
@@ -40,6 +42,7 @@ export class ProfilPage implements OnInit {
     /* FAKE DATA */
     this.initFakeData();
 
+
     this.getVisitingProfil();
     this.getListBadges();
     this.getAllUserTrips();
@@ -52,6 +55,10 @@ export class ProfilPage implements OnInit {
     this.initMapBox();
   }
 
+
+  /**
+   * TODO: FAKE DATA
+   */
   initFakeData(){
     this.carto = "sat";
   }
@@ -60,7 +67,7 @@ export class ProfilPage implements OnInit {
 
 
   /**
-   * get profil information
+   * Get profil information
    */
   getVisitingProfil(){
     this.user = {
@@ -72,7 +79,7 @@ export class ProfilPage implements OnInit {
 
 
   /**
-   * get the list of badges
+   * Get the list of badges
    */
   getListBadges(){
     this.listBadge = [
@@ -160,7 +167,7 @@ export class ProfilPage implements OnInit {
 
 
   /**
-   * display a modal with info of the badge
+   * Display a modal with info of the badge
    * @param badge 
    */
   async showInfoBadge(badge?){
@@ -184,7 +191,7 @@ export class ProfilPage implements OnInit {
 
   
   /**
-   * return
+   * Return text with date 
    * @param trip 
    */
   getDates(trip: any){
@@ -200,17 +207,15 @@ export class ProfilPage implements OnInit {
   hideShowMap(){
     this.mapMode = !this.mapMode;
     console.log("Map mode : ", this.mapMode);
-    // if(this.mapMode)
-    //   this.initMapBox();
   }
 
   /**
-   * Initialisation 
+   * Mapbox intialization
    */
   initMapBox(){
     var cartoType : string = "";
     if(this.carto == "sat")
-      cartoType = "mapbox://styles/mapbox/satellite-v9";
+      cartoType = "mapbox://styles/mapbox/satellite-streets-v11";
     else
       cartoType = "mapbox://styles/theocharlot/cjlzno5x56rvh2rljya50156n";
 
@@ -223,15 +228,9 @@ export class ProfilPage implements OnInit {
       hash: true
     });
 
-    this.map.on('load', () => {
-      // this.map.setLayoutProperty('country-label', 'text-field', ['format',
-      //   ['get', 'name_en'], { 'font-scale': 1.2 },
-      //   '\n', {},
-      //   ['get', 'name'], {
-      //   'font-scale': 0.8,
-      //   'text-font': ['literal', [ 'DIN Offc Pro Italic', 'Arial Unicode MS Regular' ]]
-      // }]);
-    });
+    this.map.on('load', () => { });
+
+    $('.mapboxgl-canvas').width('100vw');
   }
 
 }

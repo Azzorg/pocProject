@@ -35,7 +35,7 @@
 
 
     <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
-    <div class="statsSucces" *ngIf="!mapMode">
+    <div class="statsSucces" [hidden]="mapMode">
 
       <!-- Stats part -->
       <div class="stats">
@@ -81,10 +81,10 @@
 
 
     <!-- Zone map -->
-    <div *ngIf="mapMode" class="map">
-      <div class="map-container" name="wrapper">
+    <div [hidden]="!mapMode" class="map map-container">
+      <!-- <div class="map-container" name="wrapper"> -->
         <div #map id="map" class="map-container" data-tab-disable="true"></div>
-      </div>
+      <!-- </div> -->
     </div>
 
 

@@ -45,6 +45,10 @@
   Top part with : profil image + pseudo + number of subscribers + button to show the map + button to subscribe (if not own profil page)
 */
 
+#main_profil .centerBlock{
+  padding-bottom: 15px;
+}
+
 #main_profil .topPart .avatar{
   height : 110px;
   width : 110px;
@@ -173,17 +177,12 @@
 
 /**
   -----------------------------------------
-  Maps
+  Map
 */
-.map-container{
+.map-container { 
   width: 100vw;
-  height: 30vh;
+  height: 300px;
 }
-
-.mapboxgl-canvas{
-  width: 100%;
-}
-
 
 
 /** 
