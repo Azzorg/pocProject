@@ -34,7 +34,7 @@ import * as $ from 'jquery';
       state('true', style({
         opacity: 1,
         width: '*',
-        //transform: 'rotate(0deg)'
+        transform: 'rotate(0deg)'
       })),
       state('false', style({ 
         opacity: 0,
@@ -42,7 +42,7 @@ import * as $ from 'jquery';
         transform: 'rotate(181deg)'
       })),
       transition('false => true', [
-        animate("0.3s 0.2s", style({transform:'rotate(300deg)'}))
+        animate("0.3s 0.19s", style({transform:'rotate(360deg)'}))
       ]),
       transition('true => false', [
         animate("0.2s", style({transform:'rotate(180deg)'}))
