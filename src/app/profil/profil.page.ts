@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { BadgesModalComponent } from './../components/badges-modal/badges-modal.component';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 
+/* Mapbox */
 import mapboxgl from 'mapbox-gl';
 import * as $ from 'jquery';
 
@@ -11,6 +13,24 @@ import * as $ from 'jquery';
   selector: 'app-profil',
   templateUrl: './profil.page.html',
   styleUrls: ['./profil.page.scss'],
+  animations: [
+    trigger('changeMapStats', [
+      state('true', style({ 
+        height: '*',
+        opacity: 1
+      })),
+      state('false', style({ 
+        height: '0px',
+        opacity: 0 
+      })),
+      transition('false => true', [
+        animate("0.3s 0.2s")
+      ]),
+      transition('true => false', [
+        animate("0.2s")
+      ])
+    ])
+  ]
 })
 export class ProfilPage implements OnInit {
   backgroundImgUrl : string = "./../../assets/img/background-image.jpg";

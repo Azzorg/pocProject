@@ -35,7 +35,7 @@
 
 
     <!-- Zone avec stats et succes, à remplacer par la carte lors du clic -->
-    <div class="statsSucces" [hidden]="mapMode">
+    <div class="statsSucces" [@changeMapStats]="!mapMode">    <!-- [hidden]="mapMode" -->
 
       <!-- Stats part -->
       <div class="stats">
@@ -81,7 +81,7 @@
 
 
     <!-- Zone map -->
-    <div [hidden]="!mapMode" class="map map-container">
+    <div  class="map map-container" [@changeMapStats]="mapMode">    <!-- [hidden]="!mapMode" -->
       <!-- <div class="map-container" name="wrapper"> -->
         <div #map id="map" class="map-container" data-tab-disable="true"></div>
       <!-- </div> -->
