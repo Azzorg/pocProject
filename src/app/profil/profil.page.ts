@@ -29,6 +29,24 @@ import * as $ from 'jquery';
       transition('true => false', [
         animate("0.2s")
       ])
+    ]),
+    trigger('changeIcon', [
+      state('true', style({
+        opacity: 1,
+        width: '*',
+        //transform: 'rotate(0deg)'
+      })),
+      state('false', style({ 
+        opacity: 0,
+        width: '0px',
+        transform: 'rotate(181deg)'
+      })),
+      transition('false => true', [
+        animate("0.3s 0.2s", style({transform:'rotate(300deg)'}))
+      ]),
+      transition('true => false', [
+        animate("0.2s", style({transform:'rotate(180deg)'}))
+      ])
     ])
   ]
 })
@@ -250,6 +268,7 @@ export class ProfilPage implements OnInit {
 
     this.map.on('load', () => { });
 
+    // Resize the map to take 100% of the width
     $('.mapboxgl-canvas').width('100vw');
   }
 
