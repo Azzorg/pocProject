@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-footer-app',
@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterAppComponent implements OnInit {
   showOptions: boolean = false;
+  justOpen: boolean = false;
 
   constructor() { }
 
@@ -17,6 +18,18 @@ export class FooterAppComponent implements OnInit {
    */
   toggleAddOptions(){
     this.showOptions = !this.showOptions;
+    this.justOpen = true;
+  }
+
+  
+  @HostListener('document:click', ['$event'])
+  clickout(event) {
+    if(this.showOptions && !this.justOpen){
+      this.showOptions = false;
+    }
+    else{
+      this.justOpen = false;
+    }
   }
 
 }

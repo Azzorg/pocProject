@@ -69,6 +69,7 @@ export class SideMenuComponent implements OnInit {
     // Init the list of friends' trip
     this.initListFriendsTrip();
   }
+  
 
   /**
    * Initialize the list of the user's trips done currently
@@ -86,6 +87,7 @@ export class SideMenuComponent implements OnInit {
       }
     ];
   }
+
 
   /**
    * Initialize the list of trip made by the persons followed

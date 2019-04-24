@@ -21,10 +21,8 @@
         </div>
         
         <div class="mapBtn inlineBlock">
-          <div class="relativeClass">
-            <ion-icon name="globe" mode="md" [@changeIcon]="mapMode" (click)="hideShowMap()"></ion-icon>   <!-- *ngIf="!mapMode" -->
-            <ion-icon name="stats" mode="md" [@changeIcon]="!mapMode" (click)="hideShowMap()"></ion-icon>   <!-- *ngIf="mapMode" -->    
-          </div>
+          <ion-icon name="globe" mode="md" [@changeIcon]="mapMode" (click)="hideShowMap()"></ion-icon>   <!-- *ngIf="!mapMode" -->
+          <ion-icon name="stats" mode="md" [@changeIcon]="!mapMode" (click)="hideShowMap()"></ion-icon>   <!-- *ngIf="mapMode" -->    
         </div>
       </div>
 
