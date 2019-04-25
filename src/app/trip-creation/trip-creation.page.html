@@ -54,7 +54,7 @@
     <div class="customizingZone marginContent">
       <!-- Image -->
       <div class="shownImage"> 
-        <img src="{{urlImage}}" [style.filter]="getFilters()">
+        <img (pan)="panEvent($event)" src="{{urlImage}}" [style.filter]="getFilters()">
       </div>
 
       <!-- Ion-range to modify the image -->

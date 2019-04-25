@@ -77,11 +77,27 @@ export class TripCreationPage implements OnInit {
     this.urlImage = url;
   }
 
+  /**
+   * Pan event managment 
+   */
+  panEvent($event){
+    console.log("Pan : ", $event);
+    event.preventDefault();
+  }
+
+
+  /**
+   * Get values for filters
+   */
   getFilters(){
     let filterText: string = "brightness(" + this.brightnessValue + "%) contrast(" + this.contrastValue + "%) saturate(" + this.saturationValue + "%) hue-rotate(" + this.hueValue + "deg) sepia(" + this.sepiaValue + "%) grayscale(" + this.greyscaleValue + "%)";
     return this.sanitizer.bypassSecurityTrustStyle(filterText);
   }
 
+
+  /**
+   * Reinitialize filters
+   */
   reinitializeFilters(){
     this.brightnessValue = 100;
     this.contrastValue = 100;
