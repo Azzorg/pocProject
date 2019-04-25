@@ -22,6 +22,10 @@ export class FooterAppComponent implements OnInit {
   }
 
   
+  /**
+   * Method to hide adding options when clicking elsewhere on the screen
+   * @param event 
+   */
   @HostListener('document:click', ['$event'])
   clickout(event) {
     if(this.showOptions && !this.justOpen){
@@ -31,5 +35,4 @@ export class FooterAppComponent implements OnInit {
       this.justOpen = false;
     }
   }
-
 }
