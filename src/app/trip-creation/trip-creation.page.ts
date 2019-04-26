@@ -21,22 +21,7 @@ export class TripCreationPage implements OnInit {
   // Pan event variables
   position: string = "50% 50%"
 
-
-  // Pan image with zoomable-canvas
-  private top: number;
-  private bottom: number;
-  private left: number;
-  private right: number;
-  private centerX: number;
-  private centerY: number;
-  private zoomLevel: number = 0;
-  private maxZoom: number = 5;
-  private canvasWidth: number;
-  private canvasHeight: number;
-  private image: HTMLImageElement = new Image();
-
-
-  
+ 
   @ViewChild('slideWithNav') slideWithNav: any;
   
   sliderImgs: any;
@@ -55,11 +40,6 @@ export class TripCreationPage implements OnInit {
   ngOnInit() {
     this.getTripImages();
     this.urlImage = this.sliderImgs.slidesItems[0].image;
-    
-    this.canvasHeight = 80;
-    this.canvasWidth = 45;
-
-    this.image.src = this.sliderImgs.slidesItems[0].image;
   }
 
 
@@ -99,40 +79,15 @@ export class TripCreationPage implements OnInit {
    */
   changeImageShown(url){
     this.urlImage = url;
-
-    this.image.src = url;
-
-    this.getMeta(url);
   }
-
-
-  getMeta(url){   
-    var img = new Image();
-    // img.onload = function(){
-    //   alert( this.width+' '+ this.height );
-    // };
-    img.src = url;
-    console.log( img.width+' '+ img.height );
-}
-
 
   /**
    * Pan event managment 
-   * @param $event 
    */
-  onPan($event){
-    console.log("Pan : ", $event.center);
+  panEvent($event){
+    console.log("Pan : ", $event);
     event.preventDefault();
   }
-
-  /**
-   * Start 
-   * @param event 
-   */
-  // onPanStart(event: any): void {
-  //   this.startX = this.x;
-  //   this.startY = this.y;
-  // }
 
 
   /**

@@ -54,6 +54,7 @@
     <div class="customizingZone marginContent">
       <!-- Image -->
       <div class="shownImage"> 
+<<<<<<< HEAD
         <!-- <img (pan)="onPan($event)" src="{{urlImage}}" [style.filter]="getFilters()" [ngStyle]="{'object-position': position}">    (panstart)="onPanStart($event)" -->
 
         <zoomable-canvas 
@@ -65,6 +66,9 @@
           [(zoomLevel)]="zoomLevel" [maxZoom]="maxZoom" [minZoom]="0"
           (canvasWidthChange)="canvasWidth = $event" (canvasHeightChange)="canvasHeight = $event"
         ></zoomable-canvas>
+=======
+        <img (pan)="panEvent($event)" src="{{urlImage}}" [style.filter]="getFilters()">
+>>>>>>> parent of fa5bff8... Creation trip page : test pan event
       </div>
 
       <!-- Ion-range to modify the image -->
