@@ -54,7 +54,7 @@
     <div class="customizingZone marginContent">
       <!-- Image -->
       <div class="shownImage"> 
-        <img (pan)="panEvent($event)" src="{{urlImage}}" [style.filter]="getFilters()">
+        <img (pan)="onPan($event)" src="{{urlImage}}" [style.filter]="getFilters()" [ngStyle]="{'object-position': position}">    <!-- (panstart)="onPanStart($event)" -->
       </div>
 
       <!-- Ion-range to modify the image -->

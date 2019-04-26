@@ -15,8 +15,17 @@ export class TripCreationPage implements OnInit {
   sepiaValue : number = 0;
   greyscaleValue : number = 0;
 
-
   filters : string;
+
+
+  // Pan event variables
+  x: number = 0;
+  y: number = 0;
+  startX: number = 0;
+  startY: number = 0;
+
+  position: string = "50% 50%"
+
   
   @ViewChild('slideWithNav') slideWithNav: any;
   
@@ -75,15 +84,37 @@ export class TripCreationPage implements OnInit {
    */
   changeImageShown(url){
     this.urlImage = url;
+    this.getMeta(url);
   }
+
+
+  getMeta(url){   
+    var img = new Image();
+    // img.onload = function(){
+    //   alert( this.width+' '+ this.height );
+    // };
+    img.src = url;
+    console.log( img.width+' '+ img.height );
+}
+
 
   /**
    * Pan event managment 
+   * @param $event 
    */
-  panEvent($event){
-    console.log("Pan : ", $event);
+  onPan($event){
+    console.log("Pan : ", $event.center);
     event.preventDefault();
   }
+
+  /**
+   * Start 
+   * @param event 
+   */
+  // onPanStart(event: any): void {
+  //   this.startX = this.x;
+  //   this.startY = this.y;
+  // }
 
 
   /**
