@@ -19,7 +19,9 @@ export class TripCreationPage implements OnInit {
 
 
   // Pan event variables
-  position: string = "50% 50%"
+  positionX: number = 50;
+  positionY: number = 50;
+  position: string;
 
  
   @ViewChild('slideWithNav') slideWithNav: any;
@@ -40,6 +42,7 @@ export class TripCreationPage implements OnInit {
   ngOnInit() {
     this.getTripImages();
     this.urlImage = this.sliderImgs.slidesItems[0].image;
+    this.position = this.positionX + "% " + this.positionY + "%";
   }
 
 
@@ -74,21 +77,67 @@ export class TripCreationPage implements OnInit {
     };
   }
 
+
   /**
    * Method to change url of the picture
    */
   changeImageShown(url){
     this.urlImage = url;
+    this.positionX = 50;
+    this.positionY = 50;
+    this.position = this.positionX + "% " + this.positionY + "%";
   }
+
 
   /**
    * Pan event managment 
    */
   panEvent($event){
-    console.log("Pan : ", $event);
     event.preventDefault();
+    switch ($event.direction) {
+      // Pan to left
+      case 2:        
+        // Increment position object on X axis
+        if(this.positionX < 100)
+          this.positionX ++;
+        break;
+      
+      // Pan to right
+      case 4:
+        // Decrement position object on X axis
+        if(this.positionX > 0)
+          this.positionX --;
+        break;
+      
+      // Pan to top
+      case 8:        
+        // Increment position object on Y axis
+        if(this.positionY < 100)
+          this.positionY ++;
+        break;
+
+      // Pan to bottom
+      case 16:                
+        // Increment position object on Y axis
+        if(this.positionY > 0)
+          this.positionY --;
+        break;
+    
+      default:
+        break;
+    }
+
+    this.position = this.positionX + "% " + this.positionY + "%";
+    console.log("Position object : ", this.position);
   }
 
+
+
+
+
+  ///////////////////////////////////////////////
+  ///////   FILTERS PART
+  ///////////////////////////////////////////////
 
   /**
    * Get values for filters
@@ -230,8 +279,12 @@ export class TripCreationPage implements OnInit {
   }
 
   
-  
-  ////////////////////////////// FOR IMAGES CHOICE SLIDER FUNCTIONNEMENT
+
+
+  ///////////////////////////////////////////////////////////////////////
+  //////////// FOR IMAGES CHOICE SLIDER FUNCTIONNEMENT
+  ///////////////////////////////////////////////////////////////////////
+
   /**
    * Move to Next slide
    * @param object 
