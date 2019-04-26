@@ -186,6 +186,12 @@ ion-slide img{
   // object-position: 50% 50%;
 }
 
+.shownImage .zoomableImage{
+  width: 45vw;
+  height: 80vw;
+  object-fit: cover;
+}
+
 .selectors{
   padding-left: 7px;
   width: 45vw;

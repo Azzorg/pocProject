@@ -9,6 +9,9 @@ import { ComponentsModule } from './../components/components.module';
 
 import { TripCreationPage } from './trip-creation.page';
 
+/* To pan on the image */
+import { ZoomableCanvasComponent } from '@durwella/zoomable-canvas';
+
 const routes: Routes = [
   {
     path: '',
@@ -24,6 +27,6 @@ const routes: Routes = [
     ComponentsModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [TripCreationPage]
+  declarations: [TripCreationPage, ZoomableCanvasComponent]
 })
 export class TripCreationPageModule {}
