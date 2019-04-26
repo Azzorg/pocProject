@@ -19,8 +19,8 @@ export class TripCreationPage implements OnInit {
 
 
   // Pan event variables
-  positionX: number = 50;
-  positionY: number = 50;
+  positionX: number = 50;   // save this in the image to retrieve that info and display this part on trip presentation
+  positionY: number = 50;   // save this in the image to retrieve that info and display this part on trip presentation
   position: string;
 
  
@@ -41,7 +41,16 @@ export class TripCreationPage implements OnInit {
 
   ngOnInit() {
     this.getTripImages();
+    this.initPositionImage();
     this.urlImage = this.sliderImgs.slidesItems[0].image;
+  }
+
+  /**
+   * Initialize the position-object for the image 
+   */
+  initPositionImage(){
+    this.positionX = 50;
+    this.positionY = 50;
     this.position = this.positionX + "% " + this.positionY + "%";
   }
 
@@ -72,6 +81,27 @@ export class TripCreationPage implements OnInit {
         },
         {
           image: './../../assets/img/imgLocal/bryce6.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce7.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce8.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce9.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce10.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce11.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce12.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/bryce13.jpg'
         }
       ]
     };
@@ -83,9 +113,7 @@ export class TripCreationPage implements OnInit {
    */
   changeImageShown(url){
     this.urlImage = url;
-    this.positionX = 50;
-    this.positionY = 50;
-    this.position = this.positionX + "% " + this.positionY + "%";
+    this.initPositionImage();
   }
 
 
@@ -100,6 +128,7 @@ export class TripCreationPage implements OnInit {
         // Increment position object on X axis
         if(this.positionX < 100)
           this.positionX ++;
+          // this.positionX += 3;
         break;
       
       // Pan to right
@@ -107,6 +136,7 @@ export class TripCreationPage implements OnInit {
         // Decrement position object on X axis
         if(this.positionX > 0)
           this.positionX --;
+          // this.positionX -= 3;
         break;
       
       // Pan to top
@@ -114,13 +144,15 @@ export class TripCreationPage implements OnInit {
         // Increment position object on Y axis
         if(this.positionY < 100)
           this.positionY ++;
+          // this.positionY += 3;
         break;
 
       // Pan to bottom
       case 16:                
         // Increment position object on Y axis
         if(this.positionY > 0)
-          this.positionY --;
+          this.positionY --;          
+          // this.positionY -= 3;
         break;
     
       default:
