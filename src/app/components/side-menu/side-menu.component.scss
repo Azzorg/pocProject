@@ -28,7 +28,6 @@
     height: -webkit-fill-available;
     -webkit-height: -webkit-fill-available;
     --background: transparent;
-    margin-bottom: 50px;
 }
 
 #side-menu ion-list{
@@ -56,6 +55,11 @@
 
 #side-menu ion-content ion-icon{
     color: white;
+}
+
+
+.marginForFooter{
+    margin-bottom: 50px;
 }
 
 
