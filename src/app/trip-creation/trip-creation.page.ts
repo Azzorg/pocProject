@@ -107,6 +107,9 @@ export class TripCreationPage implements OnInit {
         },
         {
           image: './../../assets/img/imgLocal/bryce13.jpg'
+        },
+        {
+          image: './../../assets/img/imgLocal/testVertical.jpg'
         }
       ]
     };
@@ -173,9 +176,10 @@ export class TripCreationPage implements OnInit {
       case 8:        
         // Increment position object on Y axis
         if(this.positionY < 100){
-          this.positionY ++;
-          deltaPercent = -($event.deltaY - $event.center.y) * 100 / this.heightImage;
+          // this.positionY ++;
+          // deltaPercent = this.widthImage / this.heightImage;
           // this.positionY += deltaPercent;
+          this.positionY += 1;
 
           if(this.positionY > 100) this.positionY = 100;
         }
@@ -185,9 +189,11 @@ export class TripCreationPage implements OnInit {
       case 16:                
         // Increment position object on Y axis
         if(this.positionY > 0){
-          this.positionY --;          
-          deltaPercent = -($event.deltaY - $event.center.y) * 100 / this.heightImage;
+          // this.positionY --;          
+          // deltaPercent = -this.widthImage / this.heightImage;
           // this.positionY += deltaPercent;
+          
+          this.positionY -= 1;
 
           if(this.positionY < 0) this.positionY = 0;
         }
@@ -196,13 +202,13 @@ export class TripCreationPage implements OnInit {
       default:
         break;
     }
-    console.log("Url image : ", this.urlImage);
-    console.log("Velocity : ", $event.overallVelocityX);
-    console.log("Height image : ", this.heightImage);
-    console.log("Width image : ", this.widthImage);
-    // console.log("DelatPercent with velocity : ", deltaPercent * $event.overallVelocityX);
-    console.log("!!!!! DELTA PERCENTAGE : ", deltaPercent);
-    console.log("\n \n");
+    // console.log("Url image : ", this.urlImage);
+    // console.log("Velocity : ", $event.overallVelocityX);
+    // console.log("Height image : ", this.heightImage);
+    // console.log("Width image : ", this.widthImage);
+    // // console.log("DelatPercent with velocity : ", deltaPercent * $event.overallVelocityX);
+    // console.log("!!!!! DELTA PERCENTAGE : ", deltaPercent);
+    // console.log("\n \n");
 
     this.position = this.positionX + "% " + this.positionY + "%";
     // console.log("Position object : ", this.position);
