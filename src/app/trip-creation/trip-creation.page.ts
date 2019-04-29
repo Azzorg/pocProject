@@ -19,6 +19,8 @@ export class TripCreationPage implements OnInit {
 
 
   // Pan event variables
+  heightImage: number;
+  widthImage: number;
   positionX: number = 50;   // save this in the image to retrieve that info and display this part on trip presentation
   positionY: number = 50;   // save this in the image to retrieve that info and display this part on trip presentation
   position: string;
@@ -43,6 +45,9 @@ export class TripCreationPage implements OnInit {
     this.getTripImages();
     this.initPositionImage();
     this.urlImage = this.sliderImgs.slidesItems[0].image;
+    this.getMeta(this.urlImage);
+    console.log("Width image : ", this.widthImage);
+    console.log("Height image : ", this.heightImage);
   }
 
   /**
@@ -109,10 +114,24 @@ export class TripCreationPage implements OnInit {
 
 
   /**
+   * Get image infos (width and height)
+   * @param url 
+   */
+  getMeta(url){   
+    var img = new Image();
+    img.src = url;
+    console.log( img.width+' '+ img.height );
+    this.heightImage = img.height;
+    this.widthImage = img.width;
+  }
+
+
+  /**
    * Method to change url of the picture
    */
   changeImageShown(url){
     this.urlImage = url;
+    this.getMeta(url);
     this.initPositionImage();
   }
 
@@ -122,45 +141,71 @@ export class TripCreationPage implements OnInit {
    */
   panEvent($event){
     event.preventDefault();
+    console.log($event);
+    var deltaPercent: number;
+
     switch ($event.direction) {
       // Pan to left
       case 2:        
         // Increment position object on X axis
-        if(this.positionX < 100)
-          this.positionX ++;
-          // this.positionX += 3;
+        if(this.positionX < 100){
+          // this.positionX ++;
+          // deltaPercent = ($event.deltaX + $event.center.x) * 100 / this.widthImage * 9 / 16;
+          deltaPercent = this.heightImage / this.widthImage;
+          this.positionX += deltaPercent;
+
+          if(this.positionX > 100) this.positionX = 100;
+        }
         break;
       
       // Pan to right
       case 4:
         // Decrement position object on X axis
-        if(this.positionX > 0)
-          this.positionX --;
-          // this.positionX -= 3;
+        if(this.positionX > 0){
+          deltaPercent = -this.heightImage / this.widthImage;
+          this.positionX += deltaPercent;
+
+          if(this.positionX < 0) this.positionX = 0;
+        }
         break;
       
       // Pan to top
       case 8:        
         // Increment position object on Y axis
-        if(this.positionY < 100)
+        if(this.positionY < 100){
           this.positionY ++;
-          // this.positionY += 3;
+          deltaPercent = -($event.deltaY - $event.center.y) * 100 / this.heightImage;
+          // this.positionY += deltaPercent;
+
+          if(this.positionY > 100) this.positionY = 100;
+        }
         break;
 
       // Pan to bottom
       case 16:                
         // Increment position object on Y axis
-        if(this.positionY > 0)
+        if(this.positionY > 0){
           this.positionY --;          
-          // this.positionY -= 3;
+          deltaPercent = -($event.deltaY - $event.center.y) * 100 / this.heightImage;
+          // this.positionY += deltaPercent;
+
+          if(this.positionY < 0) this.positionY = 0;
+        }
         break;
     
       default:
         break;
     }
+    console.log("Url image : ", this.urlImage);
+    console.log("Velocity : ", $event.overallVelocityX);
+    console.log("Height image : ", this.heightImage);
+    console.log("Width image : ", this.widthImage);
+    // console.log("DelatPercent with velocity : ", deltaPercent * $event.overallVelocityX);
+    console.log("!!!!! DELTA PERCENTAGE : ", deltaPercent);
+    console.log("\n \n");
 
     this.position = this.positionX + "% " + this.positionY + "%";
-    console.log("Position object : ", this.position);
+    // console.log("Position object : ", this.position);
   }
 
 
