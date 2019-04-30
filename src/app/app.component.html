@@ -1,6 +1,6 @@
 <ion-app>
   <ion-split-pane>
-    <ion-menu>
+    <ion-menu (ionDidOpen)="menuOpened()">
       <app-side-menu></app-side-menu>
     </ion-menu>
     <ion-router-outlet main></ion-router-outlet>

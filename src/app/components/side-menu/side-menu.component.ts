@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Events } from 'ionic-angular';
 
 @Component({
   selector: 'app-side-menu',
@@ -24,8 +25,6 @@ export class SideMenuComponent implements OnInit {
   public listTrip : any;
 
   public listFriendsTrip :any;
-
-  //effect: 'flip',    
 
   public logo = './../../../assets/logo/logo.png';
 
@@ -59,9 +58,22 @@ export class SideMenuComponent implements OnInit {
   }
 
 
+  /**
+   * Constructor
+   * @param events 
+   */
+  constructor(/* public events: Events */) {
+    /* events.subscribe('menu:open', () => {
+      console.log("The event is caught");
+      this.updateSliders();
+    }); */
+  }
 
-  constructor() { }
 
+
+  /**
+   * On init for page
+   */
   ngOnInit() {
     // Init the list of the user's trips
     this.initUserTrips();
@@ -70,6 +82,7 @@ export class SideMenuComponent implements OnInit {
     this.initListFriendsTrip();
   }
   
+
 
   /**
    * Initialize the list of the user's trips done currently
@@ -89,6 +102,7 @@ export class SideMenuComponent implements OnInit {
   }
 
 
+  
   /**
    * Initialize the list of trip made by the persons followed
    */
@@ -111,6 +125,16 @@ export class SideMenuComponent implements OnInit {
         countryImage:"./../../../assets/countries/spain.png",
       }
     ];
+  }
+
+
+  /**
+   * Update the sliders in the side menu
+   */
+  updateSliders(){
+    console.log("In side-menu component update sliders");
+    this.slideWithMyTrips.update();
+    this.slideWithFriendsTrips.update();
   }
 
   

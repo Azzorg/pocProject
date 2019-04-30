@@ -30,7 +30,7 @@
         <span i18n="sidemenu trip in progress | Own trips in progress on sidemenu@@sidemenuMyTripInProgress">{listTrip.length, plural, =1 {Voyage en cours} other {Voyages en cours ({{listTrip.length}})}}</span>
       </div>
 
-      <ion-slides pager="false" [options]="slideOpts" #slideWithMyTrips (ionSlideDidChange)="slideDidChangeSideMenu(listTrip, slideWithMyTrips)">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
+      <ion-slides id="slideWithMyTrips" pager="false" [options]="slideOpts" #slideWithMyTrips (ionSlideDidChange)="slideDidChangeSideMenu(listTrip, slideWithMyTrips)">  <!-- [options]="slideOpts"  pager="true" loop="true" class="swiper-container" -->
         <ion-slide *ngFor="let trip of listTrip">
           <img class="countryImg" src={{trip.countryImage}}>
           <span>{{trip.name}}</span>
