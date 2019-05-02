@@ -5,102 +5,106 @@
 }
 
 #side-menu ion-toolbar{
-    --background: transparent;
-    text-align: center;
-    color:white !important;
-    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  --background: transparent;
+  text-align: center;
+  color:white !important;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
 }
 
 #side-menu ion-title{
-    color: white !important;
+  color: white !important;
 }
 
 #side-menu ion-item{
-    --border-style: none !important;
+  --border-style: none !important;
 }
 
 #side-menu ion-slides ion-slide{
-    justify-content: left;
-    padding-left: 32px;
+  justify-content: left;
+  padding-left: 32px;
 }
 
 #side-menu ion-content{
-    height: -webkit-fill-available;
-    -webkit-height: -webkit-fill-available;
-    --background: transparent;
+  height: -webkit-fill-available;
+  -webkit-height: -webkit-fill-available;
+  --background: transparent;
 }
 
 #side-menu ion-list{
-    margin-top: 20px;
-    margin-bottom: 0px;
-    padding-top: 0px;
-    padding-bottom: 15px;
-    background: transparent;
+  margin-top: 20px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 15px;
+  background: transparent;
 }
 
 #side-menu ion-content ion-item{
-    --background: transparent;
-    color: white !important;
+  --background: transparent;
+  color: white !important;
 }
 
 #side-menu ion-content ion-label{
-    border: none !important;
+  border: none !important;
 }
 
 #side-menu ion-label{
-    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
-    font-size: 12pt;
-    font-variant: small-caps;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  font-size: 12pt;
+  font-variant: small-caps;
 }
 
 #side-menu ion-content ion-icon{
-    color: white;
+  color: white;
 }
 
 
 .marginForFooter{
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 
 
 /**
- ---------------------------------------
- Profil : top part of the sidemenu
- Photo de profil - Pseudo - nb abonnés - button to subscribe - button to display the map
+  ---------------------------------------
+  Profil : top part of the sidemenu
+  Photo de profil - Pseudo - nb abonnés - button to subscribe - button to display the map
 */
 
+#side-menu .header-md:after{
+  background-image: none;
+}
+
 #side-menu .header:after{
-    background-image: none;
+  background-image: none;
 }
 
 #side-menu .profil{
-    width: fit-content; 
-    height: fit-content; 
-    margin-left: auto; 
-    margin-right: auto;
+  width: fit-content; 
+  height: fit-content; 
+  margin-left: auto; 
+  margin-right: auto;
 }
 
 #side-menu .profil:focus{
-    outline: none;
+  outline: none;
 }
 
 #side-menu .avatar{
-    height : 75px;
-    width : 75px;
-    border-radius : 50%;
-    display : inline-block;
-    object-fit : cover;
-    margin-top: 20px;
+  height : 75px;
+  width : 75px;
+  border-radius : 50%;
+  display : inline-block;
+  object-fit : cover;
+  margin-top: 20px;
 }
 
 #side-menu .username{
-    font-variant: small-caps;
+  font-variant: small-caps;
 }
 
 #side-menu .nbAbonne{
-    font-size: 10pt;
-    color: rgb(206, 206, 206);
+  font-size: 10pt;
+  color: rgb(206, 206, 206);
 }
 
 
@@ -111,33 +115,33 @@
 */
 
 #side-menu .partSideMenu::before{
-    content: "";
-    position: absolute;
-    left: 10%;
-    height: 1px;
-    width: 80%;
-    border-bottom: 1px solid white;
+  content: "";
+  position: absolute;
+  left: 10%;
+  height: 1px;
+  width: 80%;
+  border-bottom: 1px solid white;
 }
 
 #side-menu .partSideMenu .titlePart{
-    padding-left: 16px; 
-    padding-top: 20px;
-    font-size: 14pt;
-    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
-    font-variant: small-caps;
-    color: white;
+  padding-left: 16px; 
+  padding-top: 20px;
+  font-size: 14pt;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  font-variant: small-caps;
+  color: white;
 }
 #side-menu .partSideMenu ion-slides span{
-    font-size: 12pt;
+  font-size: 12pt;
 }
 
 #side-menu .partSideMenu ion-slides{
-    margin-top: 10px;
-    margin-bottom: 16px;
-    font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
-    font-variant: small-caps;
-    color: white;
-    overflow: visible;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  font-variant: small-caps;
+  color: white;
+  overflow: visible;
 }
 
 
@@ -149,12 +153,12 @@
 */
 
 #side-menu .partSideMenu ion-slides .countryImg{
-    height: 40px;
-    width: 40px;
-    border-radius : 50%;
-    object-fit : cover;
-    text-align: left;
-    margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border-radius : 50%;
+  object-fit : cover;
+  text-align: left;
+  margin-right: 10px;
 }
 
 
@@ -165,46 +169,46 @@
 */
 
 #side-menu .partSideMenu #sliderFriendsTripContainer{
-    overflow: visible;
+  overflow: visible;
 }
 
 #side-menu ion-slides .sliderFriendsTrip:last-child{
-    margin-right: 32px;
+  margin-right: 32px;
 }
 
 #side-menu ion-slides .sliderFriendsTrip{
-    width: auto;
+  width: auto;
 }
 
 #side-menu ion-slides .countryFriendsTrip{
-    position: absolute;
-    right: -4px;
-    bottom: -4px;
-    width: 18px;
-    height: 18px;
-    border-radius: 50%;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
 }
 
 #side-menu .avatarTripImg{
-    height : 40px;
-    width : 40px;
-    border-radius : 50%;
-    display : inline-block;
-    object-fit : cover;
-    margin-top: 0px;
+  height : 40px;
+  width : 40px;
+  border-radius : 50%;
+  display : inline-block;
+  object-fit : cover;
+  margin-top: 0px;
 }
 
 
 
 /**
- --------------------------------------
- Side menu footer
+  --------------------------------------
+  Side menu footer
 */
 #side-menu #side-menu-footer{
-    position: fixed;
-    bottom: 0;
+  position: fixed;
+  bottom: 0;
 }
 
 #side-menu #side-menu-footer img{
-    height: 50px;
+  height: 50px;
 }
