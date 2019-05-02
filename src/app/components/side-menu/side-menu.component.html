@@ -1,14 +1,15 @@
-<div id="side-menu">   <!--   -->
+<div id="side-menu">     
   <ion-content [scrollEvents]="true" force-overscroll="true"> 
-    <ion-header>
+    <ion-header class="scrolledEnd">  <!-- class="scrolledEnd" -->
       <ion-toolbar>
           <!-- Image -->
         <ion-menu-toggle auto-hide="false" class="profil" [routerLink]="'/profil'" close>
           <img class="avatar" src="{{user.avatar}}">
-          <br/>
-          <span class="username">{{user.name}}</span>
-          <br/>
-          <span class="nbAbonne" i18n="sidemenu subscribers | The number of subscribers in sidemenu@@sidemenuSubscribers">{user.nbAbonnes, plural, =0 {} =1 {1 abonné} other {{{user.nbAbonnes}} abonnés}}</span>
+          <div class="userInfo">
+            <span class="username">{{user.name}}</span>
+            <br/>
+            <span class="nbAbonne" i18n="sidemenu subscribers | The number of subscribers in sidemenu@@sidemenuSubscribers">{user.nbAbonnes, plural, =0 {} =1 {1 abonné} other {{{user.nbAbonnes}} abonnés}}</span>
+          </div>
         </ion-menu-toggle>
       </ion-toolbar>
     </ion-header>

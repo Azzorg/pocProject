@@ -98,6 +98,44 @@
   margin-top: 20px;
 }
 
+#side-menu .scrolledEnd{
+  position: sticky;
+  top: 0;
+}
+
+#side-menu .scrolledEnd ion-toolbar {
+  text-align: left;
+  height: fit-content;
+  transition: all 3s;
+}
+
+#side-menu .scrolledEnd .profil{
+  margin-left: 10px;
+  margin-top: auto;
+  margin-bottom: auto;
+  height: 85px;
+  transition: all 3s;
+}
+
+#side-menu .scrolledEnd .profil .avatar{
+  height : 50px;
+  width : 50px;
+  border-radius : 50%;
+  display : inline-block;
+  object-fit : cover;
+  margin-top:10px;
+  transition: all 3s;
+}
+
+#side-menu .scrolledEnd .profil .userInfo{
+  display: inline-block;
+  height: fit-content;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  transition: all 3s;
+}
+
 #side-menu .username{
   font-variant: small-caps;
 }
@@ -131,6 +169,7 @@
   font-variant: small-caps;
   color: white;
 }
+
 #side-menu .partSideMenu ion-slides span{
   font-size: 12pt;
 }
