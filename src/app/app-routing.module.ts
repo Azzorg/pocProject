@@ -15,7 +15,7 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'discover', loadChildren: './discover/discover.module#DiscoverPageModule' },  { path: 'trip-creation', loadChildren: './trip-creation/trip-creation.module#TripCreationPageModule' },
+  { path: 'discover', loadChildren: './discover/discover.module#DiscoverPageModule' },
   { path: 'profil', loadChildren: './profil/profil.module#ProfilPageModule' },
   { path: 'trip-creation-three', loadChildren: './trip-creation-three/trip-creation-three.module#TripCreationThreePageModule' }
 
