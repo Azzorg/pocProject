@@ -10,9 +10,6 @@ import * as $ from 'jquery';
 export class SideMenuComponent implements OnInit {
   @ViewChild('slideWithMyTrips') slideWithMyTrips: any;
   @ViewChild('slideWithFriendsTrips') slideWithFriendsTrips: any;
-  
-  // Sidemenu
-  isHeaderReduced: boolean = false;
 
   // Options for the slider
   slideOpts = {
@@ -142,18 +139,14 @@ export class SideMenuComponent implements OnInit {
   }
 
 
-  scollSidemenu(){
-    console.log("Scrolling sidemenu ...");
-
+  /**
+   * Scroll on sidemenu
+   */
+  scrollSidemenu(){
     if(document.getElementsByClassName("itemSideMenu")[0].getBoundingClientRect().top < 80) {
-      console.log("Change to scrolling end");
-      if(!document.getElementById("header").classList.contains("scrolledEnd")){
         document.getElementById("header").classList.add("scrolledEnd");
-        this.isHeaderReduced = true;
-      }
     }
     else{
-      console.log("Return to basic values");
       document.getElementById("header").classList.remove("scrolledEnd");
     }
   }
