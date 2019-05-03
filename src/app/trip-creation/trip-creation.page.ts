@@ -49,6 +49,9 @@ export class TripCreationPage implements OnInit {
     this.getMeta(this.urlImage);
   }
 
+  ngAfterContentInit(){
+  }
+
   /**
    * Initialize the position-object for the image 
    */
@@ -125,6 +128,9 @@ export class TripCreationPage implements OnInit {
     this.heightImage = img.height;
     this.widthImage = img.width;
     this.deltaPercent = this.heightImage / this.widthImage;
+    console.log("Height : ", this.heightImage);
+    console.log("Width : ", this.widthImage);
+    console.log("Delta percentage", this.deltaPercent);
   }
 
 
