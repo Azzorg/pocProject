@@ -64,6 +64,10 @@
   margin-bottom: 50px;
 }
 
+.marginHeaderMinimized{
+  margin-top: 20px;
+}
+
 
 
 /**
@@ -109,6 +113,7 @@
 #side-menu .scrolledEnd{
   position: sticky;
   top: 0;
+  background: rgb(87, 87, 87);
 }
 
 #side-menu .scrolledEnd ion-toolbar {

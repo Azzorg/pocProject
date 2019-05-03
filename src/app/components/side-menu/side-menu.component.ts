@@ -144,10 +144,12 @@ export class SideMenuComponent implements OnInit {
    */
   scrollSidemenu(){
     if(document.getElementsByClassName("itemSideMenu")[0].getBoundingClientRect().top < 80) {
-        document.getElementById("header").classList.add("scrolledEnd");
+      document.getElementById("header").classList.add("scrolledEnd");
+      document.getElementsByClassName("itemSideMenu")[0].classList.add("marginHeaderMinimized");
     }
     else{
       document.getElementById("header").classList.remove("scrolledEnd");
+      document.getElementsByClassName("itemSideMenu")[0].classList.remove("marginHeaderMinimized");
     }
   }
 
