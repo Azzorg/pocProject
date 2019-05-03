@@ -1,6 +1,6 @@
 <div id="side-menu">     
-  <ion-content [scrollEvents]="true" force-overscroll="true"> 
-    <ion-header>  <!-- class="scrolledEnd" -->
+  <ion-content [scrollEvents]="true" force-overscroll="true" (ionScroll)="scollSidemenu()"> 
+    <ion-header id="header">  <!-- class="scrolledEnd" -->
       <ion-toolbar>
           <!-- Image -->
         <ion-menu-toggle auto-hide="false" class="profil" [routerLink]="'/profil'" close>
@@ -15,8 +15,8 @@
     </ion-header>
 
     <ion-list>
-      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
-        <ion-item [routerLink]="[p.url]">
+      <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages; index as i">
+        <ion-item [routerLink]="[p.url]" [ngClass]="{'itemSideMenu': i == 0}">
           <ion-icon slot="start" [name]="p.icon"></ion-icon>
           <ion-label>
             {{p.title}}

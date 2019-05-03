@@ -75,7 +75,6 @@ export class DiscoverPage implements OnInit {
       this.blurTitle = true;
       let element = document.getElementById('title_trip');
       element.classList.add('sticky');
-  
     } else {
       this.blurTitle = false;
       let element = document.getElementById('title_trip');

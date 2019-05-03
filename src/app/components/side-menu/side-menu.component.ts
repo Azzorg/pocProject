@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild, HostListener } from '@angular/core';
 import { Events } from 'ionic-angular';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-side-menu',
@@ -9,6 +10,9 @@ import { Events } from 'ionic-angular';
 export class SideMenuComponent implements OnInit {
   @ViewChild('slideWithMyTrips') slideWithMyTrips: any;
   @ViewChild('slideWithFriendsTrips') slideWithFriendsTrips: any;
+  
+  // Sidemenu
+  isHeaderReduced: boolean = false;
 
   // Options for the slider
   slideOpts = {
@@ -135,6 +139,23 @@ export class SideMenuComponent implements OnInit {
     console.log("In side-menu component update sliders");
     this.slideWithMyTrips.update();
     this.slideWithFriendsTrips.update();
+  }
+
+
+  scollSidemenu(){
+    console.log("Scrolling sidemenu ...");
+
+    if(document.getElementsByClassName("itemSideMenu")[0].getBoundingClientRect().top < 80) {
+      console.log("Change to scrolling end");
+      if(!document.getElementById("header").classList.contains("scrolledEnd")){
+        document.getElementById("header").classList.add("scrolledEnd");
+        this.isHeaderReduced = true;
+      }
+    }
+    else{
+      console.log("Return to basic values");
+      document.getElementById("header").classList.remove("scrolledEnd");
+    }
   }
 
   

@@ -9,6 +9,8 @@
   text-align: center;
   color:white !important;
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  
+  transition: all 3s;
 }
 
 #side-menu ion-title{
@@ -83,6 +85,9 @@
   height: fit-content; 
   margin-left: auto; 
   margin-right: auto;
+
+  
+  transition: all 3s;
 }
 
 #side-menu .profil:focus{
@@ -96,6 +101,9 @@
   display : inline-block;
   object-fit : cover;
   margin-top: 20px;
+
+  
+  transition: all 3s;
 }
 
 #side-menu .scrolledEnd{
