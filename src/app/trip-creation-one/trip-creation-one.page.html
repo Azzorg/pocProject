@@ -1,9 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>trip-creation-one</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content padding id="trip_creation">
+  <div class="cancelBtn">
+    <span>Annuler</span>
+  </div>
 
-<ion-content padding>
+  <div class="content_tripCreation">
+    <div class="shapeGroup">
+      <div class="underShapeGroup">
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="circle-outline"></div>
+        <div class="line"></div>
+        <div class="circle-outline" [routerLink]="'/trip-creation-three'"></div>
+        <div class="line"></div>
+        <div class="circle-outline"></div>
+      </div>
+    </div>
+  </div>
 
 </ion-content>

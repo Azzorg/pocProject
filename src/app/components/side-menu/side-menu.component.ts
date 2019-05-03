@@ -47,7 +47,7 @@ export class SideMenuComponent implements OnInit {
     },
     {
       title: 'Nouveau voyage',
-      url: '/trip-creation-three',
+      url: '/trip-creation-one',
       icon: 'add'
     }
   ];
