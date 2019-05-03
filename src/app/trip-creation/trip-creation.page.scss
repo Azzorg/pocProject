@@ -214,6 +214,7 @@ ion-slide img{
   List of preset filters
   -----------------------------------------
 */
+
 .listFilters ion-button{
   --border-width: 1px;
 }
@@ -224,6 +225,14 @@ ion-slide img{
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
 }
 
+.listFilters > p{
+  clear: both;
+  font-size: 14pt;
+}
+
+.listFilters > div{
+  text-align: center;
+}
 
 
 /**
