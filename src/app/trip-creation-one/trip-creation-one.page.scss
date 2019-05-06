@@ -9,8 +9,9 @@
   -webkit-background-repeat: no-repeat;
   -webkit-background-size: cover;
   -webkit-background-position: right;
-  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  //font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
   color: white;
+  --ion-font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif !important;
 }
 
 .content_tripCreation{
@@ -111,15 +112,18 @@
     ---------------------------------------
   */
   .listInput ion-item{
-    --background: rgba(66,66,66,0.8);
-    --border-radius: 5px;
+    --background: transparent;
+    --border-style: none;
     color: white;
     font-size: 11pt;
+    margin-top: 10px;
+    
+    text-shadow: 0px 0px 8px rgba(0,0,0,0.85);
   }
 
   .listInput ion-item ion-input{
-      --padding-top: 0px;
-      --padding-bottom: 0px;
+    --padding-top: 0px;
+    --padding-bottom: 0px;
   }
 
 
