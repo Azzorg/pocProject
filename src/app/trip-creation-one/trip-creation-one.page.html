@@ -1,5 +1,5 @@
 <ion-content id="trip_creation">
-  <div class="cancelBtn">
+  <div class="cancelBtn" [routerLink]="'/home'">
     <span>Annuler</span>
   </div>
 
@@ -10,7 +10,7 @@
         <div class="line"></div>
         <div class="circle-outline"></div>
         <div class="line"></div>
-        <div class="circle-outline" [routerLink]="'/trip-creation-three'"></div>
+        <div class="circle-outline" [routerLink]="'/trip-creation-three'"></div>      <!-- TODO: enlever le routerLink if -->
         <div class="line"></div>
         <div class="circle-outline"></div>
       </div>
@@ -23,16 +23,41 @@
     <div class="marginContent listInput">
       <ion-item>
         <ion-label position="floating">Nom du voyage</ion-label>
-        <ion-input></ion-input>
+        <ion-input [(ngModel)]="tripName" required="true"></ion-input>
       </ion-item>
 
       <!-- Date de début et de fin -->
-      <div></div>
+      <div class="dates">
+        <ion-item>
+          <ion-label position="floating">Date de début</ion-label>
+          <ion-input [(ngModel)]="startDate" required="true" type="date"></ion-input>
+        </ion-item>
 
+        <ion-item>
+          <ion-label position="floating">Date de fin</ion-label>
+          <ion-input [(ngModel)]="endDate" type="date"></ion-input>
+        </ion-item>
+      </div>
+
+      <ion-item class="visibility">
+        <ion-label>Visibilité</ion-label>
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select one"  [(ngModel)]="visibility">
+          <ion-select-option value="publique">Publique</ion-select-option>
+          <ion-select-option value="privée">Privée</ion-select-option>
+          <ion-select-option value="AmisSeulement">Amis</ion-select-option>
+          <ion-select-option value="AmisEtLeursAmis">Amis et leurs amis</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      
+      <ion-item class="recit">
+        <ion-label position="floating">Récit</ion-label>
+        <ion-textarea rows="10" [(ngModel)]="recit"></ion-textarea>
+      </ion-item>
     </div>
 
     <!-- Next button -->
-    <div class="nextBtn whiteColor smallCaps">
+    <div class="nextBtn whiteColor smallCaps" (click)="goNext()">
       <span>Suivant</span>
     </div>
   </div>
