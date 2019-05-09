@@ -41,7 +41,7 @@
 
       <ion-item class="visibility">
         <ion-label>Visibilité</ion-label>
-        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select one"  [(ngModel)]="visibility">
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select one"  [(ngModel)]="visibility" required="true">
           <ion-select-option value="publique">Publique</ion-select-option>
           <ion-select-option value="privée">Privée</ion-select-option>
           <ion-select-option value="AmisSeulement">Amis</ion-select-option>
@@ -49,6 +49,40 @@
         </ion-select>
       </ion-item>
 
+      <div class="travelers" padding>
+        <ion-label>Participant</ion-label>
+
+        <div>
+          <ion-chip>
+            <ion-icon name="add"></ion-icon>
+            <ion-label>Ajouter</ion-label>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-avatar>
+              <img src="./../../assets/img/imgLocal/user1.jpg">
+            </ion-avatar>
+            <ion-label>Azzorg</ion-label>
+            <ion-icon name="close"></ion-icon>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-avatar>
+              <img src="./../../assets/img/imgLocal/userClem.jpg">
+            </ion-avatar>
+            <ion-label>Benclem</ion-label>
+            <ion-icon name="close"></ion-icon>
+          </ion-chip>
+
+          <ion-chip>
+            <ion-avatar>
+              <img src="./../../assets/img/imgLocal/userTheo.jpg">
+            </ion-avatar>
+            <ion-label>Slokhas</ion-label>
+            <ion-icon name="close"></ion-icon>
+          </ion-chip>
+        </div>
+      </div>
       
       <ion-item class="recit">
         <ion-label position="floating">Récit</ion-label>

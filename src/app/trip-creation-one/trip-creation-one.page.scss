@@ -139,7 +139,6 @@
 
   .dates ion-item{
     flex-grow: 1;
-    // width: 50%;
   }
 
   .visibility ion-label{
@@ -149,6 +148,18 @@
   .visibility ion-select{
     flex: none;
     vertical-align: text-bottom;
+  }
+
+  .travelers{
+    color: white;
+  }
+
+  .travelers ion-chip{
+    color: white;
+  }
+
+  .travelers ion-chip ion-icon{
+    color:white;
   }
 
 /**

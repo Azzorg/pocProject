@@ -15,6 +15,8 @@ export class TripCreationOnePage implements OnInit {
   visibility: string;
   recit: string;
 
+  listTravelers: any;
+
 
   constructor() { }
 
