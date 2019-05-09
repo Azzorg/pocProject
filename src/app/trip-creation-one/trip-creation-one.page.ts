@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { connectableObservableDescriptor } from 'rxjs/internal/observable/ConnectableObservable';
+import { AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-trip-creation-one',
@@ -18,7 +18,7 @@ export class TripCreationOnePage implements OnInit {
   listTravelers: any;
 
 
-  constructor() { }
+  constructor(public alertController: AlertController) { }
 
   ngOnInit() {
   }
@@ -42,6 +42,27 @@ export class TripCreationOnePage implements OnInit {
    */
   cancelButton(){
     console.log("Click on cancel button");
+  }
+
+
+  /**
+   * Dispaly 
+   */
+  async addNewParticipants(){
+    const alert = await this.alertController.create({
+      header: 'Ajouter un participant',
+      inputs: [
+        {
+          name: 'username',
+          placeholder: 'Username',
+          type: 'search'
+        }
+      ],
+      message: 'Rechercher un participant',
+      buttons: ['Annuler', 'Ajouter']
+    });
+
+    await alert.present();
   }
 
 }
