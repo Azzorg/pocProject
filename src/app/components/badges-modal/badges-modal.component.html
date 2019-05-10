@@ -58,11 +58,11 @@
       <div class="titleLists">
         <ion-grid>
           <ion-row>
-            <ion-col (click)="goToEarnedBadgesList()">
+            <ion-col (click)="goToEarnedBadgesList()" [ngClass]="{'selectedTab': showEarnedBadges}">
               <span class="smallCaps">Obtenus</span>
             </ion-col>
             
-            <ion-col (click)="goToInProgressBadgesList()">
+            <ion-col (click)="goToInProgressBadgesList()" [ngClass]="{'selectedTab': !showEarnedBadges}">
               <span class="smallCaps">En cours</span>
             </ion-col>
           </ion-row>

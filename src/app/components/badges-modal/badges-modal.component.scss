@@ -29,6 +29,10 @@ ion-header ion-toolbar{
   font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
 }
 
+.header-md:after{
+  background: transparent;
+}
+
 .header:after{
   background: transparent;
 }
@@ -119,7 +123,12 @@ ion-content .infoBadge .rightPart p{
 }
 
 .titleLists ion-col:nth-child(1){
-  border-right: 1px solid;
+  // border-right: 1px solid;
+}
+
+.titleLists .selectedTab{
+  font-weight: 600;
+  color: rgb(255, 182, 48);
 }
 
 
