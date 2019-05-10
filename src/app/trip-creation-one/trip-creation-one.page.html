@@ -41,8 +41,8 @@
 
       <ion-item class="visibility">
         <ion-label>Visibilité</ion-label>
-        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover" placeholder="Select one"  [(ngModel)]="visibility" required="true">
-          <ion-select-option value="publique">Publique</ion-select-option>
+        <ion-select [interfaceOptions]="customPopoverOptions" interface="popover"  [(ngModel)]="visibility" required="true">
+          <ion-select-option selected="true" value="publique">Publique</ion-select-option>
           <ion-select-option value="privée">Privée</ion-select-option>
           <ion-select-option value="AmisSeulement">Amis</ion-select-option>
           <ion-select-option value="AmisEtLeursAmis">Amis et leurs amis</ion-select-option>

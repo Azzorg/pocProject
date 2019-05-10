@@ -31,7 +31,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     //     height: '*',
     //     // background:'red'
     //   })),
-    //   transition('* <=> *', animate(300))
+    //   transition('true <=> false', animate(300))
     // ])
   ]
 })
