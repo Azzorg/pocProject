@@ -20,17 +20,17 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
     ]),
 
 
-    // Supposed to animate the height change of badge description
-    //
-    //
+    // // Supposed to animate the height change of badge description
+    
+    
     // trigger('animateHeightChange', [
     //   state('*', style({ 
     //     height: '*'
     //   })),
-    //   // state('false', style({ 
-    //   //   height: '*',
-    //   //   background:'red'
-    //   // })),
+    //   state('false', style({ 
+    //     height: '*',
+    //     // background:'red'
+    //   })),
     //   transition('* <=> *', animate(300))
     // ])
   ]

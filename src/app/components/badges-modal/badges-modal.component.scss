@@ -120,15 +120,17 @@ ion-content .infoBadge .rightPart p{
 .titleLists ion-col{
   text-align: center;
   color: white;
+  // font-size: 
 }
 
-.titleLists ion-col:nth-child(1){
-  // border-right: 1px solid;
-}
+// .titleLists ion-col:nth-child(1){
+//   border-right: 1px solid;
+// }
 
 .titleLists .selectedTab{
   font-weight: 600;
   color: rgb(255, 182, 48);
+  font-size: 14pt;
 }
 
 
