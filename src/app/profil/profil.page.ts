@@ -60,7 +60,7 @@ export class ProfilPage implements OnInit {
   nbPays: number = 4;
   nbVoyages : number = 6;
   hidden: boolean = true;
-  mapMode: boolean = true;
+  mapMode: boolean = false;
 
   /* Mapbox */
   public map : any;
@@ -116,6 +116,8 @@ export class ProfilPage implements OnInit {
   }
 
 
+
+
   /**
    * Get the list of badges
    */
@@ -151,6 +153,8 @@ export class ProfilPage implements OnInit {
       }
     ];
   }
+
+
 
 
   /**
@@ -204,6 +208,8 @@ export class ProfilPage implements OnInit {
   }
 
 
+
+
   /**
    * Display a modal with info of the badge
    * @param badge 
@@ -217,6 +223,8 @@ export class ProfilPage implements OnInit {
     });
     return await modal.present();
   }
+
+
   
 
   /**
@@ -226,6 +234,8 @@ export class ProfilPage implements OnInit {
   goToTrip(trip : any){
     console.log("Trip : " + trip.name, trip);
   }
+
+
 
   
   /**
@@ -239,14 +249,19 @@ export class ProfilPage implements OnInit {
     return trip.dateDebut + " - " + trip.dateFin
   }
 
+
+
+
   /**
    * Display or hide the map
    */
   hideShowMap(){
     this.mapMode = !this.mapMode;
-    console.log("Map mode : ", this.mapMode);
   }
 
+
+
+  
   /**
    * Mapbox intialization
    */
