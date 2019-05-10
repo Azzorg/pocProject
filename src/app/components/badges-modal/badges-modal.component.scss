@@ -186,12 +186,17 @@ ion-content .infoBadge .rightPart p{
   text-align: center; 
   width: 30%;
   background: transparent;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .badgeSelected{
   background:rgba(255, 255, 255, 0.2);
+  // background:rgba(255, 182, 48, 0.2);
   transition: all 0.5s;
-  border-radius: 5px
+  border-radius: 5px;
+  color: rgb(255, 182, 48);
+  font-weight: 600;
 }
 
 
