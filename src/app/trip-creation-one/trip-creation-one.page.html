@@ -8,9 +8,9 @@
       <div class="underShapeGroup">
         <div class="circle"></div>
         <div class="line"></div>
-        <div class="circle-outline"></div>
+        <div class="circle-outline" [routerLink]="'/trip-creation-two'"></div>
         <div class="line"></div>
-        <div class="circle-outline" [routerLink]="'/trip-creation-three'"></div>      <!-- TODO: enlever le routerLink if -->
+        <div class="circle-outline" [routerLink]="'/trip-creation-three'"></div>      <!-- TODO: enlever le routerLink if on n'est pas encore passer par cette étape de création -->
         <div class="line"></div>
         <div class="circle-outline"></div>
       </div>
@@ -83,7 +83,7 @@
           </ion-chip>
         </div>
       </div>
-      
+
       <ion-item class="recit">
         <ion-label position="floating">Récit</ion-label>
         <ion-textarea rows="10" [(ngModel)]="recit"></ion-textarea>

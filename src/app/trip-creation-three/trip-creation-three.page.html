@@ -8,7 +8,7 @@
       <div class="underShapeGroup">
         <div class="circle-outline" [routerLink]="'/trip-creation-one'"></div>
         <div class="line"></div>
-        <div class="circle-outline"></div>
+        <div class="circle-outline" [routerLink]="'/trip-creation-two'"></div>
         <div class="line"></div>
         <div class="circle"></div>
         <div class="line"></div>
@@ -53,7 +53,7 @@
 
     <div class="customizingZone marginContent">
       <!-- Image -->
-      <div id="shownImageContainer" class="shownImage"> 
+      <div id="shownImageContainer" class="shownImage">
         <img (pan)="panEvent($event)" src="{{urlImage}}" [style.filter]="getFilters()" [ngStyle]="{'object-position': position}">
       </div>
 
@@ -64,40 +64,40 @@
           <ion-icon slot="start" name="undo"></ion-icon>
           <span>Réinitialiser</span>
         </ion-button>
-        
+
         <!-- Luminosité -->
         <div class="brightness">
-          <span class="whiteColor">Luminosité</span> 
+          <span class="whiteColor">Luminosité</span>
           <ion-range color="warning" [(ngModel)]="brightnessValue" min="40" max="200" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Contraste -->
         <div class="contrast">
-          <span class="whiteColor">Contraste</span> 
+          <span class="whiteColor">Contraste</span>
           <ion-range color="warning" [(ngModel)]="contrastValue" min="40" max="200" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Saturation -->
         <div class="saturation">
-          <span class="whiteColor">Saturation</span> 
+          <span class="whiteColor">Saturation</span>
           <ion-range color="warning" [(ngModel)]="saturationValue" min="0" max="200" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Teinte -->
         <div class="hue">
-          <span class="whiteColor">Teinte</span> 
+          <span class="whiteColor">Teinte</span>
           <ion-range color="warning" [(ngModel)]="hueValue" min="0" max="360" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Sepia -->
         <div class="Sepia">
-          <span class="whiteColor">Sepia</span> 
+          <span class="whiteColor">Sepia</span>
           <ion-range color="warning" [(ngModel)]="sepiaValue" min="0" max="100" step="1" mode="md"></ion-range>
         </div>
 
         <!-- Greyscale -->
         <div class="greyscale">
-          <span class="whiteColor">Niveaux de gris</span> 
+          <span class="whiteColor">Niveaux de gris</span>
           <ion-range color="warning" [(ngModel)]="greyscaleValue" min="0" max="100" step="1" mode="md"></ion-range>
         </div>
       </div>
@@ -111,43 +111,43 @@
         <ion-button color="warning" fill="outline" (click)="f1977()">
           <span>1977</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="aden()">
           <span>Aden</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="amaro()">
           <span>Amaro</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="brannan()">
           <span>Brannan</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="brooklyn()">
           <span>Brooklyn</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="clarendon()">
           <span>Clarendon</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="earlyBird()">
           <span>Early Bird</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="gingham()">
           <span>Gingham</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="inkwell()">
           <span>Inkwell</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="lofi()">
           <span>Lofi</span>
         </ion-button>
-        
+
         <ion-button color="warning" fill="outline" (click)="walden()">
           <span>Walden</span>
         </ion-button>
@@ -159,6 +159,6 @@
       <span>Suivant</span>
     </div>
   </div>
-  
+
   <app-footer-app></app-footer-app>
 </ion-content>

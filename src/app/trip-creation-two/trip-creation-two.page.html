@@ -1,9 +1,29 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>trip-creation-two</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content id="trip_creation">
+  <div class="cancelBtn" [routerLink]="'/home'">
+    <span>Annuler</span>
+  </div>
 
-<ion-content padding>
+  <div class="content_tripCreation">
+    <div class="shapeGroup">
+      <div class="underShapeGroup">
+        <div class="circle-outline" [routerLink]="'/trip-creation-one'"></div>
+        <div class="line"></div>
+        <div class="circle"></div>
+        <div class="line"></div>
+        <div class="circle-outline" [routerLink]="'/trip-creation-three'"></div>      <!-- TODO: enlever le routerLink if -->
+        <div class="line"></div>
+        <div class="circle-outline"></div>
+      </div>
+    </div>
 
+    <div class="marginContent smallCaps pageTitle">
+      <span>Création de voyage</span>
+    </div>
+  </div>
+
+
+  <!-- Next button -->
+  <div class="nextBtn whiteColor smallCaps" (click)="goNext()">
+    <span>Suivant</span>
+  </div>
 </ion-content>

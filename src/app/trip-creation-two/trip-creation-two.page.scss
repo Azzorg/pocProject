@@ -1,0 +1,116 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:100,400,500,600,700);
+
+#trip_creation{
+  --background: transparent;
+  background-image: url("./../../assets/img/background-image.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  -webkit-background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -webkit-background-position: right;
+  font-family: Raleway, Open Sans, Droid Sans, Roboto,arial, sans-serif;
+  color: white;
+}
+
+.content_tripCreation{
+  position: relative;
+  margin-top: 60px;
+  padding-bottom: 100px;
+}
+
+.marginContent{
+  margin-left: 16px;
+  margin-right: 16px;
+}
+
+.smallCaps{
+  font-variant: small-caps;
+}
+
+span{
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+}
+
+.whiteColor{
+  color: white;
+}
+
+.cancelBtn{
+  position: fixed;
+  top:12px;
+  right:30px;
+  font-variant: small-caps;
+  font-size: 13pt;
+  color: white;
+  z-index: 10;
+}
+
+
+/**
+  Group of shapes on the top of the screen
+  ------------------------------------------
+*/
+.shapeGroup{
+  position: relative;
+  height: fit-content;
+  width: 100%;
+}
+
+.underShapeGroup{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+}
+
+.circle{
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+  float:left;
+}
+
+.circle-outline{
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 50%;
+  float:left;
+}
+
+.circle-outline:focus{
+  outline: none;
+}
+
+.line{
+  background: white;
+  float:left;
+  height: 1px;
+  width: 15px;
+  margin-top: 12px;
+}
+
+
+/** ----------------------------- */
+.pageTitle{
+  position: relative;
+  margin-top: 40px;
+  color: white;
+  clear: both;
+  font-size: 19pt;
+}
+
+
+/**
+  Next button div
+  -----------------------------------------
+*/
+.nextBtn{
+  clear: both;
+  padding-top: 50px;
+  text-shadow: 0px 0px 25px rgba(0,0,0,0.85);
+  text-align: center;
+}
