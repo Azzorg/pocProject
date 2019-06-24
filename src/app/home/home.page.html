@@ -1,77 +1,80 @@
 <ion-content id="main">
-  <div id="content-list">
+
+  <h1 id="trip-title" [ngClass]="{'displayed' : showAllNotifs == true}">Voyage au Yosemite</h1>
+
+  <div class="show-more-button" (click)="changeStateNotifs()" [ngClass]="{'reversed' : showAllNotifs == true}">
+    <ion-icon name="arrow-up" class="show-more-icon"></ion-icon>
+  </div>
+
+  <div id="content-list" [ngClass]="{'displayed' : showAllNotifs == true}">
     <ion-card id="box1" class="box blurred-bg tinted">
       <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <div class="header">
+          <img class="profil-picture" src="https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" alt="">
+          <div class="header-infos">
+            <p><b>Dimitri</b> a créé le voyage</p>
+            <p>Il y a 3 jours</p>
+          </div>
+        </div>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted">
+    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
       <ion-card-content class="content">
         <h1>Blurred Background</h1>
         <h2>By Ariona, Rian</h2>
         <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>  
+        <p class="related">See also: Staged Dropdown Animation</p>
       </ion-card-content>
     </ion-card>
   </div>
 
   <app-footer-app></app-footer-app>
 </ion-content>
-
-
-
-
-
-
-

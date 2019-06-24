@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+
+  public showAllNotifs : boolean = false;
+
+  constructor(){
+
+  }
+
+  public changeStateNotifs(){
+    console.log("change state notifs");
+    this.showAllNotifs = !this.showAllNotifs;
+    document.getElementById("content-list").scrollTop = 0;
+  }
 }
