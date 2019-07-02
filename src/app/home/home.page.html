@@ -1,80 +1,48 @@
-<ion-content id="main">
+<ion-content>
 
-  <h1 id="trip-title" [ngClass]="{'displayed' : showAllNotifs == true}">Voyage au Yosemite</h1>
+    <ion-slides pager="false" [options]="slideOpts">
 
-  <div class="show-more-button" (click)="changeStateNotifs()" [ngClass]="{'reversed' : showAllNotifs == true}">
-    <ion-icon name="arrow-up" class="show-more-icon"></ion-icon>
-  </div>
+      <ion-slide *ngFor="let trip of lstTrips" class="main" [ngStyle]="{'background-image' : trip.imageVoyage}">
+        <h1 id="trip-title" [ngClass]="{'displayed' : showAllNotifs == true}">{{trip.title}}</h1>
 
-  <div id="content-list" [ngClass]="{'displayed' : showAllNotifs == true}">
-    <ion-card id="box1" class="box blurred-bg tinted">
-      <ion-card-content class="content">
-        <div class="header">
-          <img class="profil-picture" src="https://images.unsplash.com/photo-1497316730643-415fac54a2af?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=80" alt="">
-          <div class="header-infos">
-            <p><b>Dimitri</b> a créé le voyage</p>
-            <p>Il y a 3 jours</p>
-          </div>
+        <div class="show-more-button" (click)="changeStateNotifs()" [ngClass]="{'reversed' : showAllNotifs == true}">
+          <ion-icon name="arrow-up" class="show-more-icon"></ion-icon>
         </div>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-    <ion-card id="box1" class="box blurred-bg tinted" (click)="changeStateNotifs()">
-      <ion-card-content class="content">
-        <h1>Blurred Background</h1>
-        <h2>By Ariona, Rian</h2>
-        <p>Drag this box to move around</p>
-        <p class="related">See also: Staged Dropdown Animation</p>
-      </ion-card-content>
-    </ion-card>
-  </div>
+
+        <div id="content-list" [ngClass]="{'displayed' : showAllNotifs == true}">
+          <ion-card *ngFor="let post of trip.lstPosts; let index = index" id="box{{index}}" class="box blurred-bg tinted">
+            <ion-card-content class="content">
+              <div class="header">
+                <img class="profil-picture" src="{{post.userPicture}}" alt="">
+                <div class="header-infos">
+                  <p class="user-name">{{post.userName}}</p>
+                  <p class="user-action" *ngIf="post.type == 'new_trip'">a créé le voyage</p>
+                  <p class="user-action" *ngIf="post.type == 'new_step'">a créé l'étape <b>{{post.complementary}}</b></p>
+                  <p class="user-action" *ngIf="post.type == 'new_photos'">a posté {{post.complementary}} photos</p>
+                  <p class="action-age">Il y a {{dateFromNow(post.date)}} jours</p>
+                </div>
+              </div>
+              <div class="location-infos">
+                <ion-icon name="ios-pin"></ion-icon>
+                <span>Yosemite NP, CA, USA</span>
+              </div>
+              <div class="social-actions">
+                <div class="social-action">
+                  <ion-icon name="ios-text-outline"></ion-icon>
+                  <div class="social-action-number">{{post.commentsCount}}</div>
+                </div>
+                <div class="social-action">
+                  <ion-icon name="ios-heart-outline"></ion-icon>
+                  <div class="social-action-number">{{post.likesCount}}</div>
+                </div>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </div>
+      </ion-slide>
+
+    </ion-slides>
+
 
   <app-footer-app></app-footer-app>
 </ion-content>
