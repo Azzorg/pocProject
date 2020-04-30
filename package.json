@@ -51,7 +51,7 @@
     "ionic-swipe-all": "^2.0.0",
     "ionicons": "git://github.com/ionic-team/ionicons.git#3.0",
     "ionicons-npm": "^2.0.1",
-    "jquery": "^3.4.0",
+    "jquery": "^3.5.0",
     "mapbox-gl": "^0.53.1",
     "npm": "^6.9.0",
     "rxjs": "^6.5.1",
