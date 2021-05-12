@@ -56,7 +56,7 @@
     "npm": "^6.9.0",
     "rxjs": "^6.5.1",
     "rxjs-compat": "^6.5.1",
-    "swiper": "^4.5.0",
+    "swiper": "^6.5.1",
     "zone.js": "~0.8.29"
   },
   "devDependencies": {
